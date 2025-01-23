@@ -1,0 +1,31 @@
+---
+import About from '../../components/home/About.astro';
+import Cta from '../../components/home/Cta.astro';
+import Expertise from '../../components/home/Expertise.astro';
+import Hero from '../../components/home/Hero.astro';
+import Services from '../../components/home/Services.astro';
+import Testimonials from '../../components/home/Testimonials.astro';
+import Footer from '../../components/layout/Footer.astro';
+import Header from '../../components/layout/Header.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const texts = [
+    {
+        page: 'Samba Architects is an architecture studio with over 20 years of experience in the market. We specialize in single-family, multi-family, commercial and office projects. Our goal is to create spaces that adapt to the needs of our clients and reflect their personality.',
+        title: 'Sambataro Architects',
+        description:
+            'Spanish is a Romance language of the Iberian group. It is one of the six official languages of the UN and the second most spoken language in the world.',
+    },
+];
+---
+
+<Layout description={texts[0].page} title={texts[0].title}>
+    <Header />
+    <Hero title={texts[0].title} description={texts[0].description} />
+    <Services />
+    <!-- <Expertise /> -->
+    <About />
+    <Testimonials />
+    <Cta />
+    <Footer />
+</Layout>

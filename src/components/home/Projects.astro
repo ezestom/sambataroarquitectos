@@ -1,0 +1,67 @@
+---
+import Project from '../../components/Project.astro';
+import Base from '../../layouts/Base.astro';
+import colon from '../../img/projects/colon.webp';
+import kimmel from '../../img/projects/kimmel.webp';
+import eastman from '../../img/projects/eastman.webp';
+import lago from '../../img/projects/lago.webp';
+import ciudad from '../../img/projects/ciudad.webp';
+---
+
+<Base>
+    <Project
+        id="colon"
+        city="Buenos Aires, Argentina"
+        year="1987-1990"
+        room="Sala Lírica"
+        project="Teatro Colón"
+        description="El Teatro Colón de Buenos Aires, inaugurado en el año 1908 y diseñado por los arquitectos Francesco Tamburini, Vittorio Meano y Jules Dormal, posee una capacidad para 2487 espectadores sentados y es considerado tanto por su acústica como por su arquitectura, uno de los teatros más importantes del mundo."
+        img={colon}
+        anchor="Ver más sobre este proyecto"
+        href="/projects/theaters/teatro-colon"
+    />
+    <Project
+        id="ciudad"
+        city="Valencia, España"
+        year="2000-2001"
+        room="Palacio de las Artes Reina Sofía"
+        project="Ciudad de las Artes y las Ciencias"
+        description="La Ciudad de las Artes y las Ciencias, un complejo arquitectónico cultural y de entretenimiento inaugurado en el año 1998 y diseñado por el ingeniero Santiago Calatrava y el arquitecto Félix Candela, conforma una de las construcciones de arte moderno más importantes del mundo. "
+        img={ciudad}
+        anchor="Ver más sobre este proyecto"
+        href="/projects/theaters/ciudad-de-las-artes"
+    />
+    <Project
+        id="kimmel"
+        city="Filadelfia, Estados Unidos"
+        year="2002"
+        room="Palacio de las Artes Reina Sofía"
+        project="Acoustic Canopy System, Verizon Hall"
+        description="El Kimmel Center para las artes escénicas, inaugurado en el año 2001 y diseñado por el arquitecto Rafael Viñoly, es el principal teatro de Filadelfia, Estados Unidos y alberga la sala Verizon como concert hall para 2547 espectadores y la sala Perelman como sala multipropósito, con capacidad para 650 espectadores."
+        img={kimmel}
+        anchor="Ver más sobre este proyecto"
+        href="/projects/theaters/kimmel-center"
+    />
+    <Project
+        id="eastman"
+        city="Rochester, Estados Unidos"
+        year="2004"
+        room="Acoustic Shell System, Kodak Hall"
+        project="Eastman Theater - Rochester"
+        description="El Eastman Theater, inaugurado en 1922 como centro de música, danza y artes visuales, con su sala principal Kodak Hall, contiene una capacidad para 2260 espectadores y es la sala de teatro principal de la Escuela de Música Eastman de la Universidad de Rochester."
+        img={eastman}
+        anchor="Ver más sobre este proyecto"
+        href="/projects/theaters/eastman-theater"
+    />
+    <Project
+        id="lago"
+        city="Frutillar, Chile"
+        year="2009-2010"
+        room="Espacio Tronador, Sala Nestlé"
+        project="Teatro del Lago"
+        description="El Teatro del Lago de Frutillar, Chile, inaugurado en el año 2010 y diseñado inicialmente por los arquitectos Gerardo Köster, Gustavo Greene en una primera etapa; y por los arquitectos Bernd Haller, Cristián Valdés, Pablo Cordua y Andrés Alvear, en una segunda etapa, se destaca por ser el teatro internacional más austral del mundo con una de las mejores acústicas del país."
+        img={lago}
+        anchor="Ver más sobre este proyecto"
+        href="/projects/theaters/teatro-del-lago"
+    />
+</Base>

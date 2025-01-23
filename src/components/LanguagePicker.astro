@@ -1,0 +1,53 @@
+---
+import { languages } from '../i18n/ui';
+
+import { getRouteFromUrl, useTranslatedPath, getLangFromUrl } from '../i18n/utils';
+
+const route = getRouteFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const currentLocaleData = languages[lang];
+const otherLocales = Object.values(languages).filter((locale) => locale.code !== lang);
+---
+
+<div class="z-20">
+    <div
+        class="font-base bg-black/50 hover:bg-black/40 group rounded-full text-xl font-semibold transition-all">
+        <button
+            type="button"
+            class="inline-flex h-16 w-16 items-center justify-center rounded-full text-primary-950 shadow ring-primary-950 transition hover:bg-primary-500/10 focus:outline-none focus-visible:ring-2 dark:text-primary-200 dark:hover:bg-primary-400/10"
+            aria-expanded="true"
+            aria-haspopup="true">
+            <!-- <currentLocaleData.flag /> -->
+            {currentLocaleData.name}
+        </button>
+        <ul
+            class="group-hover:animate-fade-down group-hover:animate-duration-200 group-flex-col absolute hidden w-full pt-1 gap-1 group-hover:flex group-hover:flex-col">
+            {
+                otherLocales.map((locale) => (
+                    <a
+                        class="inline-flex h-16 w-16 items-center justify-center rounded-full text-primary-950 shadow ring-primary-950 transition hover:bg-primary-500/10 focus:outline-none focus-visible:ring-2 dark:text-primary-200 dark:hover:bg-primary-400/10"
+                        href={translatePath(`/${route ? route : ''}`, locale.code)}>
+                        {locale.name}
+                    </a>
+                ))
+            }
+        </ul>
+    </div>
+</div>
+
+<script>
+    const changeLanguage = (e: any) => {
+        e.preventDefault();
+        const url = e.target.href;
+        window.location = url;
+    };
+
+    // agregar el evento click a los elementos de la lista
+    const languageBtn = document.getElementById('language-btn');
+    const languageBtnItems = languageBtn?.querySelectorAll('a');
+    languageBtnItems?.forEach((item) => {
+        item.addEventListener('click', changeLanguage);
+    });
+</script>

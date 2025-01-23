@@ -1,0 +1,63 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import HeaderLink from '../HeaderLink.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const links = [
+    {
+        ref: '01',
+        name: t('nav.home'),
+        href: '/',
+    },
+    {
+        ref: '02',
+        name: t('nav.about'),
+        href: '/about',
+    },
+    {
+        ref: '03',
+        name: t('nav.twitter'),
+        href: 'https://twitter.com/astrodotbuild',
+    },
+    {
+        ref: '04',
+        name: t('nav.pricing'),
+        href: '/pricing',
+    },
+    {
+        ref: '05',
+        name: t('nav.contact'),
+        href: '/contact',
+    },
+];
+---
+
+<nav class="flex flex-col gap-1 divide-y divide-primary-900/10 dark:divide-primary-300/10">
+    <ul class="flex flex-col gap-1 divide-y divide-primary-900/10 dark:divide-primary-300/10">
+        {
+            links.map((link) => (
+                <HeaderLink
+                    href={link.href}
+                    locale={lang}
+                    class="group inline-flex  py-6 text-3xl font-medium tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-primary-200 sm:py-8 sm:text-4xl">
+                    <div class="group flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 ">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl">{link.ref}</span>
+                            <span class="group-hover:opacity-75">{link.name}</span>
+                        </div>
+                        <svg
+                            class="h-6 w-6 text-primary-600 transition group-hover:rotate-45 group-hover:scale-150 dark:text-primary-400 sm:h-8 sm:w-8"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            aria-hidden="true">
+                            <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+                        </svg>
+                    </div>
+                </HeaderLink>
+            ))
+        }
+    </ul>
+</nav>

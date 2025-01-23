@@ -14,8 +14,11 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
+<html lang="es" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
     <head>
+        <!-- check este meta!!! -->
+        <!-- <meta http-equiv="refresh" content="0;url=/es/" /> -->
+        <link rel="stylesheet" href="photoswipe/dist/photoswipe.css" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -28,13 +31,14 @@ const { description, title } = Astro.props;
         <ViewTransitions />
     </head>
     <body
-        class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200">
-        <Header />
+        class="bg-primary-100 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200">
         <main>
             <slot />
         </main>
-        <Footer />
         <style is:global>
+            html {
+                scroll-behavior: smooth;
+            }
             [x-cloak] {
                 display: none !important;
             }

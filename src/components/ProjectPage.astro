@@ -1,0 +1,86 @@
+---
+import GoBack from './GoBack.astro';
+import { SimpleGallery } from './SimpleGallery/SimpleGallery';
+import DataList from './DataList.astro';
+
+interface infoProjects {
+    id?: string;
+    city?: string;
+    year?: number;
+    room?: string;
+    project?: string;
+    description1?: string;
+    description2?: string;
+    description3?: string;
+    img?: string;
+    anchor?: string;
+    href?: string;
+    images?: {
+        largeURL: string;
+        thumbnailURL: string;
+        width: number;
+        height: number;
+    }[];
+}
+
+const { id, city, year, room, project, description1, description2, description3, img, images } =
+    Astro.props;
+---
+
+<section class="relative">
+    <GoBack />
+    <div class="h-full w-full">
+        <div class="place-items-start bg-primary-100 dark:bg-primary-950 lg:grid xl:grid-cols-3">
+            <img
+                transition:name={id}
+                class="top-0 h-[50vh] w-full overflow-hidden rounded-3xl object-cover object-bottom p-4 xl:sticky xl:h-screen"
+                src={img.src}
+                alt="picture"
+            />
+            <div class="relative dark:bg-primary-950/90">
+                <!-- Mission description -->
+                <div
+                    class="bg-primary-200/50 p-4 dark:bg-primary-900/90 my-4 lg:rounded-xl lg:p-12">
+                    <div class="">
+                        <dd class="text-xl font-light text-primary-950/70 dark:text-primary-200/70">
+                            {city}
+                        </dd>
+                        <p
+                            class="tracking-light text-base font-light text-primary-950/70 dark:text-primary-200/70">
+                            {room}
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <dd
+                            class="text-4xl font-thin tracking-tight text-primary-950/70 dark:text-primary-200/70 lg:text-6xl">
+                            {year}
+                        </dd>
+                    </div>
+                    <h2
+                        class="text-balance text-3xl font-light tracking-tight text-primary-950/70 dark:text-primary-200 lg:text-6xl">
+                        {project}
+                    </h2>
+
+                    <div class="text-pretty space-y-6 py-8">
+                        <p
+                            class="text-pretty text-base text-primary-950/70 dark:text-primary-200/70">
+                            {description1}
+                        </p>
+                        <p
+                            class="text-pretty text-base text-primary-950/70 dark:text-primary-200/70">
+                            {description2}
+                        </p>
+                        <p
+                            class="text-pretty text-base text-primary-950/70 dark:text-primary-200/70">
+                            {description3}
+                        </p>
+                    </div>
+                    <DataList />
+                </div>
+            </div>
+            <aside class="">
+                <SimpleGallery client:visible galleryID="myGallery" images={images} />
+            </aside>
+        </div>
+    </div>
+</section>

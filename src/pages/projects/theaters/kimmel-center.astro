@@ -1,0 +1,54 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import kimmel from '../../../img/projects/kimmel.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import kimmel1 from '../../../img/projects/kimmel/kimmel1.webp';
+import kimmel2 from '../../../img/projects/kimmel/kimmel2.webp';
+import kimmel3 from '../../../img/projects/kimmel/kimmel3.webp';
+import kimmel4 from '../../../img/projects/kimmel/kimmel4.webp';
+
+const images = [
+    {
+        largeURL: kimmel1.src,
+        thumbnailURL: kimmel1.src,
+        width: 1123,
+        height: 744,
+    },
+    {
+        largeURL: kimmel2.src,
+        thumbnailURL: kimmel2.src,
+        width: 1190,
+        height: 744,
+    },
+    {
+        largeURL: kimmel3.src,
+        thumbnailURL: kimmel3.src,
+        width: 1414,
+        height: 744,
+    },
+    {
+        largeURL: kimmel4.src,
+        thumbnailURL: kimmel4.src,
+        width: 600,
+        height: 744,
+    },
+];
+---
+
+<Base>
+    <Layout description="" title="">
+        <ProjectPage
+            images={images}
+            id="kimmel"
+            city="Filadelfia, Estados Unidos"
+            year="2002"
+            room="Acoustic Canopy System, Verizon Hall"
+            project="The Kimmel Center for the Performing Arts"
+            description1="El centro Kimmel para las artes escénicas, inaugurado en el año 2001 y diseñado por el arquitecto Rafael Viñoly, es el principal teatro de Filadelfia, Estados Unidos y alberga la sala Verizon como concert hall para 2547 espectadores y la sala Perelman como sala multipropósito, con capacidad para 650 espectadores."
+            description2="El proyecto abarcó la ingeniería constructiva del sistema de canopy modulado – cámara acústica- regulable para acondicionamiento escénico y acústico con accionamiento electromecánico. Construido y montado por Hoffend and Sons., fue realizado en conjunto con la asesoría de Artec Consultants y Theater Projects Consultants."
+            img={kimmel}
+        />
+    </Layout>
+</Base>

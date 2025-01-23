@@ -1,0 +1,23 @@
+<a
+    href="/#top"
+    class="fixed bottom-2 right-2 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200 font-light uppercase tracking-tight text-primary-950 shadow ring-primary-950 transition hover:bg-primary-300 focus:outline-none focus-visible:ring-2 dark:bg-primary-600 dark:text-primary-200 dark:hover:bg-primary-400/10 sm:text-3xl lg:text-4xl"
+    id="top">
+    <span class="sr-only">go top</span>
+     ↑
+    <!-- <img class="h-8 w-auto" width="65" height="40" alt="logo" /> -->
+</a>
+
+<style>
+    #top {
+        opacity: 0;
+        animation: reveal linear both;
+        animation-timeline: scroll();
+        animation-range: 0 50px;
+    }
+    @keyframes reveal {
+        to {
+            opacity: 1;
+            z-index: 10;
+        }
+    }
+</style>

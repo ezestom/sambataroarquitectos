@@ -1,0 +1,82 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import eastman from '../../../img/projects/eastman.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import eastman1 from '../../../img/projects/eastman/eastman1.webp';
+import eastman2 from '../../../img/projects/eastman/eastman2.webp';
+import eastman3 from '../../../img/projects/eastman/eastman3.webp';
+import eastman4 from '../../../img/projects/eastman/eastman4.webp';
+import eastman5 from '../../../img/projects/eastman/eastman5.webp';
+import eastman6 from '../../../img/projects/eastman/eastman6.webp';
+import eastman7 from '../../../img/projects/eastman/eastman7.webp';
+import eastman8 from '../../../img/projects/eastman/eastman8.webp';
+
+const images = [
+    {
+        largeURL: eastman1.src,
+        thumbnailURL: eastman1.src,
+        width: 1402,
+        height: 744,
+    },
+    {
+        largeURL: eastman2.src,
+        thumbnailURL: eastman2.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: eastman3.src,
+        thumbnailURL: eastman3.src,
+        width: 1073,
+        height: 638,
+    },
+    {
+        largeURL: eastman4.src,
+        thumbnailURL: eastman4.src,
+        width: 1018,
+        height: 744,
+    },
+    {
+        largeURL: eastman5.src,
+        thumbnailURL: eastman5.src,
+        width: 1054,
+        height: 744,
+    },
+    {
+        largeURL: eastman6.src,
+        thumbnailURL: eastman6.src,
+        width: 1031,
+        height: 744,
+    },
+    {
+        largeURL: eastman7.src,
+        thumbnailURL: eastman7.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: eastman8.src,
+        thumbnailURL: eastman8.src,
+        width: 991,
+        height: 744,
+    },
+];
+---
+
+<Base>
+    <Layout description="" title="">
+        <ProjectPage
+            images={images}
+            id="eastman"
+            city="Rochester, Estados Unidos"
+            year="2004"
+            room="Acoustic Shell System, Kodak Hall"
+            project="Eastman Theater - Rochester"
+            description1="El teatro Eastman, inaugurado en 1922 como centro de música, danza y artes visuales, con su sala principal Kodak Hall, contiene una capacidad para 2260 espectadores y es la sala de teatro principal de la Escuela de Música Eastman de la Universidad de Rochester."
+            description2="Para esta obra se realizó la ingeniería de proyecto de la cámara de concierto para acondicionamiento acústico, con un plafond de paneles de múltiple ángulo de trabajo y paredes laterales y de fondo. Controla su accionamiento electromecánico un software “Vortek” para suspensión y movimientos horizontales. El proyecto comprende toda la ingeniería constructiva estructural y del diseño decorativo y sus ornamentos."
+            img={eastman}
+        />
+    </Layout>
+</Base>
