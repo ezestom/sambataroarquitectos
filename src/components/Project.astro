@@ -22,7 +22,7 @@ const { id, city, year, room, project, description, anchor, href, img } = Astro.
             class="grid overflow-hidden rounded-xl bg-primary-200/50 shadow-md dark:bg-primary-400 lg:max-h-[700px] lg:grid-cols-2">
             <img
                 transition:name={id}
-                class="mx-auto h-full w-full object-cover lg:object-bottom lg:aspect-[4/5] max-h-[400px] lg:max-h-[700px]"
+                class="mx-auto h-full max-h-[400px] w-full object-cover lg:aspect-[4/5] lg:max-h-[700px] lg:object-bottom"
                 src={img.src}
                 alt="picture"
             />

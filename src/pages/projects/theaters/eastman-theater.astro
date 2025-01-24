@@ -13,6 +13,22 @@ import eastman6 from '../../../img/projects/eastman/eastman6.webp';
 import eastman7 from '../../../img/projects/eastman/eastman7.webp';
 import eastman8 from '../../../img/projects/eastman/eastman8.webp';
 
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: '26 Gibbs St, Rochester, Nueva York, Estados Unidos de América' },
+    { label: 'Temática', value: 'Acoustic Shell System' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo' },
+    { label: 'Comitente', value: 'Hoffend & Sons, Inc. Rochester New York' },
+    { label: 'Localidades', value: '2200' },
+    { label: 'Superficie aproximada total', value: '30.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '6.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 5.000.000' },
+    { label: 'Año', value: '2004' },
+    { web: 'http://eastmantheatre.org/', href: 'http://eastmantheatre.org/' },
+];
+
+const asesores = ['-'];
+
 const images = [
     {
         largeURL: eastman1.src,
@@ -77,6 +93,8 @@ const images = [
             description1="El teatro Eastman, inaugurado en 1922 como centro de música, danza y artes visuales, con su sala principal Kodak Hall, contiene una capacidad para 2260 espectadores y es la sala de teatro principal de la Escuela de Música Eastman de la Universidad de Rochester."
             description2="Para esta obra se realizó la ingeniería de proyecto de la cámara de concierto para acondicionamiento acústico, con un plafond de paneles de múltiple ángulo de trabajo y paredes laterales y de fondo. Controla su accionamiento electromecánico un software “Vortek” para suspensión y movimientos horizontales. El proyecto comprende toda la ingeniería constructiva estructural y del diseño decorativo y sus ornamentos."
             img={eastman}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
         />
     </Layout>
 </Base>

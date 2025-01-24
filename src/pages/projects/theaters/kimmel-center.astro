@@ -9,6 +9,23 @@ import kimmel2 from '../../../img/projects/kimmel/kimmel2.webp';
 import kimmel3 from '../../../img/projects/kimmel/kimmel3.webp';
 import kimmel4 from '../../../img/projects/kimmel/kimmel4.webp';
 
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Concert Hall' },
+    { label: 'Ubicación', value: '300 S Broad St, Filadelfia, Estados Unidos de América' },
+    { label: 'Temática', value: 'Acoustic Canopy System Verizon Hall' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo' },
+    { label: 'Comitente', value: 'Hoffend & Sons, Inc. Rochester New York' },
+    { label: 'Proyecto de arquitectura general', value: 'Arq. Rafael Viñoly' },
+    { label: 'Localidades', value: '2500' },
+    { label: 'Superficie aproximada total', value: '40.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '9.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 7.000.000' },
+    { label: 'Año', value: '2002' },
+    { web: 'https://www.kimmelcenter.org/', href: 'https://www.kimmelcenter.org/' },
+];
+
+const asesores = ["-"];
+
 const images = [
     {
         largeURL: kimmel1.src,
@@ -49,6 +66,8 @@ const images = [
             description1="El centro Kimmel para las artes escénicas, inaugurado en el año 2001 y diseñado por el arquitecto Rafael Viñoly, es el principal teatro de Filadelfia, Estados Unidos y alberga la sala Verizon como concert hall para 2547 espectadores y la sala Perelman como sala multipropósito, con capacidad para 650 espectadores."
             description2="El proyecto abarcó la ingeniería constructiva del sistema de canopy modulado – cámara acústica- regulable para acondicionamiento escénico y acústico con accionamiento electromecánico. Construido y montado por Hoffend and Sons., fue realizado en conjunto con la asesoría de Artec Consultants y Theater Projects Consultants."
             img={kimmel}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
         />
     </Layout>
 </Base>

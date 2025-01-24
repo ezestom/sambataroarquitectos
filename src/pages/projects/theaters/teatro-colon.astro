@@ -11,6 +11,31 @@ import colon4 from '../../../img/projects/colon/colon4.webp';
 import colon5 from '../../../img/projects/colon/colon5.webp';
 import colon6 from '../../../img/projects/colon/colon6.webp';
 
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Cerrito 628, Ciudad Autónoma de Buenos Aires, Argentina' },
+    { label: 'Temática', value: 'Remodelación, Modernización y Equipamiento Escénico' },
+    { label: 'Servicios', value: 'Proyecto licitatorio, proyecto ejecutivo, dirección de obra' },
+    { label: 'Comitente', value: 'Municipalidad de la Ciudad de Buenos Aires' },
+    { label: 'Dirección Ejecutiva', value: 'Enrique Bordolini' },
+    { label: 'Proyecto escenotécnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Dirección de obra', value: 'Alfio Sambataro' },
+    { label: 'Localidades', value: '2500' },
+    { label: 'Superficie aproximada total', value: '58.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '7.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 14.000.000' },
+    { label: 'Año', value: '1987-1990' },
+    { web: 'http://www.teatrocolon.org.ar/', href: 'http://www.teatrocolon.org.ar/' },
+];
+
+const asesores = [
+    'Theater Projects',
+    'Ing. Federico Malvares',
+    'Ing. Fink',
+    'José Luis Fiorruccio',
+    'Rolando Sadra',
+];
+
 const images = [
     {
         largeURL: colon1.src,
@@ -64,6 +89,8 @@ const images = [
             description2="El proyecto escenotécnico para un edificio de estas características, requirió un profundo análisis de diagnóstico, concluyendo que su caja escénica, como corazón de todo teatro, se encontraba obsoleta, operando con sistemas de suspensión del siglo pasado; lo que impedía al teatro estar a la altura de la demanda cultural del momento."
             description3="En este contexto, el proyecto abarcó la remodelación completa de la caja escénica incluyendo el refuerzo y adecuación de la estructura resistente de rigging del centenario edificio. Involucró el diseño de doble parrilla y 3 niveles de puentes de maniobras y técnicos. Los sistemas de suspensión comprendieron un total de 30 varas manuales contrapesadas, 36 varas motorizadas, 60 malacates de 12 líneas de 5 puntuales, 2 puentes de iluminación y sistema de embocadura variable compuesto de torres laterales y puente portal. Se instalaron en total 100 motores controlados por un sistema central computarizado. También se incluyeron nuevos sistemas de intercomunicación técnica, llamadores a escena, audio y video."
             img={colon}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
         />
     </Layout>
 </Base>

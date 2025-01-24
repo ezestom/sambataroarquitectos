@@ -1,7 +1,7 @@
 ---
 import GoBack from './GoBack.astro';
 import { SimpleGallery } from './SimpleGallery/SimpleGallery';
-import DataList from './DataList.astro';
+import DataList from './DataList.jsx';
 
 interface infoProjects {
     id?: string;
@@ -22,8 +22,24 @@ interface infoProjects {
         height: number;
     }[];
 }
+interface infoData {
+    datosTecnicos: {
+        title: string;
+        data: {
+            title: string;
+            value: string;
+        }[];
+    }[];
+    asesores: {
+        title: string;
+        data: {
+            title: string;
+            value: string;
+        }[];
+    }[];
+}
 
-const { id, city, year, room, project, description1, description2, description3, img, images } =
+const { id, city, year, room, project, description1, description2, description3, img, images, datosTecnicos, asesores } =
     Astro.props;
 ---
 
@@ -33,14 +49,14 @@ const { id, city, year, room, project, description1, description2, description3,
         <div class="place-items-start bg-primary-100 dark:bg-primary-950 lg:grid xl:grid-cols-3">
             <img
                 transition:name={id}
-                class="top-0 h-[50vh] w-full overflow-hidden rounded-3xl object-cover object-bottom p-4 xl:sticky xl:h-screen"
+                class="top-0 h-[50vh] w-full overflow-hidden object-cover object-bottom lg:rounded-3xl lg:p-4 xl:sticky xl:h-screen"
                 src={img.src}
                 alt="picture"
             />
             <div class="relative dark:bg-primary-950/90">
                 <!-- Mission description -->
                 <div
-                    class="bg-primary-200/50 p-4 dark:bg-primary-900/90 my-4 lg:rounded-xl lg:p-12">
+                    class="bg-primary-200/50 p-4 dark:bg-primary-900/90 lg:my-4 lg:rounded-xl lg:p-12">
                     <div class="">
                         <dd class="text-xl font-light text-primary-950/70 dark:text-primary-200/70">
                             {city}
@@ -75,7 +91,7 @@ const { id, city, year, room, project, description1, description2, description3,
                             {description3}
                         </p>
                     </div>
-                    <DataList />
+                    <DataList client:visible datosTecnicos={datosTecnicos} asesores={asesores} />
                 </div>
             </div>
             <aside class="">
