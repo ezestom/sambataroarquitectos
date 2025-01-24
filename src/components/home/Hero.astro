@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import video from '../../video/portada_cacta_optimizado.mp4';
+import video from '../../video/video_colon.mp4';
 import colon from '../../img/colon.webp';
 import Anchor from '../Anchor.astro';
 import GoTop from '../GoTop.astro';
@@ -13,22 +13,30 @@ const { title, description } = Astro.props;
 ---
 
 <Base>
-    <section class="pt-12 relative">
+    <section class="relative pt-2">
         <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="flex flex-col gap-8">
-                <h1 class="tracking-thin text-4xl font-light sm:text-5xl lg:text-[4vw]">
+            <div class="flex flex-col gap-2">
+                <h1 class="tracking-thin text-[2.5rem] font-light lg:text-[4vw]">
                     {title}
                 </h1>
                 <figure
-                    class="aspect-video object-center h-auto w-full rounded-xl shadow-lg sm:h-[24rem] lg:h-[50%]">
+                    class="relative aspect-video h-auto w-full rounded-xl object-center shadow-lg sm:h-[24rem] lg:h-[50%]">
                     <video
                         poster={colon.src}
-                        src=""
+                        src={video}
                         autoplay
-                        loop
                         muted
                         playsinline
-                        class="h-full w-full rounded-xl object-cover object-center shadow-md">
+                        class="h-full w-full rounded-xl object-cover object-center">
+                    </video>
+                    <video
+                        id="blur"
+                        poster={colon.src}
+                        src={video}
+                        autoplay
+                        muted
+                        playsinline
+                        class="absolute inset-0 bottom-0 top-0 rounded-xl object-cover object-center">
                     </video>
                 </figure>
             </div>
@@ -37,3 +45,12 @@ const { title, description } = Astro.props;
     </section>
     <Base />
 </Base>
+
+<style>
+    #blur {
+        filter: blur(15px) contrast(200%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+</style>
