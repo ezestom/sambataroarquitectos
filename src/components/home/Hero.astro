@@ -3,7 +3,6 @@ import Base from '../../layouts/Base.astro';
 import video from '../../video/video_colon.mp4';
 import colon from '../../img/colon.webp';
 import Anchor from '../Anchor.astro';
-import GoTop from '../GoTop.astro';
 
 interface Props {
     title?: string;
@@ -13,23 +12,22 @@ const { title, description } = Astro.props;
 ---
 
 <Base>
-    <section class="relative pt-2">
-        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <section class="relative -z-10 -translate-y-[5.5rem] pt-2">
+        <div class="mx-auto">
             <div class="flex flex-col gap-2">
-                <h1 class="tracking-thin text-[2.5rem] font-light lg:text-[4vw]">
+                <!-- <h1 class="tracking-thin text-[2.5rem] font-light lg:text-[4vw]">
                     {title}
-                </h1>
-                <figure
-                    class="relative aspect-video h-auto w-full rounded-xl object-center shadow-lg sm:h-[24rem] lg:h-[50%]">
+                </h1> -->
+                <figure class="">
                     <video
                         poster={colon.src}
-                        src={video}
+                        src={''}
                         autoplay
                         muted
                         playsinline
-                        class="h-full w-full rounded-xl object-cover object-center">
+                        class="h-full max-h-screen object-cover w-full">
                     </video>
-                    <video
+                    <!-- <video
                         id="blur"
                         poster={colon.src}
                         src={video}
@@ -37,15 +35,32 @@ const { title, description } = Astro.props;
                         muted
                         playsinline
                         class="absolute inset-0 bottom-0 top-0 rounded-xl object-cover object-center">
-                    </video>
+                    </video> -->
                 </figure>
             </div>
         </div>
-        <GoTop />
     </section>
     <Base />
 </Base>
 
+<script is:inline>
+    const allVideos = document.querySelectorAll('video');
+
+    // if window is mobile size or smaller video pause
+    if (window.innerWidth <= 768) {
+        allVideos.forEach((video) => {
+            video.pause();
+        });
+    }
+    // si el video ya se mostro 1 vez no se muestra de nuevo
+    if (sessionStorage.getItem('videoShown')) {
+        allVideos.forEach((video) => {
+            video.pause();
+        });
+    } else {
+        sessionStorage.setItem('videoShown', 'true');
+    }
+</script>
 <style>
     #blur {
         filter: blur(15px) contrast(200%);

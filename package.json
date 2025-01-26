@@ -20,6 +20,7 @@
     "alpinejs": "3.12.3",
     "astro": "^5.1.5",
     "astro-compress": "^2.3.6",
+    "embla-carousel-react": "^8.5.2",
     "photoswipe": "^5.4.4",
     "prettier": "3.0.2",
     "prettier-plugin-astro": "0.12.0",

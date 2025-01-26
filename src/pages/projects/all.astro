@@ -1,0 +1,111 @@
+---
+import Base from '../../layouts/Base.astro';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import EmblaCarousel from '../../components/EmblaCarousel/EmblaCarousel.jsx';
+import Heading from '../../components/about/Heading.astro';
+
+import colon from '../../img/projects/colon.webp';
+import argentino from '../../img/projects/argentino.webp';
+import kimmel from '../../img/projects/kimmel.webp';
+import solis from '../../img/projects/solis.webp';
+
+const OPTIONS = { loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+const titles = [
+    {
+        title: 'Teatros',
+    },
+    {
+        title: 'Centros Culturales',
+    },
+    {
+        title: 'Arenas',
+    },
+    {
+        title: 'Edificios complementarios',
+    },
+    {
+        title: 'Escenografías',
+    },
+    {
+        title: 'Producciones al aire libre',
+    },
+];
+
+const projects = [
+    {
+        id: 'colon',
+        city: 'Buenos Aires, Argentina',
+        year: '1987-1990',
+        room: 'Sala Lírica',
+        project: 'Teatro Colón',
+        description: 'El Teatro Colón de Buenos Aires, inaugurado en el año 1908...',
+        img: colon,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/theaters/teatro-colon',
+    },
+    {
+        id: 'argentino',
+        city: 'La Plata, Buenos Aires, Argentina',
+        year: '1998-2001',
+        room: 'Sala Lírica',
+        project: 'Teatro Argentino de La Plata',
+        description: 'El nuevo Teatro Argentino de La Plata, re-inaugurado en el año 1999...',
+        img: argentino,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/theaters/teatro-argentino',
+    },
+    {
+        id: 'kimmel',
+        city: 'Filadelfia, Estados Unidos',
+        year: '2002',
+        room: 'Acoustic Canopy System, Verizon Hall',
+        project: 'The Kimmel Center for the Performing Arts',
+        description: 'El centro Kimmel para las artes escénicas, inaugurado en el año 2001...',
+        img: kimmel,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/theaters/kimmel-center',
+    },
+    {
+        id: 'solis',
+        city: 'Montevideo, Uruguay',
+        year: '2003',
+        room: 'Sala Lírica',
+        project: 'Teatro Municipal Solís',
+        description:
+            'El Teatro Municipal Solís de Montevideo, Uruguay fue por primera vez inaugurado en el año 1856...',
+        img: solis,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/theaters/teatro-solis',
+    },
+];
+---
+
+<Layout description="" title="">
+    <Base>
+        <Header />
+        <section class="py-12">
+            <h1>
+                <Heading title="Proyectos" subtitle="" />
+            </h1>
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[0].title}
+                </h6>
+
+                <EmblaCarousel
+                    client:visible
+                    slides={SLIDES}
+                    options={OPTIONS}
+                    projects={projects}
+                />
+            </article>
+        </section>
+        <Footer />
+    </Base>
+</Layout>

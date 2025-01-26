@@ -26,6 +26,7 @@ export const showDefaultLang = false;
 export const ui = {
   es: {
     'nav.home': 'Inicio',
+    'nav.projects': 'Proyectos',
     'nav.about': 'Acerca de',
     'nav.twitter': 'Twitter',
     'nav.pricing': 'Precios',
@@ -33,6 +34,7 @@ export const ui = {
   },
   en: {
     'nav.home': 'Home',
+    'nav.projects': 'Projects',
     'nav.about': 'About',
     'nav.twitter': 'Twitter',
     'nav.pricing': 'Pricing',
@@ -40,6 +42,7 @@ export const ui = {
   },
   de: {
     'nav.home': 'Startseite',
+    'nav.projects': 'Projekte',
     'nav.about': 'Über uns',
     'nav.twitter': 'Twitter',
     'nav.pricing': 'Preise',
@@ -52,6 +55,7 @@ export const ui = {
 export const routes = {
   es: {
     inicio: 'home',
+    proyectos: 'projects/all',
     acerca: 'about',
     twitter: 'twitter',
     precios: 'pricing',
@@ -59,6 +63,7 @@ export const routes = {
   },
   en: {
     home: 'inicio',
+    projects: 'projects/all',
     about: 'acerca',
     twitter: 'twitter',
     pricing: 'precios',
@@ -66,6 +71,7 @@ export const routes = {
   },
   de: {
     startseite: 'home',
+    projekte: 'projects/all',
     über: 'about',
     twitter: 'twitter',
     preise: 'pricing',
