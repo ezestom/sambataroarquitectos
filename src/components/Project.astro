@@ -19,36 +19,39 @@ const { id, city, year, room, project, description, anchor, href, img } = Astro.
 <section class="py-16 sm:py-20">
     <div class="mx-auto max-w-2xl px-4 lg:max-w-7xl">
         <div
-            class="grid max-h-[550px] overflow-hidden rounded-xl bg-primary-200/50 shadow-md dark:bg-primary-400 lg:grid-cols-2">
+            class="grid overflow-hidden rounded-xl bg-primary-200/50 shadow-md dark:bg-primary-400 lg:max-h-[550px] lg:grid-cols-2">
             <img
                 transition:name={id}
-                class="mx-auto block h-full max-h-[375px] w-full object-cover lg:aspect-[4/5] lg:max-h-[550px] lg:object-bottom"
+                class="mx-auto block h-full max-h-[300px] w-full object-cover lg:aspect-[4/5] lg:max-h-[550px] lg:object-bottom"
                 src={img.src}
                 alt="picture"
             />
             <div
-                class="flex max-h-[550px] flex-col justify-between space-y-4 p-6 dark:bg-primary-950/95 lg:p-8">
+                class="flex h-full max-h-[550px] flex-col justify-between space-y-2 p-4 dark:bg-primary-950/95 sm:space-y-4 lg:p-8">
                 <!-- Mission description -->
 
                 <div class="tracking-light font-light text-primary-950/70 dark:text-primary-200/70">
-                    <p class="text-xl">
+                    <p class="">
                         {city}
                     </p>
                     <p class="text-base">✦ {room}</p>
                 </div>
                 <div class="">
-                    <dd class="text-4xl font-thin tracking-tight">{year}</dd>
+                    <dd class="text-xl font-thin tracking-tight sm:text-4xl">{year}</dd>
                 </div>
                 <h2 class="text-balance text-3xl font-light tracking-tight lg:text-4xl">
                     {project}
                 </h2>
 
                 <div class="flex flex-1 space-y-6">
-                    <p class="text-pretty text-base text-primary-950/70 dark:text-primary-200/70">
+                    <p
+                        class="text-pretty text-sm text-primary-950/70 dark:text-primary-200/70 lg:text-base">
                         {description}
                     </p>
                 </div>
-                <Anchor name={anchor} href={href} />
+                <div class="pt-2">
+                    <Anchor name={anchor} href={href} />
+                </div>
             </div>
         </div>
     </div>

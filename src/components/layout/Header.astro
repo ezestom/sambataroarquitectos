@@ -8,15 +8,15 @@ import Nav from './Nav.astro';
 <header
     id="top"
     x-data="{ open: false }"
-    class="transition"
+    class="transition pt-2 sm:pt-0"
     :class="{ 'bg-primary-500/10 dark:bg-primary-400/10 z-20': open, 'bg-transparent dark:bg-transparent': !(open) }">
     <div
-        class="mx-auto flex max-w-2xl items-center justify-between px-4 py-4 sm:px-6 sm:py-1 lg:max-w-7xl lg:px-8 lg:py-2">
+        class="mx-auto flex max-w-2xl items-center justify-between px-4 py-0 sm:px-6 sm:py-1 lg:max-w-7xl lg:px-8 lg:py-2">
         <!-- Brand logo -->
         <div class="flex">
             <a
                 href="/"
-                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50  text-xl font-semibold dark:text-primary-200 dark:hover:bg-primary-800/75">
+                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-xl font-semibold text-primary-950 shadow ring-primary-950 transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
                 <span class="sr-only">logo sambataro</span>
                  SA
                 <!-- <img class="h-8 w-auto" width="65" height="40" alt="logo" /> -->
@@ -109,7 +109,7 @@ import Nav from './Nav.astro';
                 <img
                     src={orquesta.src}
                     alt="orquesta picture"
-                    class="h-full rounded-xl object-cover grayscale -z-10"
+                    class="-z-10 h-full rounded-xl object-cover grayscale"
                 />
             </div>
 
