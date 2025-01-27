@@ -12,6 +12,8 @@ import kimmel from '../../img/projects/kimmel.webp';
 import solis from '../../img/projects/solis.webp';
 import eastman from '../../img/projects/eastman.webp';
 import santiago from '../../img/projects/santiago.webp';
+import pane from '../../img/projects/pane.webp';
+import condes from '../../img/projects/condes.webp';
 
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 5;
@@ -45,7 +47,7 @@ const projects = [
         year: '1987-1990',
         room: 'Sala Lírica',
         project: 'Teatro Colón',
-        description: 'El Teatro Colón de Buenos Aires, inaugurado en el año 1908...',
+        description: 'El Teatro Colón de Buenos Aires, inaugurado en el año 1908',
         img: colon,
         anchor: 'Ver más sobre este proyecto',
         href: '/projects/theaters/teatro-colon',
@@ -56,7 +58,7 @@ const projects = [
         year: '1998-2001',
         room: 'Sala Lírica',
         project: 'Teatro Argentino de La Plata',
-        description: 'El nuevo Teatro Argentino de La Plata, re-inaugurado en el año 1999...',
+        description: 'El nuevo Teatro Argentino de La Plata, re-inaugurado en el año 1999',
         img: argentino,
         anchor: 'Ver más sobre este proyecto',
         href: '/projects/theaters/teatro-argentino',
@@ -67,7 +69,7 @@ const projects = [
         year: '2002',
         room: 'Acoustic Canopy System, Verizon Hall',
         project: 'The Kimmel Center for the Performing Arts',
-        description: 'El centro Kimmel para las artes escénicas, inaugurado en el año 2001...',
+        description: 'El centro Kimmel para las artes escénicas, inaugurado en el año 2001',
         img: kimmel,
         anchor: 'Ver más sobre este proyecto',
         href: '/projects/theaters/kimmel-center',
@@ -79,7 +81,7 @@ const projects = [
         room: 'Sala Lírica',
         project: 'Teatro Municipal Solís',
         description:
-            'El Teatro Municipal Solís de Montevideo, Uruguay fue por primera vez inaugurado en el año 1856...',
+            'El Teatro Municipal Solís de Montevideo, Uruguay fue por primera vez inaugurado en el año 1856',
         img: solis,
         anchor: 'Ver más sobre este proyecto',
         href: '/projects/theaters/teatro-solis',
@@ -91,7 +93,7 @@ const projects = [
         room: 'Acoustic Shell System, Kodak Hall',
         project: 'Eastman Theater - Rochester',
         description:
-            'El teatro Eastman, inaugurado en 1922 como centro de música, danza y artes visuales, con su sala principal Kodak Hall...',
+            'El teatro Eastman, inaugurado en 1922 como centro de música, danza y artes visuales, con su sala principal Kodak Hall',
         img: eastman,
         anchor: 'Ver más sobre este proyecto',
         href: '/projects/theaters/eastman-theater',
@@ -103,15 +105,39 @@ const projects = [
         room: 'Sala Lírica',
         project: 'Teatro Municipal de Santiago',
         description:
-            'El Teatro Municipal de Santiago, inaugurado originalmente en el año 1857 y diseñado por el arquitecto François Brunet...',
+            'El Teatro Municipal de Santiago, inaugurado originalmente en el año 1857 y diseñado por el arquitecto François Brunet',
         img: santiago,
         anchor: 'Ver más sobre este proyecto',
         href: '/projects/theaters/teatro-santiago',
     },
+    {
+        id: 'pane',
+        city: 'Asunción, Paraguay',
+        year: '2005-2006',
+        room: 'Sala Lírica',
+        project: 'Teatro Municipal Ignacio A. Pane',
+        description:
+            'El Teatro Municipal Ignacio A. Pane de Paraguay, restaurado en 2005 siguiendo los criterios del edificio original de 1894',
+        img: pane,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/theaters/teatro-pane',
+    },
+    {
+        id: 'condes',
+        city: 'Santiago, Chile',
+        year: '2005-2006',
+        room: 'Sala Lírica',
+        project: 'Teatro Municipal de Las Condes',
+        description:
+            'Inaugurado en el año 2010, El Teatro Municipal de Las Condes, diseñado por los arquitectos Eduardo San Martín y Pedro Gastón Pascal, y que sustituyó al pequeño Teatro Apoquindo; posee una capacidad total de 874 localidades.;',
+        img: condes,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/theaters/teatro-condes',
+    },
 ];
 ---
 
-<Layout description="" title="">
+<Layout description="" title="Proyectos">
     <Base>
         <Header />
         <section class="py-12">

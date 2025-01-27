@@ -2,7 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import video from '../../video/video_colon.mp4';
 import colon from '../../img/colon.webp';
-import Anchor from '../Anchor.astro';
 
 interface Props {
     title?: string;
@@ -21,11 +20,11 @@ const { title, description } = Astro.props;
                 <figure class="">
                     <video
                         poster={colon.src}
-                        src={''}
+                        src={video}
                         autoplay
                         muted
                         playsinline
-                        class="h-[85vh] lg:h-full lg:max-h-screen object-cover w-full">
+                        class="h-[85vh] w-full object-cover object-bottom lg:h-full lg:max-h-screen">
                     </video>
                     <!-- <video
                         id="blur"

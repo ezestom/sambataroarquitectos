@@ -28,7 +28,7 @@ const EmblaCarousel = (props) => {
                   year={project.year}
                   room={project.room}
                   project={project.project}
-                  description={project.description}
+                  description={`${project.description.slice(0, 50)}...`}
                   img={project.img}
                   anchor={project.anchor}
                   href={project.href}

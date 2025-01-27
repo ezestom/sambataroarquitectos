@@ -17,7 +17,7 @@ export function ProjectSlider({ id, city, year, room, project, description, anch
         <div class="">
           <dd class="text-4xl font-thin tracking-tight lg:text-3xl">{year}</dd>
         </div>
-        <h2 class="text-balance text-3xl font-light tracking-tight ">{project}</h2>
+        <h2 class="text-balance text-2xl  lg:text-4xl font-light tracking-tight ">{project}</h2>
 
         <div class="flex flex-1 space-y-6">
           <p class="text-pretty text-base text-primary-950/70 dark:text-primary-200/70">

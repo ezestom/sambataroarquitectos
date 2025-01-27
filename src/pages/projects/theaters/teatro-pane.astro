@@ -1,0 +1,194 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import pane from '../../../img/projects/pane.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import pane1 from '../../../img/projects/pane/pane1.webp';
+import pane2 from '../../../img/projects/pane/pane2.webp';
+import pane3 from '../../../img/projects/pane/pane3.webp';
+import pane4 from '../../../img/projects/pane/pane4.webp';
+import pane5 from '../../../img/projects/pane/pane5.webp';
+import pane6 from '../../../img/projects/pane/pane6.webp';
+import pane7 from '../../../img/projects/pane/pane7.webp';
+import pane8 from '../../../img/projects/pane/pane8.webp';
+import pane9 from '../../../img/projects/pane/pane9.webp';
+import pane10 from '../../../img/projects/pane/pane10.webp';
+import pane11 from '../../../img/projects/pane/pane11.webp';
+import pane12 from '../../../img/projects/pane/pane12.webp';
+import pane13 from '../../../img/projects/pane/pane13.webp';
+import pane14 from '../../../img/projects/pane/pane14.webp';
+import pane15 from '../../../img/projects/pane/pane15.webp';
+import pane16 from '../../../img/projects/pane/pane16.webp';
+import pane17 from '../../../img/projects/pane/pane17.webp';
+import pane18 from '../../../img/projects/pane/pane18.webp';
+import pane19 from '../../../img/projects/pane/pane19.webp';
+import pane20 from '../../../img/projects/pane/pane20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Pdte. Franco, Asunción, Paraguay' },
+    {
+        label: 'Temática',
+        value: 'Proyecto de Remodelación Edilicia y equipamiento de maquinaria escénica',
+    },
+    { label: 'Servicios', value: 'Proyecto licitatorio, ejecutivo e ingeniería de fabricación' },
+    { label: 'Comitente', value: 'Municipalidad de la Ciudad de Asunción' },
+    {
+        label: 'Proyecto de arquitectura general',
+        value: 'Arq. Pablo Capelletti, Arq. Javier Corvalán y Arq. Pedro Espínola Vargas Peña',
+    },
+    { label: 'Localidades', value: '700' },
+    { label: 'Superficie aproximada total', value: '20.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '8.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 1.500.000' },
+    { label: 'Año', value: '2005-2006' },
+    {
+        web: 'http://www.teatromunicipal.com.py/',
+        href: 'http://www.teatromunicipal.com.py/',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: pane1.src,
+        thumbnailURL: pane1.src,
+        width: 849,
+        height: 524,
+    },
+    {
+        largeURL: pane2.src,
+        thumbnailURL: pane2.src,
+        width: 720,
+        height: 480,
+    },
+    {
+        largeURL: pane3.src,
+        thumbnailURL: pane3.src,
+        width: 1024,
+        height: 400,
+    },
+    {
+        largeURL: pane4.src,
+        thumbnailURL: pane4.src,
+        width: 1023,
+        height: 660,
+    },
+    {
+        largeURL: pane5.src,
+        thumbnailURL: pane5.src,
+        width: 994,
+        height: 660,
+    },
+    {
+        largeURL: pane6.src,
+        thumbnailURL: pane6.src,
+        width: 953,
+        height: 660,
+    },
+    {
+        largeURL: pane7.src,
+        thumbnailURL: pane7.src,
+        width: 953,
+        height: 660,
+    },
+    {
+        largeURL: pane8.src,
+        thumbnailURL: pane8.src,
+        width: 953,
+        height: 660,
+    },
+    {
+        largeURL: pane9.src,
+        thumbnailURL: pane9.src,
+        width: 991,
+        height: 660,
+    },
+    {
+        largeURL: pane10.src,
+        thumbnailURL: pane10.src,
+        width: 969,
+        height: 660,
+    },
+    {
+        largeURL: pane11.src,
+        thumbnailURL: pane11.src,
+        width: 969,
+        height: 660,
+    },
+    {
+        largeURL: pane12.src,
+        thumbnailURL: pane12.src,
+        width: 969,
+        height: 660,
+    },
+    {
+        largeURL: pane13.src,
+        thumbnailURL: pane13.src,
+        width: 969,
+        height: 660,
+    },
+    {
+        largeURL: pane14.src,
+        thumbnailURL: pane14.src,
+        width: 969,
+        height: 660,
+    },
+    {
+        largeURL: pane15.src,
+        thumbnailURL: pane15.src,
+        width: 1065,
+        height: 660,
+    },
+    {
+        largeURL: pane16.src,
+        thumbnailURL: pane16.src,
+        width: 1048,
+        height: 660,
+    },
+    {
+        largeURL: pane17.src,
+        thumbnailURL: pane17.src,
+        width: 1052,
+        height: 660,
+    },
+    {
+        largeURL: pane18.src,
+        thumbnailURL: pane18.src,
+        width: 1380,
+        height: 660,
+    },
+    {
+        largeURL: pane19.src,
+        thumbnailURL: pane19.src,
+        width: 965,
+        height: 660,
+    },
+    {
+        largeURL: pane20.src,
+        thumbnailURL: pane20.src,
+        width: 660,
+        height: 660,
+    },
+];
+---
+
+<Layout description="" title="Teatro Municipal Ignacio A. Pane">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="pane"
+            city="Asunción, Paraguay"
+            year="2005-2006"
+            room="Sala Lírica"
+            project="Teatro Municipal Ignacio A. Pane"
+            description1="El Teatro Municipal Ignacio A. Pane de Paraguay, restaurado en 2005 siguiendo los criterios del edificio original de 1894, fue diseñado por los arquitectos Pablo Capelletti, Javier Corvalán y Pedro Espínola Vargas Peña y posee una sala principal con capacidad para 700 espectadores. Su escenario contiene una embocadura de 14 m de ancho por 9 m de alto y una superficie de 225 m², con una altura total de 22m."
+            description2="En este contexto, se realizó un estudio técnico de diagnóstico del edificio para luego desarrollar el proyecto licitatorio y ejecutivo de arquitectura teatral y escenotecnia. Este comprendió parrillas y puentes de maniobras con piso modulado desmontables, sistemas de suspensión motorizados para decorados e iluminación, telón principal con apertura americana, embocadura variable, sistemas de montaje auxiliar, audio y video."
+            img={pane}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

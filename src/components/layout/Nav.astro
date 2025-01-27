@@ -39,17 +39,17 @@ const links = [
 ];
 ---
 
-<nav class="flex flex-col gap-1 divide-y divide-primary-900/10 dark:divide-primary-300/10">
+<nav class="flex flex-col gap-2 divide-y divide-primary-900/10 dark:divide-primary-300/10 ">
     <ul class="flex flex-col gap-1 divide-y divide-primary-900/10 dark:divide-primary-300/10">
         {
             links.map((link) => (
                 <HeaderLink
                     href={link.href}
                     locale={lang}
-                    class="group inline-flex  py-6 text-3xl font-medium tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-primary-200 sm:py-8 sm:text-4xl">
+                    class="group inline-flex  py-4 text-xl font-medium tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-primary-200  sm:text-2xl">
                     <div class="group flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 ">
                         <div class="flex items-center gap-4">
-                            <span class="text-3xl">{link.ref}</span>
+                            <span class="text-xl">{link.ref}</span>
                             <span class="group-hover:opacity-75">{link.name}</span>
                         </div>
                         <svg
