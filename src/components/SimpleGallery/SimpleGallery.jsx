@@ -19,7 +19,7 @@ export function SimpleGallery(props) {
 
   return (
     <div
-      className="pswp-gallery sticky top-0 z-10 grid h-full grid-cols-2 flex-wrap  items-start justify-center gap-2 overflow-x-auto p-4 sm:flex lg:px-4"
+      className="pswp-gallery sticky top-0 z-10 grid h-full grid-cols-2 flex-wrap  items-start justify-center gap-2 overflow-x-auto p-4 sm:flex lg:px-4 w-full"
       id={props.galleryID}
     >
       {props.images.map((image, index) => (
