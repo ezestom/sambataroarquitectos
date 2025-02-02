@@ -1,9 +1,7 @@
 ---
 import orquesta from '../../img/orquesta.webp';
-import GoTop from '../GoTop.astro';
 import LanguagePicker from '../LanguagePicker.astro';
 import Nav from './Nav.astro';
-import music from '../../music/song.mp3';
 import Music from '../Music.astro';
 ---
 
@@ -28,7 +26,7 @@ import Music from '../Music.astro';
         <!-- Actions -->
         <div class="-mr-2 flex w-fit items-center space-x-1">
             <!-- Music -->
-            <Music />
+            <Music transition:persist/>
             <button
                 type="button"
                 class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
