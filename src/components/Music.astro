@@ -1,0 +1,71 @@
+---
+import music from '../music/song.mp3';
+---
+
+<div class="mr-1 flex w-fit items-center">
+    <!-- Music -->
+    <audio id="audio" src={music} loop class="hidden" transition:persist></audio>
+
+    <button
+        id="play"
+        type="button"
+        class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+            ><path
+                fill="none"
+                stroke="currentColor"
+                stroke-dasharray="40"
+                stroke-dashoffset="40"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 6l10 6l-10 6Z"
+                ><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="40;0"
+                ></animate></path
+            ></svg
+        >
+    </button>
+
+    <button
+        id="pause"
+        type="button"
+        class="mx-auto hidden h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
+        <svg
+            class="mx-auto"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            ><g fill="none" stroke="currentColor" stroke-width="2"
+                ><rect width="4" height="16" x="14" y="4" rx="1"></rect><rect
+                    width="4"
+                    height="16"
+                    x="6"
+                    y="4"
+                    rx="1"></rect></g
+            ></svg
+        >
+    </button>
+</div>
+
+<script is:inline>
+    const audio = document.querySelector('#audio');
+    const playButton = document.querySelector('#play');
+    const pauseButton = document.querySelector('#pause');
+
+    playButton?.addEventListener('click', () => {
+        if (audio && audio.paused) {
+            audio.play();
+            playButton.classList.add('hidden');
+            pauseButton.classList.remove('hidden');
+        }
+    });
+
+    pauseButton?.addEventListener('click', () => {
+        if (audio && !audio.paused) {
+            audio.pause();
+            playButton.classList.remove('hidden');
+            pauseButton.classList.add('hidden');
+        }
+    });
+</script>

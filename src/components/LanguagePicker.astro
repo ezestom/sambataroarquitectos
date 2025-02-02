@@ -16,7 +16,7 @@ const otherLocales = Object.values(languages).filter((locale) => locale.code !==
         class="font-base bg-black/50 hover:bg-black/40 group rounded-full text-xl font-semibold transition-all">
         <button
             type="button"
-            class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
+            class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
             aria-expanded="true"
             aria-haspopup="true">
             <!-- <currentLocaleData.flag /> -->
@@ -27,7 +27,7 @@ const otherLocales = Object.values(languages).filter((locale) => locale.code !==
             {
                 otherLocales.map((locale) => (
                     <a
-                        class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
+                        class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
                         href={translatePath(`/${route ? route : ''}`, locale.code)}>
                         {locale.name}
                     </a>

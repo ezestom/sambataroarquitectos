@@ -1,0 +1,331 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import coliseo from '../../../img/projects/coliseo.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import coliseo1 from '../../../img/projects/coliseo/coliseo1.webp';
+import coliseo2 from '../../../img/projects/coliseo/coliseo2.webp';
+import coliseo3 from '../../../img/projects/coliseo/coliseo3.webp';
+import coliseo4 from '../../../img/projects/coliseo/coliseo4.webp';
+import coliseo5 from '../../../img/projects/coliseo/coliseo5.webp';
+import coliseo6 from '../../../img/projects/coliseo/coliseo6.webp';
+import coliseo7 from '../../../img/projects/coliseo/coliseo7.webp';
+import coliseo8 from '../../../img/projects/coliseo/coliseo8.webp';
+import coliseo9 from '../../../img/projects/coliseo/coliseo9.webp';
+import coliseo10 from '../../../img/projects/coliseo/coliseo10.webp';
+import coliseo11 from '../../../img/projects/coliseo/coliseo11.webp';
+import coliseo12 from '../../../img/projects/coliseo/coliseo12.webp';
+import coliseo13 from '../../../img/projects/coliseo/coliseo13.webp';
+import coliseo14 from '../../../img/projects/coliseo/coliseo14.webp';
+import coliseo15 from '../../../img/projects/coliseo/coliseo15.webp';
+import coliseo16 from '../../../img/projects/coliseo/coliseo16.webp';
+import coliseo17 from '../../../img/projects/coliseo/coliseo17.webp';
+import coliseo18 from '../../../img/projects/coliseo/coliseo18.webp';
+import coliseo19 from '../../../img/projects/coliseo/coliseo19.webp';
+import coliseo20 from '../../../img/projects/coliseo/coliseo20.webp';
+import coliseo21 from '../../../img/projects/coliseo/coliseo21.webp';
+import coliseo22 from '../../../img/projects/coliseo/coliseo22.webp';
+import coliseo23 from '../../../img/projects/coliseo/coliseo23.webp';
+import coliseo24 from '../../../img/projects/coliseo/coliseo24.webp';
+import coliseo25 from '../../../img/projects/coliseo/coliseo25.webp';
+import coliseo26 from '../../../img/projects/coliseo/coliseo26.webp';
+import coliseo27 from '../../../img/projects/coliseo/coliseo27.webp';
+import coliseo28 from '../../../img/projects/coliseo/coliseo28.webp';
+import coliseo29 from '../../../img/projects/coliseo/coliseo29.webp';
+import coliseo30 from '../../../img/projects/coliseo/coliseo30.webp';
+import coliseo31 from '../../../img/projects/coliseo/coliseo31.webp';
+import coliseo32 from '../../../img/projects/coliseo/coliseo32.webp';
+import coliseo33 from '../../../img/projects/coliseo/coliseo33.webp';
+import coliseo34 from '../../../img/projects/coliseo/coliseo34.webp';
+import coliseo35 from '../../../img/projects/coliseo/coliseo35.webp';
+import coliseo36 from '../../../img/projects/coliseo/coliseo36.webp';
+import coliseo37 from '../../../img/projects/coliseo/coliseo37.webp';
+import coliseo38 from '../../../img/projects/coliseo/coliseo38.webp';
+import coliseo39 from '../../../img/projects/coliseo/coliseo39.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    {
+        label: 'Ubicación',
+        value: 'Marcelo T. de Alvear 1125, Ciudad Autónoma de Buenos Aires, Argentina',
+    },
+    {
+        label: 'Temática',
+        value: 'Proyecto de Remodelación, Modernización y Equipamiento Escenotécnico',
+    },
+    { label: 'Servicios', value: 'Proyecto ejecutivo y Supervisión de obra' },
+    { label: 'Comitente', value: 'Fundación Cultural Coliseum' },
+    { label: 'Directora ejecutiva', value: 'Elisabetta Riva' },
+    { label: 'Proyecto general escenotécnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Proyecto general de arquitectura teatral', value: 'Arq. Agostina Sambataro' },
+    { label: 'Dirección de obra', value: 'Arq. Sergio Ronzoni' },
+    { label: 'Asesores', value: 'Jose Luis Fioruccio, Sandro Massironi, Ing. Juan Antonio Vargas' },
+    { label: 'Colaboradores', value: 'Arq. María Paz Carvajal, Arq. María Virginia Castro' },
+    { label: 'Visualización arquitectónica digital', value: 'Light-Syndrome' },
+    { label: 'Localidades', value: '1700' },
+    { label: 'Superficie aproximada total', value: '10.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '9.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 4.500.000' },
+    { label: 'Año', value: '2013-2017' },
+    { web: 'http://www.teatrocoliseo.org.ar/', href: 'http://www.teatrocoliseo.org.ar/' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: coliseo1.src,
+        thumbnailURL: coliseo1.src,
+        width: 400,
+        height: 600,
+    },
+    {
+        largeURL: coliseo2.src,
+        thumbnailURL: coliseo2.src,
+        width: 1490,
+        height: 474,
+    },
+    {
+        largeURL: coliseo3.src,
+        thumbnailURL: coliseo3.src,
+        width: 1091,
+        height: 660,
+    },
+    {
+        largeURL: coliseo4.src,
+        thumbnailURL: coliseo4.src,
+        width: 1091,
+        height: 660,
+    },
+    {
+        largeURL: coliseo5.src,
+        thumbnailURL: coliseo5.src,
+        width: 1075,
+        height: 660,
+    },
+    {
+        largeURL: coliseo6.src,
+        thumbnailURL: coliseo6.src,
+        width: 1045,
+        height: 660,
+    },
+    {
+        largeURL: coliseo7.src,
+        thumbnailURL: coliseo7.src,
+        width: 1154,
+        height: 660,
+    },
+    {
+        largeURL: coliseo8.src,
+        thumbnailURL: coliseo8.src,
+        width: 483,
+        height: 726,
+    },
+    {
+        largeURL: coliseo9.src,
+        thumbnailURL: coliseo9.src,
+        width: 483,
+        height: 726,
+    },
+    {
+        largeURL: coliseo10.src,
+        thumbnailURL: coliseo10.src,
+        width: 483,
+        height: 726,
+    },
+    {
+        largeURL: coliseo11.src,
+        thumbnailURL: coliseo11.src,
+        width: 483,
+        height: 726,
+    },
+    {
+        largeURL: coliseo12.src,
+        thumbnailURL: coliseo12.src,
+        width: 791,
+        height: 660,
+    },
+    {
+        largeURL: coliseo13.src,
+        thumbnailURL: coliseo13.src,
+        width: 543,
+        height: 726,
+    },
+    {
+        largeURL: coliseo14.src,
+        thumbnailURL: coliseo14.src,
+        width: 543,
+        height: 726,
+    },
+    {
+        largeURL: coliseo15.src,
+        thumbnailURL: coliseo15.src,
+        width: 543,
+        height: 726,
+    },
+    {
+        largeURL: coliseo16.src,
+        thumbnailURL: coliseo16.src,
+        width: 830,
+        height: 623,
+    },
+    {
+        largeURL: coliseo17.src,
+        thumbnailURL: coliseo17.src,
+        width: 600,
+        height: 623,
+    },
+    {
+        largeURL: coliseo18.src,
+        thumbnailURL: coliseo18.src,
+        width: 936,
+        height: 623,
+    },
+    {
+        largeURL: coliseo19.src,
+        thumbnailURL: coliseo19.src,
+        width: 600,
+        height: 623,
+    },
+    {
+        largeURL: coliseo20.src,
+        thumbnailURL: coliseo20.src,
+        width: 600,
+        height: 600,
+    },
+    {
+        largeURL: coliseo21.src,
+        thumbnailURL: coliseo21.src,
+        width: 1490,
+        height: 619,
+    },
+    {
+        largeURL: coliseo22.src,
+        thumbnailURL: coliseo22.src,
+        width: 600,
+        height: 600,
+    },
+    {
+        largeURL: coliseo23.src,
+        thumbnailURL: coliseo23.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: coliseo24.src,
+        thumbnailURL: coliseo24.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: coliseo25.src,
+        thumbnailURL: coliseo25.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: coliseo26.src,
+        thumbnailURL: coliseo26.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: coliseo27.src,
+        thumbnailURL: coliseo27.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: coliseo28.src,
+        thumbnailURL: coliseo28.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: coliseo29.src,
+        thumbnailURL: coliseo29.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: coliseo30.src,
+        thumbnailURL: coliseo30.src,
+        width: 833,
+        height: 660,
+    },
+    {
+        largeURL: coliseo31.src,
+        thumbnailURL: coliseo31.src,
+        width: 931,
+        height: 623,
+    },
+    {
+        largeURL: coliseo32.src,
+        thumbnailURL: coliseo32.src,
+        width: 456,
+        height: 685,
+    },
+    {
+        largeURL: coliseo33.src,
+        thumbnailURL: coliseo33.src,
+        width: 600,
+        height: 623,
+    },
+    {
+        largeURL: coliseo34.src,
+        thumbnailURL: coliseo34.src,
+        width: 1490,
+        height: 556,
+    },
+    {
+        largeURL: coliseo35.src,
+        thumbnailURL: coliseo35.src,
+        width: 456,
+        height: 685,
+    },
+    {
+        largeURL: coliseo36.src,
+        thumbnailURL: coliseo36.src,
+        width: 923,
+        height: 660,
+    },
+    {
+        largeURL: coliseo37.src,
+        thumbnailURL: coliseo37.src,
+        width: 967,
+        height: 660,
+    },
+    {
+        largeURL: coliseo38.src,
+        thumbnailURL: coliseo38.src,
+        width: 923,
+        height: 660,
+    },
+    {
+        largeURL: coliseo39.src,
+        thumbnailURL: coliseo39.src,
+        width: 970,
+        height: 660,
+    },
+];
+---
+
+<Layout description="" title="Teatro Coliseo">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="coliseo"
+            city="Buenos Aires, Argentina"
+            year="2013-2017"
+            room="Sala de Teatro"
+            project="Teatro Coliseo"
+            description1="El Teatro Coliseo de Buenos Aires es un teatro tradicional con capacidad para 1700 personas, propiedad del Consulado de Italia. Su historia data de fines del siglo XIX, momento a partir del cual tuvo una serie de modificaciones en su fachada y estructura interior, conformando en 1961 la actual impronta, obra del arquitecto Mario Bigongiari. El proyecto de puesta en valor, remodelación, equipamiento y modernización de las instalaciones edilicias que se inició en el año 2013, comenzó a partir de un profundo estudio de relevamiento y diagnóstico que permitió diseñar un proyecto integral abarcando no sólo su caja escénica, sino toda la infraestructura edilicia, tanto en sus aspectos de funcionalidad técnica como estéticos."
+            description2="La renovación fue diseñada y planificada de manera que pueda ser ejecutado en distintas etapas durante los períodos de receso para no interrumpir la actividad del teatro. Dentro de este marco, respetando tanto la arquitectura original como su ambientación, se concretó la reparación completa de los 1250 m2 de fachada y se realizó el interiorismo de la sala de teatro, recomponiendo también sectores que habían sido intervenidos en los últimos años y no favorecían a la funcionalidad de la misma. Todo aquello con sus respectivos proyectos de iluminación, instalación termomecánica y eléctrica totalmente nuevos.La caja escénica se remodeló y modernizó integralmente. Se construyó un nuevo sistema de parrillas y puentes de maniobras que implicaron una estructura metálica de 75.000 kg . El nuevo equipamiento incluyó 30 varas motorizadas automatizadas y sistemas de rieles puntuales motorizados, según normativas internacionales de seguridad.  También un nuevo sistema de accionamiento del telón cortafuego automatizado y nuevo piso de escenario, para el cual se adoptó un criterio de máxima flexibilidad de transformación geométrica que lo convierte en un sistema polifuncional único en Argentina. Se diseñó y fabricó en el país una cámara de concierto modular desarmable que permitió mejorar notablemente la acústica de la sala. El avance en materia de tecnología permitió al teatro recibir producciones internacionales de espectáculos y proveer mayor grado de seguridad tanto para el personal técnico como para artistas."
+            description3="Las áreas de apoyo técnico y artístico fueron proyectadas para devolverle el potencial operativo a la funcionalidad de la planta, creando espacios eficientes y compactos y optimizando cada ambiente y espacios comunes. Dentro del área artística, se realizaron 2 niveles de camarines (con servicio de audio-video escénico y llamado a escena), 2 salas de ensayo y un green room o hall de artistas. Dentro del área de apoyo técnico se remodelaron depósitos, sala de dimmers y sala de control auxiliar, incluyendo la construcción de una bodega especialmente diseñada para el piano."
+            img={coliseo}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

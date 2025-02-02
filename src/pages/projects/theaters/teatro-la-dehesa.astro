@@ -1,0 +1,195 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import dehesa from '../../../img/projects/dehesa.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import dehesa1 from '../../../img/projects/dehesa/dehesa1.webp';
+import dehesa2 from '../../../img/projects/dehesa/dehesa2.webp';
+import dehesa3 from '../../../img/projects/dehesa/dehesa3.webp';
+import dehesa4 from '../../../img/projects/dehesa/dehesa4.webp';
+import dehesa5 from '../../../img/projects/dehesa/dehesa5.webp';
+import dehesa6 from '../../../img/projects/dehesa/dehesa6.webp';
+import dehesa7 from '../../../img/projects/dehesa/dehesa7.webp';
+// import dehesa8 from '../../../img/projects/dehesa/dehesa8.webp';
+import dehesa9 from '../../../img/projects/dehesa/dehesa9.webp';
+import dehesa10 from '../../../img/projects/dehesa/dehesa10.webp';
+import dehesa11 from '../../../img/projects/dehesa/dehesa11.webp';
+import dehesa12 from '../../../img/projects/dehesa/dehesa12.webp';
+import dehesa13 from '../../../img/projects/dehesa/dehesa13.webp';
+import dehesa14 from '../../../img/projects/dehesa/dehesa14.webp';
+import dehesa15 from '../../../img/projects/dehesa/dehesa15.webp';
+import dehesa16 from '../../../img/projects/dehesa/dehesa16.webp';
+import dehesa17 from '../../../img/projects/dehesa/dehesa17.webp';
+import dehesa18 from '../../../img/projects/dehesa/dehesa18.webp';
+import dehesa19 from '../../../img/projects/dehesa/dehesa19.webp';
+import dehesa20 from '../../../img/projects/dehesa/dehesa20.webp';
+import dehesa21 from '../../../img/projects/dehesa/dehesa21.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Santiago, Chile' },
+    { label: 'Temática', value: 'Proyecto de obra nueva' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo de escenotecnia' },
+    { label: 'Comitente', value: 'La Dehesa Holding' },
+    {
+        label: 'Proyecto de arquitectura general',
+        value: 'Bodas, Miami, Anger Arquitectos y Asociados; Soto Arquitectos',
+    },
+    { label: 'Dirección ejecutiva', value: 'Enrique Bordolini' },
+    { label: 'Asesores', value: 'Ing. Juan Antonio Vargas, Ing. Jorge Sommerhoff, Jorge Cárdena' },
+    { label: 'Colaboradores', value: 'Arq. María Paz Carvajal, Arq. Cristina Cordero' },
+    { label: 'Localidades', value: '270' },
+    { label: 'Superficie aproximada intervenida', value: '1.000 m2' },
+    { label: 'Año', value: '2015-2016' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: dehesa1.src,
+        thumbnailURL: dehesa1.src,
+        width: 1465,
+        height: 660,
+    },
+    {
+        largeURL: dehesa2.src,
+        thumbnailURL: dehesa2.src,
+        width: 1465,
+        height: 660,
+    },
+    {
+        largeURL: dehesa3.src,
+        thumbnailURL: dehesa3.src,
+        width: 1465,
+        height: 660,
+    },
+    {
+        largeURL: dehesa4.src,
+        thumbnailURL: dehesa4.src,
+        width: 1465,
+        height: 660,
+    },
+    {
+        largeURL: dehesa5.src,
+        thumbnailURL: dehesa5.src,
+        width: 1465,
+        height: 660,
+    },
+    {
+        largeURL: dehesa6.src,
+        thumbnailURL: dehesa6.src,
+        width: 1465,
+        height: 660,
+    },
+    {
+        largeURL: dehesa7.src,
+        thumbnailURL: dehesa7.src,
+        width: 1465,
+        height: 660,
+    },
+    // {
+    //     largeURL: dehesa8.src,
+    //     thumbnailURL: dehesa8.src,
+    //     width: 1465,
+    //     height: 660,
+    // },
+    {
+        largeURL: dehesa9.src,
+        thumbnailURL: dehesa9.src,
+        width: 809,
+        height: 660,
+    },
+    {
+        largeURL: dehesa10.src,
+        thumbnailURL: dehesa10.src,
+        width: 822,
+        height: 660,
+    },
+    {
+        largeURL: dehesa11.src,
+        thumbnailURL: dehesa11.src,
+        width: 824,
+        height: 660,
+    },
+    {
+        largeURL: dehesa12.src,
+        thumbnailURL: dehesa12.src,
+        width: 807,
+        height: 660,
+    },
+    {
+        largeURL: dehesa13.src,
+        thumbnailURL: dehesa13.src,
+        width: 817,
+        height: 660,
+    },
+    {
+        largeURL: dehesa14.src,
+        thumbnailURL: dehesa14.src,
+        width: 843,
+        height: 660,
+    },
+    {
+        largeURL: dehesa15.src,
+        thumbnailURL: dehesa15.src,
+        width: 1009,
+        height: 660,
+    },
+    {
+        largeURL: dehesa16.src,
+        thumbnailURL: dehesa16.src,
+        width: 840,
+        height: 660,
+    },
+    {
+        largeURL: dehesa17.src,
+        thumbnailURL: dehesa17.src,
+        width: 600,
+        height: 660,
+    },
+    {
+        largeURL: dehesa18.src,
+        thumbnailURL: dehesa18.src,
+        width: 836,
+        height: 660,
+    },
+    {
+        largeURL: dehesa19.src,
+        thumbnailURL: dehesa19.src,
+        width: 856,
+        height: 660,
+    },
+    {
+        largeURL: dehesa20.src,
+        thumbnailURL: dehesa20.src,
+        width: 945,
+        height: 660,
+    },
+    {
+        largeURL: dehesa21.src,
+        thumbnailURL: dehesa21.src,
+        width: 972,
+        height: 660,
+    },
+];
+---
+
+<Layout description="" title="Teatro La Dehesa">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="dehesa"
+            city="Santiago, Chile"
+            year="2015-2016"
+            room="Sala de Teatro"
+            project="Teatro La Dehesa"
+            description1="El complejo La Dehesa, es una edificación multiuso con programa de vivienda, comercio y cultura, ubicado en La Dehesa, Santiago de Chile. Para la sala de espectáculos posicionada en su subsuelo con capacidad para 270 espectadores, se realizó el proyecto completo de arquitectura teatral y escenotecnia."
+            description2="Se incorporó equipamiento escenotécnico para decorados e iluminación escénica y acondicionamiento acústico para canto y orquesta sinfónica. También se proyectaron las áreas de apoyo técnico y artístico y un estudio de isóptica para óptimas visuales del público en la sala."
+            img={dehesa}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

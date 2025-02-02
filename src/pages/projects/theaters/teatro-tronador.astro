@@ -1,0 +1,202 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import tronador from '../../../img/projects/tronador.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import tronador1 from '../../../img/projects/tronador/tronador1.webp';
+import tronador2 from '../../../img/projects/tronador/tronador2.webp';
+import tronador3 from '../../../img/projects/tronador/tronador3.webp';
+import tronador4 from '../../../img/projects/tronador/tronador4.webp';
+import tronador5 from '../../../img/projects/tronador/tronador5.webp';
+import tronador6 from '../../../img/projects/tronador/tronador6.webp';
+import tronador7 from '../../../img/projects/tronador/tronador7.webp';
+import tronador8 from '../../../img/projects/tronador/tronador8.webp';
+import tronador9 from '../../../img/projects/tronador/tronador9.webp';
+import tronador10 from '../../../img/projects/tronador/tronador10.webp';
+import tronador11 from '../../../img/projects/tronador/tronador11.webp';
+import tronador12 from '../../../img/projects/tronador/tronador12.webp';
+import tronador13 from '../../../img/projects/tronador/tronador13.webp';
+import tronador14 from '../../../img/projects/tronador/tronador14.webp';
+import tronador15 from '../../../img/projects/tronador/tronador15.webp';
+import tronador16 from '../../../img/projects/tronador/tronador16.webp';
+import tronador17 from '../../../img/projects/tronador/tronador17.webp';
+import tronador18 from '../../../img/projects/tronador/tronador18.webp';
+import tronador19 from '../../../img/projects/tronador/tronador19.webp';
+import tronador20 from '../../../img/projects/tronador/tronador20.webp';
+import tronador21 from '../../../img/projects/tronador/tronador21.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    {
+        label: 'Ubicación',
+        value: 'Santiago del Estero 1746, Mar del Plata, Buenos Aires, Argentina',
+    },
+    { label: 'Temática', value: 'Proyecto de Remodelación Teatro Tronador' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo de escenotecnia' },
+    { label: 'Comitente', value: 'Marcelo González' },
+    {
+        label: 'Proyecto general de arquitectura',
+        value: 'Arq. Mariano Englebienne, Arq. Leonardo Boccardo',
+    },
+    { label: 'Proyecto general escenotécnico', value: 'Enrique Bordolini, Arq. Alfio Sambataro' },
+    { label: 'Proyecto general de arquitectura teatral', value: 'Arq. Agostina Sambataro' },
+    { label: 'Asesor acústico', value: 'Ing. Jorge Sommerhoff' },
+    { label: 'Colaboradores', value: 'Justo Álvarez, Arq. María Virginia Castro' },
+    { label: 'Visualización arquitectónica digital', value: 'Light-syndrome' },
+    { label: 'Localidades', value: '800' },
+    { label: 'Superficie aproximada intervenida', value: '4.000 m2' },
+    { label: 'Año', value: '2017-2018' },
+    { web: 'http://www.teatrotronador.com.ar/', href: 'http://www.teatrotronador.com.ar/' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: tronador1.src,
+        thumbnailURL: tronador1.src,
+        width: 989,
+        height: 660,
+    },
+    {
+        largeURL: tronador2.src,
+        thumbnailURL: tronador2.src,
+        width: 1428,
+        height: 660,
+    },
+    {
+        largeURL: tronador3.src,
+        thumbnailURL: tronador3.src,
+        width: 1430,
+        height: 660,
+    },
+    {
+        largeURL: tronador4.src,
+        thumbnailURL: tronador4.src,
+        width: 933,
+        height: 660,
+    },
+      {
+         largeURL: tronador5.src,
+         thumbnailURL: tronador5.src,
+         width: 832,
+         height: 660,
+      },
+      {
+         largeURL: tronador6.src,
+         thumbnailURL: tronador6.src,
+         width: 828,
+         height: 660,
+      },
+      {
+         largeURL: tronador7.src,
+         thumbnailURL: tronador7.src,
+         width: 844,
+         height: 660,
+      },
+      {
+         largeURL: tronador8.src,
+         thumbnailURL: tronador8.src,
+         width: 894,
+         height: 660,
+      },
+      {
+         largeURL: tronador9.src,
+         thumbnailURL: tronador9.src,
+         width: 834,
+         height: 660,
+      },
+      {
+         largeURL: tronador10.src,
+         thumbnailURL: tronador10.src,
+         width: 778,
+         height: 660,
+      },
+      {
+         largeURL: tronador11.src,
+         thumbnailURL: tronador11.src,
+         width: 1028,
+         height: 744,
+      },
+      {
+         largeURL: tronador12.src,
+         thumbnailURL: tronador12.src,
+         width: 1013,
+         height: 660,
+      },
+      {
+         largeURL: tronador13.src,
+         thumbnailURL: tronador13.src,
+         width: 879,
+         height: 660,
+      },
+      {
+         largeURL: tronador14.src,
+         thumbnailURL: tronador14.src,
+         width: 847,
+         height: 660,
+      },
+      {
+         largeURL: tronador15.src,
+         thumbnailURL: tronador15.src,
+         width: 1011,
+         height: 660,
+      },
+      {
+         largeURL: tronador16.src,
+         thumbnailURL: tronador16.src,
+         width: 991,
+         height: 660,
+      },
+      {
+         largeURL: tronador17.src,
+         thumbnailURL: tronador17.src,
+         width: 848,
+         height: 660,
+      },
+      {
+         largeURL: tronador18.src,
+         thumbnailURL: tronador18.src,
+         width: 632,
+         height: 660,
+      },
+      {
+         largeURL: tronador19.src,
+         thumbnailURL: tronador19.src,
+         width: 854,
+         height: 660,
+      },
+      {
+         largeURL: tronador20.src,
+         thumbnailURL: tronador20.src,
+         width: 852,
+         height: 660,
+      },
+      {
+         largeURL: tronador21.src,
+         thumbnailURL: tronador21.src,
+         width: 845,
+         height: 660,
+      },
+];
+---
+
+<Layout description="" title="Teatro Tronador">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="tronador"
+            city="Mar del Plata, Buenos Aires"
+            year="2017-2018"
+            room="Sala de Teatro"
+            project="Teatro Tronador"
+            description1="El tradicional teatro de Mar del Plata se remodeló completamente, reconvirtiéndose en una nueva sala de espectáculos con capacidad para 800 personas. El complejo incluyó una escuela de ballet, sede del Instituto Superior de Arte del Teatro Colón.El proyecto escenotécnico abarcó en el área del teatro, el diseño de una renovada caja escénica y equipamiento conteniendo una nueva estructura metálica de 40 toneladas de parrilla y puentes de maniobras. Se incorporaron sistemas de suspensión para decorados y varas de iluminación, motorizados, automatizados, según normativa internacional para uso teatral. Se renovó totalmente el sistema de iluminación escénica que comprende las posiciones de escenario, sala, cabina de control y plataformas de seguidores. El nuevo piso de escenario modulado y completamente desmontable permite realizar múltiples configuraciones facilitando mutaciones a la vista. Adicionalmente contiene un sistema de piso de rebote desmontable con tecnología internacional de primer nivel."
+            description2="Se diseñó un patio de platea y bandeja de palcos con estudio de isóptica para darle una buena visual a cada espectador. El diseño acústico de la sala se realizó por geometría y materialidad. Todas las áreas de apoyo público y artístico, como así también la escuela de ballet, recibieron el tratamiento necesario para lograr los estándares de mitigación de ruido necesarios."
+            description3="El proyecto contempló un sector de apoyo técnico y artístico con camarines individuales, grupales, y para primeras figuras, así como también talleres de vestuario y maquillaje. Dentro del proyecto de arquitectura teatral se ejecutó el programa integral de la escuela de ballet con los correspondientes salones de danza y áreas de apoyo tales como camarines de maestros, kinesiología, sala audiovisual y área administrativa."
+            img={tronador}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

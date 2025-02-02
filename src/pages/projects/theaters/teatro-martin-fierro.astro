@@ -1,0 +1,125 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import fierro from '../../../img/projects/fierro.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import fierro1 from '../../../img/projects/fierro/fierro1.webp';
+import fierro2 from '../../../img/projects/fierro/fierro2.webp';
+import fierro3 from '../../../img/projects/fierro/fierro3.webp';
+import fierro4 from '../../../img/projects/fierro/fierro4.webp';
+import fierro5 from '../../../img/projects/fierro/fierro5.webp';
+import fierro6 from '../../../img/projects/fierro/fierro6.webp';
+import fierro7 from '../../../img/projects/fierro/fierro7.webp';
+import fierro8 from '../../../img/projects/fierro/fierro8.webp';
+import fierro9 from '../../../img/projects/fierro/fierro9.webp';
+import fierro10 from '../../../img/projects/fierro/fierro10.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    {
+        label: 'Ubicación',
+        value: 'Calle Nicolás Cúccolo y Calle Juan Prossi S/N, Paseo del Bosque, La Plata, Buenos Aires, Argentina',
+    },
+    { label: 'Temática', value: 'Proyecto de Restauración del Teatro al aire libre' },
+    { label: 'Servicios', value: 'Proyecto licitatorio de escenotecnia' },
+    { label: 'Comitente', value: 'Gobierno de la Provincia de Buenos Aires' },
+    {
+        label: 'Proyecto general de arquitectura',
+        value: 'Ministerio de Infraestructura, Secretaría de Cultura',
+    },
+    {
+        label: 'Asesores',
+        value: 'Enrique Bordolini, Ing. Juan Antonio Vargas, Arq. Andrés Cumsille',
+    },
+    { label: 'Colaboradores', value: 'Arq. María Virginia Castro' },
+    { label: 'Localidades', value: '2600' },
+    { label: 'Superficie aproximada total', value: '10.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '9.000 m2' },
+    { label: 'Año', value: '2016' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: fierro1.src,
+        thumbnailURL: fierro1.src,
+        width: 1490,
+        height: 564,
+    },
+    {
+        largeURL: fierro2.src,
+        thumbnailURL: fierro2.src,
+        width: 1490,
+        height: 356,
+    },
+    {
+        largeURL: fierro3.src,
+        thumbnailURL: fierro3.src,
+        width: 879,
+        height: 660,
+    },
+    {
+        largeURL: fierro4.src,
+        thumbnailURL: fierro4.src,
+        width: 835,
+        height: 660,
+    },
+      {
+         largeURL: fierro5.src,
+         thumbnailURL: fierro5.src,
+         width: 838,
+         height: 660,
+      },
+      {
+         largeURL: fierro6.src,
+         thumbnailURL: fierro6.src,
+         width: 858,
+         height: 660,
+      },
+      {
+         largeURL: fierro7.src,
+         thumbnailURL: fierro7.src,
+         width: 1003,
+         height: 660,
+      },
+      {
+         largeURL: fierro8.src,
+         thumbnailURL: fierro8.src,
+         width: 1065,
+         height: 744,
+      },
+      {
+         largeURL: fierro9.src,
+         thumbnailURL: fierro9.src,
+         width: 826,
+         height: 660,
+      },
+      {
+         largeURL: fierro10.src,
+         thumbnailURL: fierro10.src,
+         width: 1190,
+         height: 744,
+      },
+];
+---
+
+<Layout description="" title="Teatro Martin Fierro">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="fierro"
+            city="La Plata, Argentina"
+            year="2016"
+            room="Sala al aire libre"
+            project="Teatro Martin Fierro"
+            description1="El Teatro Martín Fierro, comúnmente conocido como “Teatro del Lago” y ubicado en la isla del “Paseo del Lago”, es un espacio al aire libre cuya historia data de principios del siglo XX, período tras el cual se construyó el actual teatro en el año 1949, con capacidad para 2600 espectadores en su platea.En el año 2016 se decidió comenzar un proyecto de modernización y restauración del antiguo teatro. Tras el estudio de diagnóstico, se concluyó que el teatro presentaba un mal estado de conservación, con una serie de modificaciones en su arquitectura que restaba funcionalidad."
+            description2="El proyecto escenotécnico y de arquitectura teatral tuvo entonces como idea rectora la puesta en valor del Teatro, considerando los lineamientos de restauración y refuncionalización. Esto se logró conjugando las necesidades técnicas propias de la especialidad escenotécnica junto con los criterios de intervención de la especialidad de restauración edilicia."
+            description3="La remodelación abarca la caja escénica y dependencias técnicas y artísticas -incluyendo dos pisos de camarines y oficinas- y una nueva sala experimental, devolviendo la funcionalidad al teatro y generando espacios más confortables. Para la caja escénica se incluyó un sistema de parrilla completamente nuevo con equipamiento de maquinaria escenotecnica motorizado; sistemas de iluminación escénica y de plataformas móviles para escenario y foso de orquesta."
+            img={fierro}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

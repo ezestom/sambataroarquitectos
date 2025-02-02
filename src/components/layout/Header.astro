@@ -3,20 +3,22 @@ import orquesta from '../../img/orquesta.webp';
 import GoTop from '../GoTop.astro';
 import LanguagePicker from '../LanguagePicker.astro';
 import Nav from './Nav.astro';
+import music from '../../music/song.mp3';
+import Music from '../Music.astro';
 ---
 
 <header
     id="top"
     x-data="{ open: false }"
-    class="pt-2 transition sm:pt-0"
-    :class="{ 'bg-primary-500/10 dark:bg-primary-400/10 z-20': open, 'bg-transparent dark:bg-transparent': !(open) }">
+    class="fixed inset-x-0 top-0 z-50 px-4 pt-2 transition sm:pt-0 lg:px-0"
+    :class="{ 'bg-primary-200/80  dark:bg-primary-800/80 z-20 backdrop-blur-md': open, 'bg-red-100 dark:bg-red-100': !(open) }">
     <div
-        class="mx-auto flex max-w-2xl items-center justify-between px-4 py-0 sm:px-6 sm:py-1 lg:max-w-7xl lg:px-8 lg:py-2">
+        class="mx-auto flex max-w-2xl items-center justify-between sm:px-6 sm:py-1 lg:max-w-7xl lg:px-8 lg:py-2">
         <!-- Brand logo -->
         <div class="flex">
             <a
                 href="/"
-                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-xl font-semibold text-primary-950 shadow ring-primary-950 transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
+                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-xl font-semibold text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
                 <span class="sr-only">logo sambataro</span>
                  SA
                 <!-- <img class="h-8 w-auto" width="65" height="40" alt="logo" /> -->
@@ -25,10 +27,11 @@ import Nav from './Nav.astro';
 
         <!-- Actions -->
         <div class="-mr-2 flex w-fit items-center space-x-1">
-            <!-- Toggle theme mode -->
+            <!-- Music -->
+            <Music />
             <button
                 type="button"
-                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
+                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
                 x-data
                 @click="$store.theme.toggle()">
                 <span class="sr-only">Toggle theme mode</span>
@@ -61,7 +64,7 @@ import Nav from './Nav.astro';
             <!-- Toggle menu -->
             <button
                 type="button"
-                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
+                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
                 @click="open = !open"
                 @mousedown="if (open) $event.preventDefault()"
                 aria-controls="website-menu"
@@ -118,5 +121,26 @@ import Nav from './Nav.astro';
             <Nav />
         </div>
     </div>
-    <GoTop />
 </header>
+
+<script is:inline>
+    const audio = document.querySelector('#audio');
+    const playButton = document.querySelector('#play');
+    const pauseButton = document.querySelector('#pause');
+
+    playButton?.addEventListener('click', () => {
+        if (audio && audio.paused) {
+            audio.play();
+            playButton.classList.add('hidden');
+            pauseButton.classList.remove('hidden');
+        }
+    });
+
+    pauseButton?.addEventListener('click', () => {
+        if (audio && !audio.paused) {
+            audio.pause();
+            playButton.classList.remove('hidden');
+            pauseButton.classList.add('hidden');
+        }
+    });
+</script>
