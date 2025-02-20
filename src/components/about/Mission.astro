@@ -1,73 +1,86 @@
 ---
+import { Image } from 'astro:assets';
+import Heading from '../../components/about/Heading.astro';
+import orquesta from '../../img/orquesta.webp';
 const stats = [
-  {
-    name: 'Years',
-    value: '9',
-  },
-  {
-    name: 'Experts',
-    value: '15',
-  },
-  {
-    name: 'Projects',
-    value: '122',
-  },
-  {
-    name: 'Awards',
-    value: "'9'",
-  },
+    {
+        name: 'Years',
+        value: '30',
+    },
+    {
+        name: 'Experts',
+        value: '5',
+    },
+    {
+        name: 'Projects',
+        value: '100',
+    },
+    {
+        name: 'Awards',
+        value: "'5'",
+    },
 ];
 ---
 
 <section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
-      <img
-        class="mx-auto h-auto w-full max-w-xl rounded-3xl"
-        width="576"
-        height="864"
-        src="/assets/about.webp"
-        alt="Our experts working together"
-      />
-      <div class="flex flex-col gap-10">
-        <!-- Mission description -->
-        <div class="space-y-8 sm:space-y-12">
-          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our mission</h2>
-          <div class="space-y-6">
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed
-              consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi.
-              Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames
-              senectus vitae.
-            </p>
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem
-              nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet
-              quam urna. Sollicitudin tristique eros erat odio sed vitae, consequat turpis
-              elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat
-              donec laoreet quam urna.
-            </p>
-            <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-              Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies.
-              Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum
-              consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-              fermentum lacus in. Viverra.
-            </p>
-          </div>
-        </div>
+    <Heading title="Estudio" subtitle="Contactanos para más información" />
 
-        <!-- Stats -->
-        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {
-            stats.map((stat) => (
-              <div class="border-primary-900/10 dark:border-primary-300/10 rounded-3xl border p-6">
-                <dt class="text-base">{stat.name}</dt>
-                <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
-              </div>
-            ))
-          }
-        </dl>
-      </div>
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
+        <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+            <Image
+                class="mx-auto h-full w-full max-w-xl rounded-3xl object-cover"
+                src={orquesta}
+                alt="Our experts working together"
+            />
+            <div class="flex flex-col gap-10">
+                <!-- Mission description -->
+                <div class="space-y-8 sm:space-y-12">
+                    <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Historia</h2>
+                    <div class="space-y-6">
+                        <p
+                            class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                            Desde nuestro comienzo en 1987, trabajamos en más de 40 proyectos en 8
+                            países- teatros, centros culturales, escenografías, salas líricas, de
+                            prosa, concert halls, auditorios, arenas, etc. – Sin importar el tamaño
+                            del proyecto, volcamos nuestra experiencia para crear espacios
+                            innovadores, flexibles, y eficientes.
+                        </p>
+                        <p
+                            class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                            En 1987, el escenógrafo Enrique Bordolini junto con arquitecto Alfio
+                            Sambataro, desarrollaron el proyecto escenotécnico en el destacado
+                            Teatro Colón de Buenos Aires, donde se remodeló por completo su caja
+                            escénica. Trabajando tanto en América como en Europa, crecieron y fueron
+                            pioneros en el asesoramiento escenotécnico en Latinoamérica, en
+                            proyectos de gran envergadura. A partir del 2012, tras 30 años de
+                            trayectoria, el estudio se estableció e integró nuevos profesionales
+                            como la arquitecta Agostina Sambataro, incorporándose a nuevos
+                            proyectos.
+                        </p>
+                        <p
+                            class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                            En la última década el estudio se consolidó como uno de los pocos
+                            referentes regionales de la especialización. Actualmente tenemos un
+                            equipo conformado por profesionales argentinos y chilenos; arquitectos,
+                            ingenieros, diseñadores y técnicos, apasionados por hacer edificios
+                            contenedores de arte funcionales a la audiencia, artistas y técnicos por
+                            igual.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    {
+                        stats.map((stat) => (
+                            <div class="rounded-3xl border border-primary-900/10 p-6 dark:border-primary-300/10">
+                                <dt class="text-base">{stat.name}</dt>
+                                <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
+                            </div>
+                        ))
+                    }
+                </dl>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

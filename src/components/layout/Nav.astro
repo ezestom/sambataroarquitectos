@@ -23,13 +23,13 @@ const links = [
     },
     {
         ref: '04',
-        name: t('nav.twitter'),
-        href: 'https://twitter.com/astrodotbuild',
+        name: t('nav.publications'),
+        href: '/publications',
     },
     {
         ref: '05',
-        name: t('nav.pricing'),
-        href: '/pricing',
+        name: t('nav.service'),
+        href: '/service',
     },
     {
         ref: '06',
@@ -39,7 +39,7 @@ const links = [
 ];
 ---
 
-<nav class="flex flex-col gap-2 divide-y divide-primary-900/10 dark:divide-primary-300/10 ">
+<nav class="flex flex-col gap-2 divide-y divide-primary-900/10 dark:divide-primary-300/10">
     <ul class="flex flex-col gap-1 divide-y divide-primary-900/10 dark:divide-primary-300/10">
         {
             links.map((link) => (

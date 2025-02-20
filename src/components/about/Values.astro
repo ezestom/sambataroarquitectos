@@ -1,59 +1,59 @@
 ---
 const values = [
-  [
-    {
-      ref: '01',
-      name: 'Excellence',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    },
-    {
-      ref: '02',
-      name: 'Innovation',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    },
-  ],
-  [
-    {
-      ref: '03',
-      name: 'Teamwork',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    },
-    {
-      ref: '04',
-      name: 'Respect',
-      description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    },
-  ],
+    [
+        {
+            ref: '01',
+            name: 'Experiencia y Trayectoria',
+            description:
+                'Desde 1987, hemos trabajado en más de 40 proyectos en 8 países, desarrollando teatros, centros culturales, auditorios y más. Nuestra experiencia nos permite crear espacios innovadores, flexibles y eficientes.',
+        },
+        {
+            ref: '02',
+            name: 'Innovación en Escenotecnia',
+            description:
+                'Fuimos pioneros en el asesoramiento escenotécnico en Latinoamérica, participando en proyectos de gran envergadura como la remodelación de la caja escénica del Teatro Colón de Buenos Aires.',
+        },
+    ],
+    [
+        {
+            ref: '03',
+            name: 'Equipo Multidisciplinario',
+            description:
+                'Nuestro equipo está conformado por arquitectos, ingenieros, diseñadores y técnicos de Argentina y Chile, todos apasionados por la creación de espacios funcionales para artistas, técnicos y audiencias.',
+        },
+        {
+            ref: '04',
+            name: 'Compromiso con el Arte',
+            description:
+                'Diseñamos edificios que son verdaderos contenedores de arte, asegurando que cada proyecto cumpla con los más altos estándares de funcionalidad y excelencia técnica.',
+        },
+    ],
 ];
 ---
 
 <section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-8 lg:gap-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our Values</h2>
-      <div class="grid gap-8 lg:grid-cols-2">
-        {
-          values.map((column, index) => (
-            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
-              {column.map((value) => (
-                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-                  <p class="text-sm">{value.ref}</p>
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-xl font-medium">{value.name}</h3>
-                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="flex flex-col gap-8 lg:gap-12">
+            <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Nuestros valores</h2>
+            <div class="grid gap-8 lg:grid-cols-2">
+                {
+                    values.map((column, index) => (
+                        <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
+                            {column.map((value) => (
+                                <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+                                    <p class="text-sm">{value.ref}</p>
+                                    <div class="flex flex-col gap-4">
+                                        <h3 class="text-xl font-medium">{value.name}</h3>
+                                        <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                                            {value.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ))
+                }
             </div>
-          ))
-        }
-      </div>
+        </div>
     </div>
-  </div>
 </section>

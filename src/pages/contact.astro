@@ -1,13 +1,16 @@
 ---
 import ContactForm from '../components/contact/ContactForm.astro';
 import ContactInfo from '../components/contact/ContactInfo.astro';
+import Footer from '../components/layout/Footer.astro';
+import Header from '../components/layout/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import Heading from '../components/about/Heading.astro';
 ---
 
-<Layout
-  description="Contact our team to learn more about how we can help you."
-  title="Contact · Stone"
->
-  <ContactInfo />
-  <ContactForm />
+<Layout description="" title="Contacto">
+    <Header />
+    <Heading title="Contacto" subtitle="Contactanos para más información" />
+    <ContactInfo />
+    <ContactForm />
+    <Footer />
 </Layout>
