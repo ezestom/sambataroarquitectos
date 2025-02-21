@@ -13,20 +13,22 @@ import Music from '../Music.astro';
     <div
         class="mx-auto flex max-w-2xl items-center justify-between sm:px-6 sm:py-1 lg:max-w-7xl lg:px-8 lg:py-2">
         <!-- Brand logo -->
-        <div class="flex">
+        <div class="group relative flex items-center transition-all">
             <a
                 href="/"
-                class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-xl font-semibold text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
-                <span class="sr-only">logo sambataro</span>
-                 SA
-                <!-- <img class="h-8 w-auto" width="65" height="40" alt="logo" /> -->
+                class="z-20 inline-flex h-14 w-16 items-center justify-center rounded-md bg-primary-200/50 text-xl font-bold text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:border-2 hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
+                SA
             </a>
+            <span
+                class="border-l-none absolute left-full z-10 ml-2 flex -translate-x-6 transform flex-col justify-center rounded-md border-2 bg-primary-200/50 px-2 py-1 text-base font-bold leading-[1.05rem] text-primary-950 opacity-0 shadow ring-primary-950 drop-shadow backdrop-blur-md transition-all duration-300 group-hover:-translate-x-4 group-hover:opacity-100 dark:text-primary-200 tracking">
+                Sambataro <span> Arquitectos</span>
+            </span>
         </div>
 
         <!-- Actions -->
         <div class="-mr-2 flex w-fit items-center space-x-1">
             <!-- Music -->
-            <Music transition:persist/>
+            <!-- <Music transition:persist/> -->
             <button
                 type="button"
                 class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary-200/50 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75"
@@ -104,15 +106,15 @@ import Music from '../Music.astro';
         x-show="open"
         x-collapse
         x-collapse.duration.500ms>
-        <div class="relative grid grid-cols-1 gap-x-8 py-32 pt-2 lg:grid-cols-2 lg:pt-4">
-            <div
+        <div class="relative grid grid-cols-1 gap-x-8 py-32 pt-2 lg:pt-4">
+            <!-- <div
                 class="hidden w-auto items-center justify-center rounded-xl bg-primary-500/10 object-cover dark:bg-primary-400/10 lg:flex">
                 <img
                     src={orquesta.src}
                     alt="orquesta picture"
                     class="-z-10 h-full rounded-xl object-cover grayscale"
                 />
-            </div>
+            </div> -->
 
             <!-- Navigation -->
 

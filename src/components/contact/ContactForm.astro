@@ -1,3 +1,7 @@
+---
+import { Form } from '../Form/Form.jsx';
+---
+
 <section class="py-16 sm:py-20">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
@@ -10,8 +14,8 @@
                     recibir iniciativas!
                 </p>
             </div>
-            <form action="#" method="POST" class="mt-3 flex flex-col gap-y-6">
-                <!-- Full name input -->
+            <!-- <form action="#" method="POST" class="mt-3 flex flex-col gap-y-6">
+             
                 <div>
                     <label for="full-name" class="sr-only">Full name</label>
                     <input
@@ -24,7 +28,7 @@
                     />
                 </div>
 
-                <!-- Email input -->
+               
                 <div>
                     <label for="email" class="sr-only">Email</label>
                     <input
@@ -37,7 +41,6 @@
                     />
                 </div>
 
-                <!-- Message textarea -->
                 <div>
                     <label for="message" class="sr-only">Message</label>
                     <textarea
@@ -55,7 +58,22 @@
                         Enviar mensaje
                     </button>
                 </div>
-            </form>
+            </form> -->
+            <Form
+                name="Nombre"
+                name_placeholder="John Doe"
+                company={'Empresa'}
+                company_placeholder="Sabataro Arquitectos S.A."
+                email={'Correo Electrónico'}
+                email_placeholder="johndoe@sambataroarquitectos.com"
+                phone={'Teléfono'}
+                phone_placeholder="+54 9 11 1234 5678"
+                message={'Mensaje'}
+                message_placeholder="Hola, me gustaría conocer más sobre sus servicios."
+                send="Enviar"
+                message_2="¡Gracias por contactarnos! Nos pondremos en contacto contigo a la brevedad. 📩"
+                client:visible
+            />
         </div>
     </div>
 </section>

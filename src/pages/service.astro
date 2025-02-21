@@ -103,7 +103,7 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
 <Layout title="Servicio" description="Conoce más sobre nuestro servicio">
     <Header id="top" />
     <section class="py-16 sm:py-20">
-        <Heading title="Servicio" subtitle="Nuestro servicio ofrece" />
+        <Heading title="Servicios" subtitle="Variedad de servicios" />
 
         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
             <div class="mb-12 grid gap-16 lg:grid-cols-2 lg:gap-24">
@@ -143,14 +143,14 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
             </div>
             <div class="grid gap-8 py-12 lg:grid-cols-2">
                 <div
-                    class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+                    class="flex flex-col gap-4 rounded-3xl bg-primary-500/10 p-4 dark:bg-primary-400/10 lg:p-12">
                     <h2 class="text-2xl font-bold lg:text-4xl">{tema1}</h2>
                     <p
                         class="pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion1}
                     </p>
                     <div class="flex flex-col items-center">
-                        <ul class="mb-2 pl-5 text-left text-sm">
+                        <ul class="mb-2 text-left text-sm">
                             {
                                 servicios.map((servicio: string) => (
                                     <li class="text-sm text-primary-950/70 dark:text-primary-200/70 sm:text-base">
@@ -163,14 +163,14 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
                 </div>
 
                 <div
-                    class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+                    class="flex flex-col gap-4 rounded-3xl bg-primary-500/10 p-4 dark:bg-primary-400/10 lg:p-12">
                     <h2 class="text-2xl font-bold lg:text-4xl">{tema2}</h2>
                     <p
                         class="pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion2}
                     </p>
                     <div class="flex flex-col items-center">
-                        <ul class="mb-2 pl-5 text-left text-sm">
+                        <ul class="mb-2 text-left text-sm">
                             {
                                 equipamentos.map((equipamento: string) => (
                                     <li class="text-sm text-primary-950/70 dark:text-primary-200/70 sm:text-base">
@@ -183,14 +183,14 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
                 </div>
             </div>
             <div
-                class="flex max-w-[50%] flex-col items-start justify-start gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+                class="flex flex-col items-start justify-start gap-12 rounded-3xl bg-primary-500/10 p-4 dark:bg-primary-400/10 lg:max-w-[50%] lg:p-12">
                 <h2 class="text-2xl font-bold lg:text-4xl">{tema3}</h2>
                 <p
                     class="text-balance !max-w-[50ch] pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                     {descripcion3}
                 </p>
                 <div class="flex flex-col items-center">
-                    <ul class="mb-2 pl-5 text-left text-sm">
+                    <ul class="mb-2 text-left text-sm">
                         {
                             contenidos.map((contenido: string) => (
                                 <li class="text-sm text-primary-950/70 dark:text-primary-200/70 sm:text-base">
@@ -202,6 +202,6 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
                 </div>
             </div>
         </div>
-        <Footer />
     </section>
+    <Footer />
 </Layout>

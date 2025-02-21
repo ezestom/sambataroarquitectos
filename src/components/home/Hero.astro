@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import video from '../../video/colon2_video_op.mp4';
-import colon from '../../img/colon.webp';
+import colon from '../../img/colon.avif';
 
 interface Props {
     title?: string;
@@ -24,7 +24,7 @@ const { title, description } = Astro.props;
                         autoplay
                         muted
                         playsinline
-                        class="h-[85vh] w-full object-cover object-bottom lg:h-full lg:max-h-screen">
+                        class="h-[85vh] w-full lg:h-full object-cover object-bottom">
                     </video>
                     <!-- <video
                         id="blur"
