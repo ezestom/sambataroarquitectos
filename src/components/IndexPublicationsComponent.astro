@@ -3,19 +3,22 @@ import Base from '../layouts/Base.astro';
 
 const notes = [
     {
-        title: 'Plaza del Agua, un emblema "abandonado"de Mar del Plata',
-        date: 'May 14, 2018 - El Marplatense',
-        images: ['/publications/plaza1.avif'],
+        magazine: 'Revista ARQ',
+        title: '"Renovación a pleno de un ícono cultural marplatense". Artículo sobre la rehabilitación del Teatro Tronador de Mar del Plata. Suplemento de arquitectura del diario Clarín del 20 de marzo de 2018, página 6-9',
+        images: ['/notes/1.webp'],
+        link: '#',
     },
     {
-        title: '“La cantidad de gente que vino demuestra el interés y el impacto”',
-        date: 'Mar 4, 2018 - El Marplatense',
-        images: ['/publications/nelson1.avif'],
+        magazine: 'Revista Summa+',
+        title: '"Renovación de un clásico moderno". Artículo sobre la remodelación del Teatro Coliseo. Revista n°153, páginas 110-111',
+        images: ['/notes/2.webp'],
+        link: '#',
     },
     {
-        title: 'Mar del Plata palpita el histórico concierto de la Filarmónica',
-        date: 'Mar 3, 2018 - El Marplatense',
-        images: ['/publications/fila1.avif'],
+        magazine: 'Revista ARQ',
+        title: 'Publicación proyecto Escuela técnica de la Universidad de Buenos Aires. Revista de arquitectura de la Pontificia Universidad Católica de Chile, n° 86, Abril 2014, página 95',
+        images: ['/notes/3.webp'],
+        link: '#',
     },
 ];
 ---
@@ -27,28 +30,25 @@ const notes = [
                 <ul role="list" class="grid gap-8 lg:grid-cols-3">
                     {
                         notes.map((item, index) => (
-                            <li
-                                class="rounded-3xl  border border-primary-900/10 p-2 dark:border-primary-300/10 ">
+                            <li class="rounded-3xl  border border-primary-900/10 p-2 dark:border-primary-300/10 ">
                                 <div class="flex h-full flex-col justify-start">
                                     {item.images?.[0] && (
                                         <img
-                                            class="mx-auto h-[300px] w-full rounded-2xl object-cover"
+                                            class="mx-auto h-[350px] w-full rounded-2xl bg-transparent object-cover"
                                             src={item.images[0]}
                                             alt={item.title}
                                         />
                                     )}
 
                                     <div class="flex flex-1 flex-col py-2 text-start">
-                                        <date class="text-sm font-light opacity-50">
-                                            {item.date}
-                                        </date>
+                                        <p class="text-sm font-light opacity-50">{item.magazine}</p>
                                         <p class="pb-2 text-base leading-relaxed text-primary-950/70 dark:text-primary-200/70">
                                             {item.title}
                                         </p>
                                     </div>
                                     <a
                                         href="/publications"
-                                        class="flex items-center justify-center w-full rounded-3xl border border-primary-900/10 px-4 py-2 transition hover:bg-primary-200 dark:border-primary-300/10 hover:dark:bg-primary-900/10"
+                                        class="flex w-full items-center justify-center rounded-3xl border border-primary-900/10 px-4 py-2 transition hover:bg-primary-200 dark:border-primary-300/10 hover:dark:bg-primary-900/10"
                                         data-index={index}>
                                         Leer más
                                     </a>

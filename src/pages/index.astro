@@ -5,12 +5,12 @@ import Cta from '../components/home/Cta.astro';
 import Expertise from '../components/home/Expertise.astro';
 import Hero from '../components/home/Hero.astro';
 import Projects from '../components/home/Projects.astro';
-import Notes from '../components/home/Notes.astro';
 import Testimonials from '../components/home/Testimonials.astro';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
 import Layout from '../layouts/Layout.astro';
-import IndexNotesComponent from '../components/IndexNotesComponent.astro';
+import IndexNewsComponent from '../components/IndexNewsComponent.astro';
+import IndexPublicationsComponent from '../components/IndexPublicationsComponent.astro';
 
 const texts = [
     {
@@ -27,8 +27,16 @@ const texts = [
     <Hero title={texts[0].title} description={texts[0].description} />
     <Heading title="Proyectos" subtitle="Selección de los más renombrados" />
     <Projects />
-    <Heading title="Notas y publicaciones" subtitle="de los medios" />
-    <IndexNotesComponent client:load />
+    <Heading
+        title="Noticias"
+        subtitle="Noticias sobre arquitectura teatral y escenotecnia respecto a proyectos realizados por Sambataro Arquitectos"
+    />
+    <IndexNewsComponent client:load />
+    <Heading
+        title="Publicaciones"
+        subtitle="Publicaciones sobre arquitectura teatral y escenotecnia respecto a proyectos realizados por Sambataro Arquitectos"
+    />
+    <IndexPublicationsComponent client:load />
     <!-- <Expertise /> -->
     <!-- <Testimonials /> -->
     <Cta />

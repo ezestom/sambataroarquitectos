@@ -1,0 +1,11 @@
+---
+import NewsComponent from '../components/NewsComponent.astro';
+import Base from '../layouts/Base.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout description="" title="Noticias">
+    <Base>
+        <NewsComponent client:load />
+    </Base>
+</Layout>

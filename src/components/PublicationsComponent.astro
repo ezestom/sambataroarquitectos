@@ -1,0 +1,129 @@
+---
+import Base from '../layouts/Base.astro';
+
+const notes = [
+    {
+        magazine: 'Revista ARQ',
+        title: '"Renovación a pleno de un ícono cultural marplatense". Artículo sobre la rehabilitación del Teatro Tronador de Mar del Plata. Suplemento de arquitectura del diario Clarín del 20 de marzo de 2018, página 6-9',
+        images: ['/notes/1.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista Summa+',
+        title: '"Renovación de un clásico moderno". Artículo sobre la remodelación del Teatro Coliseo. Revista n°153, páginas 110-111',
+        images: ['/notes/2.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: 'Publicación proyecto Escuela técnica de la Universidad de Buenos Aires. Revista de arquitectura de la Pontificia Universidad Católica de Chile, n° 86, Abril 2014, página 95',
+        images: ['/notes/3.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"Recuperación patrimonial con tecnología de punta". Artículo escrito por Agostina Sambataro sobre la remodelación del Teatro Coliseo. Revista n°793, páginas 10-14.',
+        images: ['/notes/4.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"Los arquitectos que vienen". Artículo sobre los ganadores de los premios Clarín-SCA 2013. Tapa de revista de arquitectura 10 de diciembre de 2013, páginas 12-18',
+        images: ['/notes/5.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista Color y Textura',
+        title: 'Publicación proyecto de modernización del teatro Coliseo',
+        images: ['/notes/6.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"Diez historias de vida tras el premio". Artículo sobre la carrera profesional de los ganadores de los premios Clarín-SCA 2013. Revista de arquitectura del 16 de agosto de 2014, páginas 16-18.',
+        images: ['/notes/7.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Diario Clarín',
+        title: '"El Coliseo, un clásico en medio de la renovación". Artículo sobre la remodelación del Teatro Coliseo. Diario Clarín del 15 de mayo del 2014',
+        images: ['/notes/8.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista Diseño & Decoración',
+        title: '"Teatro Coliseo, la restauración". Artículo sobre la remodelación del Teatro Coliseo. Revista de diseño del 2 de noviembre de 2016.',
+        images: ['/notes/9.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"El Coliseo apunto, puesta en valor y nueva tecnología". Artículo sobre la remodelación del Teatro Coliseo. Revista de arquitectura del 17 de mayo de 2016, páginas 20-24.',
+        images: ['/notes/10.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Diario Clarín',
+        title: '"El nuevo Coliseo". "El Teatro Coliseo, renovado y moderno mostró su nueva cara". Artículo sobre la remodelación del Teatro Coliseo. Diario Clarín del 6 de mayo de 2016, página 53',
+        images: ['/notes/11.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Diario Clarín',
+        title: '"El Teatro Tronador, entre la nostalgia y el sueño de un nuevo esplendor". Artículo sobre la rehabilitación del Teatro Tronador de Mar del Plata. Diario del 30 de enero de 2018, página 285',
+        images: ['/notes/12.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Escuela de Ballet de Santiago',
+        title: '"Teatro Municipal: Escuela de Ballet". Publicación sobre la rehabilitación de la Escuela de Ballet de Santiago.',
+        images: ['/notes/13.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Teatro del Lago',
+        title: '"Teatro del Lago: una obra para destacar". Artículo sobre la construcción del Teatro del Lago de Frutillar, Chile.',
+        images: ['/notes/14.webp'],
+        link: '#',
+    },
+];
+---
+
+<Base>
+    <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="flex flex-col gap-12 sm:gap-16">
+                <ul role="list" class="grid gap-8 lg:grid-cols-3">
+                    {
+                        notes.map((item, index) => (
+                            <li class="rounded-3xl  border border-primary-900/10 p-2 dark:border-primary-300/10 ">
+                                <div class="flex h-full flex-col justify-start">
+                                    {item.images?.[0] && (
+                                        <img
+                                            class="mx-auto h-[350px] w-full rounded-2xl bg-transparent object-cover"
+                                            src={item.images[0]}
+                                            alt={item.title}
+                                        />
+                                    )}
+
+                                    <div class="flex flex-1 flex-col py-2 text-start">
+                                        <p class="text-sm font-light opacity-50">{item.magazine}</p>
+                                        <p class="pb-2 text-base leading-relaxed text-primary-950/70 dark:text-primary-200/70">
+                                            {item.title}
+                                        </p>
+                                    </div>
+                                    {/* <a
+                                        href={item.link}
+                                        class="flex w-full items-center justify-center rounded-3xl border border-primary-900/10 px-4 py-2 transition hover:bg-primary-200 dark:border-primary-300/10 hover:dark:bg-primary-900/10"
+                                        data-index={index}>
+                                        Ir a la publicación
+                                    </a> */}
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+</Base>

@@ -1,11 +1,24 @@
 ---
-import NotesComponent from '../components/NotesComponent.astro';
+import Heading from '../components/about/Heading.astro';
+import GoBack from '../components/GoBack.astro';
+import Footer from '../components/layout/Footer.astro';
+import Header from '../components/layout/Header.astro';
+import PublicationsComponent from '../components/PublicationsComponent.astro';
 import Base from '../layouts/Base.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout description="" title="Publicaciones">
     <Base>
-        <NotesComponent client:load />
+        <Header />
+        <GoBack />
+        <div class="mx-auto h-full w-full max-w-2xl px-4 pt-20 sm:px-6 lg:max-w-7xl lg:px-8">
+            <Heading
+                title="Publicaciones"
+                subtitle="Publicaciones sobre arquitectura teatral y escenotecnia respecto a proyectos realizados por Sambataro Arquitectos"
+            />
+            <PublicationsComponent client:load />
+        </div>
+        <Footer />
     </Base>
 </Layout>
