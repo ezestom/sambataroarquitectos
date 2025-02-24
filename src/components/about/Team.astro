@@ -78,7 +78,7 @@ const team2 = [
             <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {
                     team.map((item, index) => (
-                        <li class="rounded-3xl border border-primary-900/10 px-6 py-8 dark:border-primary-300/10">
+                        <li class="rounded-3xl border border-primary-900/10  px-2 lg:px-6 py-8 dark:border-primary-300/10">
                             <div class="space-y-6">
                                 <img
                                     class="mx-auto h-40 w-40 rounded-full object-cover"
@@ -121,7 +121,7 @@ const team2 = [
                                                 />
                                             </svg>
                                         </button>
-                                        <div class="flex h-full flex-col items-center space-y-4 overflow-auto p-8">
+                                        <div class="flex h-full flex-col items-center space-y-4 overflow-auto  lg:p-8">
                                             <img
                                                 class="h-40 w-40 rounded-full  object-cover"
                                                 src={item.image}
@@ -133,7 +133,7 @@ const team2 = [
                                             <p class="text-base font-semibold text-primary-950/70 dark:text-primary-100/70">
                                                 {item.job}
                                             </p>
-                                            <p class="text-balance text-pretty px-8 text-xs text-primary-950/70 dark:text-primary-200/70 lg:text-sm">
+                                            <p class="text-balance text-pretty px-4 lg:px-8 text-xs text-primary-950/70 dark:text-primary-200/70 lg:text-sm">
                                                 {item.full_description}
                                             </p>
                                             <a
