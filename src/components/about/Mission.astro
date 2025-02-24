@@ -27,18 +27,33 @@ const stats = [
 
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
         <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
-            <Image
-                class="mx-auto h-full w-full max-w-xl rounded-3xl object-cover"
-                src={orquesta}
-                alt="Our experts working together"
-            />
+            <div>
+                <Image
+                    class="mx-auto w-full max-w-xl rounded-3xl object-cover"
+                    src={orquesta}
+                    alt="Our experts working together"
+                />
+                <h2 class="py-8 text-3xl font-medium tracking-tight sm:text-4xl">Estudio</h2>
+                <div class="space-y-6">
+                    <p class="text-sm text-primary-950/70 dark:text-primary-200/70 lg:text-base">
+                        Nuestro equipo incluye expertos en el desarrollo de planificación,
+                        patrimonio, arquitectura teatral, escenotecnia y diseño de escenografías
+                        para ópera. Además, contamos con especialistas en ingeniería escénica,
+                        estructural y mecánica; acústica, iluminación escénica, sonido y video.
+                        Tenemos experiencia en operación de teatros, por lo tanto, entendemos las
+                        necesidades artísticas, operacionales, técnicas y comerciales de todo tipo
+                        de salas de espectáculos, áreas de apoyo y edificios complementarios.
+                    </p>
+                </div>
+            </div>
+
             <div class="flex flex-col gap-10">
                 <!-- Mission description -->
                 <div class="space-y-8 sm:space-y-12">
                     <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Historia</h2>
                     <div class="space-y-6">
                         <p
-                            class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                            class="text-sm text-primary-950/70 dark:text-primary-200/70 lg:text-base">
                             Desde nuestro comienzo en 1987, trabajamos en más de 40 proyectos en 8
                             países- teatros, centros culturales, escenografías, salas líricas, de
                             prosa, concert halls, auditorios, arenas, etc. – Sin importar el tamaño
@@ -46,7 +61,7 @@ const stats = [
                             innovadores, flexibles, y eficientes.
                         </p>
                         <p
-                            class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                            class="text-sm text-primary-950/70 dark:text-primary-200/70 lg:text-base">
                             En 1987, el escenógrafo Enrique Bordolini junto con arquitecto Alfio
                             Sambataro, desarrollaron el proyecto escenotécnico en el destacado
                             Teatro Colón de Buenos Aires, donde se remodeló por completo su caja
@@ -58,7 +73,7 @@ const stats = [
                             proyectos.
                         </p>
                         <p
-                            class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
+                            class="text-sm text-primary-950/70 dark:text-primary-200/70 lg:text-base">
                             En la última década el estudio se consolidó como uno de los pocos
                             referentes regionales de la especialización. Actualmente tenemos un
                             equipo conformado por profesionales argentinos y chilenos; arquitectos,
@@ -70,7 +85,7 @@ const stats = [
                 </div>
 
                 <!-- Stats -->
-                <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <!-- <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     {
                         stats.map((stat) => (
                             <div class="rounded-3xl border border-primary-900/10 p-6 dark:border-primary-300/10">
@@ -79,7 +94,7 @@ const stats = [
                             </div>
                         ))
                     }
-                </dl>
+                </dl> -->
             </div>
         </div>
     </div>

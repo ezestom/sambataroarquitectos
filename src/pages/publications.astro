@@ -1,0 +1,11 @@
+---
+import NotesComponent from '../components/NotesComponent.astro';
+import Base from '../layouts/Base.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout description="" title="Publicaciones">
+    <Base>
+        <NotesComponent client:load />
+    </Base>
+</Layout>

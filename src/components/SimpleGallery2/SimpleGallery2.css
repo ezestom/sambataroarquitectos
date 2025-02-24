@@ -1,0 +1,15 @@
+.badge {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  padding: 5px;
+  color: #FFF;
+  background: rgba(0,0,0,0.5);
+  line-height: 1;
+  transition: opacity 100ms linear;
+  font-size: 16px;
+  font-weight: normal;
+}
+.badge--hidden {
+  opacity: 0;
+}
