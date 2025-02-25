@@ -33,24 +33,24 @@ export const ui = {
     'nav.service': 'Servicios',
     'nav.contact': 'Contacto',
   },
-  en: {
-    'nav.home': 'Home',
-    'nav.projects': 'Projects',
-    'nav.about': 'About',
-    'nav.news': 'News',
-    'nav.publications': 'Publications',
-    'nav.service': 'Services',
-    'nav.contact': 'Contact',
-  },
-  de: {
-    'nav.home': 'Startseite',
-    'nav.projects': 'Projekte',
-    'nav.about': 'Über uns',
-    'nav.news': 'Nachrichten',
-    'nav.publications': 'Publikationen',
-    'nav.service': 'Dienstleistungen',
-    'nav.contact': 'Kontakt',
-  },
+  // en: {
+  //   'nav.home': 'Home',
+  //   'nav.projects': 'Projects',
+  //   'nav.about': 'About',
+  //   'nav.news': 'News',
+  //   'nav.publications': 'Publications',
+  //   'nav.service': 'Services',
+  //   'nav.contact': 'Contact',
+  // },
+  // de: {
+  //   'nav.home': 'Startseite',
+  //   'nav.projects': 'Projekte',
+  //   'nav.about': 'Über uns',
+  //   'nav.news': 'Nachrichten',
+  //   'nav.publications': 'Publikationen',
+  //   'nav.service': 'Dienstleistungen',
+  //   'nav.contact': 'Kontakt',
+  // },
 } as const;
 
 // export const showDefaultLang = false;
