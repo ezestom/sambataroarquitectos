@@ -26,6 +26,10 @@ import recoleta from '../../img/projects/recoleta.webp';
 import ciudad from '../../img/projects/ciudad.webp';
 import mistral from '../../img/projects/mistral.webp';
 import cultural from '../../img/projects/cultural.webp';
+import arena from '../../img/projects/arena.webp';
+import ballet from '../../img/projects/ballet.webp';
+import municipal from '../../img/projects/municipal.webp';
+import superior from '../../img/projects/superior.webp';
 
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 5;
@@ -290,6 +294,57 @@ const centers = [
         href: '/projects/centers/cultural-casas',
     },
 ];
+
+const sands = [
+    {
+        id: 'arena',
+        city: 'Santiago, Chile',
+        year: '2005-2006',
+        room: 'Arena',
+        project: 'Arena Santiago',
+        description:
+            'La Arena Santiago es un edificio tipo estadio, con capacidad para 16.500 espectadores, ',
+        img: arena,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/sands/arena-santiago',
+    },
+];
+
+const buildings = [
+    {
+        id: 'ballet',
+        city: 'Santiago, Chile',
+        year: '2013',
+        room: 'Escuela de ballet',
+        project: 'Escuela de ballet de Santiago',
+        description: 'El edificio Moneda 759, adyacente al Teatro Municipal de Santiago ',
+        img: ballet,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/buildings/ballet-santiago',
+    },
+    {
+        id: 'municipal',
+        city: 'Santiago, Chile',
+        year: '2014',
+        room: 'Camarines',
+        project: 'Teatro Municipal de Santiago',
+        description: 'El Teatro Municipal de Santiago, inaugurado originalmente en el año 1857',
+        img: municipal,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/buildings/teatro-municipal',
+    },
+    {
+        id: 'superior',
+        city: 'Mar del Plata, Argentina',
+        year: '2017-2018',
+        room: 'Escuela de ballet',
+        project: 'Instituto Superior de Arte del teatro Colón',
+        description: 'Se ejecutó el programa integral de la escuela de ballet',
+        img: superior,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/buildings/superior-de-arte',
+    },
+];
 ---
 
 <Layout description="" title="Proyectos">
@@ -324,6 +379,29 @@ const centers = [
                     slides={SLIDES}
                     options={OPTIONS}
                     projects={centers}
+                />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[2].title}
+                </h6>
+
+                <EmblaCarousel client:visible slides={SLIDES} options={OPTIONS} projects={sands} />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[3].title}
+                </h6>
+
+                <EmblaCarousel
+                    client:visible
+                    slides={SLIDES}
+                    options={OPTIONS}
+                    projects={buildings}
                 />
             </article>
         </section>

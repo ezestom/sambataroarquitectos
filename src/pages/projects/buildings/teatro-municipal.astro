@@ -1,0 +1,152 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import municipal from '../../../img/projects/municipal.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import municipal1 from '../../../img/projects/municipal/municipal1.webp';
+import municipal2 from '../../../img/projects/municipal/municipal2.webp';
+import municipal3 from '../../../img/projects/municipal/municipal3.webp';
+import municipal4 from '../../../img/projects/municipal/municipal4.webp';
+import municipal5 from '../../../img/projects/municipal/municipal5.webp';
+import municipal6 from '../../../img/projects/municipal/municipal6.webp';
+import municipal7 from '../../../img/projects/municipal/municipal7.webp';
+import municipal8 from '../../../img/projects/municipal/municipal8.webp';
+import municipal9 from '../../../img/projects/municipal/municipal9.webp';
+import municipal10 from '../../../img/projects/municipal/municipal10.webp';
+import municipal11 from '../../../img/projects/municipal/municipal11.webp';
+import municipal12 from '../../../img/projects/municipal/municipal12.webp';
+import municipal13 from '../../../img/projects/municipal/municipal13.webp';
+import municipal14 from '../../../img/projects/municipal/municipal14.webp';
+import municipal15 from '../../../img/projects/municipal/municipal15.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Edificio Complementario' },
+    { label: 'Ubicación', value: 'Agustinas 794, Santiago, Chile' },
+    { label: 'Temática', value: 'Remodelación' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo, Dirección de obra' },
+    { label: 'Comitente', value: 'Municipalidad de Santiago' },
+    { label: 'Proyecto general de arquitectura', value: 'Arq. Alfio Sambataro' },
+    {
+        label: 'Colaboradores',
+        value: 'Arq. María Paz Carvajal V., Carolina Díaz S., Arq. Marcela Durán G., Macarena Aranda J.',
+    },
+    { label: 'Asesores', value: 'Arq. Andrés Cumsille' },
+    { label: 'Año', value: '2014' },
+    { web: 'http://www.municipal.cl/', href: 'http://www.municipal.cl/' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: municipal1.src,
+        thumbnailURL: municipal1.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal2.src,
+        thumbnailURL: municipal2.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal3.src,
+        thumbnailURL: municipal3.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal4.src,
+        thumbnailURL: municipal4.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal5.src,
+        thumbnailURL: municipal5.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal6.src,
+        thumbnailURL: municipal6.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal7.src,
+        thumbnailURL: municipal7.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: municipal8.src,
+        thumbnailURL: municipal8.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal9.src,
+        thumbnailURL: municipal9.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal10.src,
+        thumbnailURL: municipal10.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal11.src,
+        thumbnailURL: municipal11.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal12.src,
+        thumbnailURL: municipal12.src,
+        width: 787,
+        height: 526,
+    },
+    {
+        largeURL: municipal13.src,
+        thumbnailURL: municipal13.src,
+        width: 930,
+        height: 744,
+    },
+    {
+        largeURL: municipal14.src,
+        thumbnailURL: municipal14.src,
+        width: 1301,
+        height: 744,
+    },
+    {
+        largeURL: municipal15.src,
+        thumbnailURL: municipal15.src,
+        width: 1062,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Camarines Teatro Municipal de Santiago">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="municipal"
+            city="Santiago, Chile"
+            year="2014"
+            room="Camarines"
+            project="Camarines Teatro Municipal de Santiago"
+            description1="El Teatro Municipal de Santiago, inaugurado originalmente en el año 1857 y diseñado por el arquitecto François Brunet de Baines y el ingeniero Felipe Augusto Charme de l´Isle, es la Ópera Nacional de Chile y principal escenario para la música clásica del país.El proyecto de remodelación de los camarines del Teatro Municipal de Santiago requirió un relevamiento y estudio de diagnóstico que dio como resultado las soluciones a implementar para transformar los espacios y adecuarlos para que funcionen correctamente."
+            description2="En una primera etapa se realizaron los camarines de la compañía de ballet del Teatro Municipal de Santiago. Se reorganizó el espacio de cada camarín para aprovechar al máximo la superficie disponible, ya que por tratarse de un edificio que es Monumento Histórico Nacional, no se podía modificar la configuración del espacio existente. Se diseñó el amoblamiento completo, especialmente dedicado a la actividad del ballet. Además, se proyectaron los núcleos sanitarios, aumentando su capacidad de uso simultáneo. El proyecto comprendió los camarines de las primeras figuras, co-primarios, de maestros, de cuerpo de ballet y la sala de kinesiología."
+            description3="En una segunda etapa se construyeron los camarines del primero y segundo nivel, refuncionalizando los espacios existentes para que alberguen el equipamiento diseñado a medida para su uso específico. Se remodelaron completamente los núcleos sanitarios. El proyecto comprendió el green room, los camarines de primeras figuras, grupales y sala de maquillaje."
+            img={municipal}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

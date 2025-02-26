@@ -1,0 +1,89 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import superior from '../../../img/projects/superior.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import superior1 from '../../../img/projects/superior/superior1.webp';
+import superior2 from '../../../img/projects/superior/superior2.webp';
+import superior3 from '../../../img/projects/superior/superior3.webp';
+import superior4 from '../../../img/projects/superior/superior4.webp';
+import superior5 from '../../../img/projects/superior/superior5.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Edificio complementario' },
+    {
+        label: 'Ubicación',
+        value: 'Santiago del Estero 1746, Mar del Plata, Buenos Aires, Argentina.',
+    },
+    { label: 'Temática', value: 'Proyecto de Remodelación Teatro Tronador' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo' },
+    { label: 'Comitente', value: 'Marcelo González' },
+    {
+        label: 'Proyecto general de arquitectura',
+        value: 'Arq. Mariano Englebienne, Arq. Leonardo Boccardo',
+    },
+    { label: 'Asesor acústico', value: 'Ing. Jorge Sommerhoff' },
+    { label: 'Colaboradores', value: 'Arq. María Virginia Castro' },
+    { label: 'Superficie aproximada total', value: '4.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '4.000 m2' },
+    { label: 'Año', value: '2017-2018' },
+    {
+        web: 'http://www.teatrocolon.org.ar/es/instituto-superior-de-arte',
+        href: 'http://www.teatrocolon.org.ar/es/instituto-superior-de-arte',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: superior1.src,
+        thumbnailURL: superior1.src,
+        width: 1024,
+        height: 606,
+    },
+    {
+        largeURL: superior2.src,
+        thumbnailURL: superior2.src,
+        width: 1024,
+        height: 571,
+    },
+    {
+        largeURL: superior3.src,
+        thumbnailURL: superior3.src,
+        width: 1024,
+        height: 683,
+    },
+    {
+        largeURL: superior4.src,
+        thumbnailURL: superior4.src,
+        width: 1051,
+        height: 744,
+    },
+    {
+        largeURL: superior5.src,
+        thumbnailURL: superior5.src,
+        width: 1663,
+        height: 711,
+    },
+];
+---
+
+<Layout description="" title="Instituto Superior de Arte del teatro Colón">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="superior"
+            city="Mar del Plata, Argentina"
+            year="2017-2018"
+            room="Escuela de ballet"
+            project="Instituto Superior de Arte del teatro Colón"
+            description1="Dentro del proyecto del complejo teatral completamente remodelado del Teatro Tronador de Mar del Plata se ubica la Sede del Instituto Superior de Arte del Teatro Colón."
+            description2="Se ejecutó el programa integral de la escuela de ballet con los correspondientes salones de danza y áreas de apoyo tales como vestuarios para alumnos, camarines de maestros, kinesiología, sala audiovisual y área administrativa. Se equiparon las salas con un piso de rebote fijo de alta tecnología, espejos sin distorsión de imagen y barrales de danza especialmente diseñados. Los camarines se proyectaron con amoblamiento específico para la actividad y servicios individuales para cada ambiente. Se realizó el acondicionamiento acústico para lograr el adecuado control de ruidos desde el interior hacia el exterior y viceversa."
+            img={superior}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>
