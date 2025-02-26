@@ -22,6 +22,10 @@ import fierro from '../../img/projects/fierro.webp';
 import tronador from '../../img/projects/tronador.webp';
 import libertador from '../../img/projects/libertador.webp';
 import dehesa from '../../img/projects/dehesa.webp';
+import recoleta from '../../img/projects/recoleta.webp';
+import ciudad from '../../img/projects/ciudad.webp';
+import mistral from '../../img/projects/mistral.webp';
+import cultural from '../../img/projects/cultural.webp';
 
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 5;
@@ -48,7 +52,7 @@ const titles = [
     },
 ];
 
-const projects = [
+const theaters = [
     {
         id: 'colon',
         city: 'Buenos Aires, Argentina',
@@ -239,6 +243,53 @@ const projects = [
         href: '/projects/theaters/teatro-la-dehesa',
     },
 ];
+
+const centers = [
+    {
+        id: 'recoleta',
+        city: 'Buenos Aires, Argentina',
+        year: '2016',
+        room: 'Salas el Aleph y Villa Villa',
+        project: 'Centro Cultural Recoleta',
+        description: 'El Centro Cultural Recoleta es un complejo de exhibiciones',
+        img: recoleta,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/centers/cultural-recoleta',
+    },
+    {
+        id: 'ciudad',
+        city: 'Valencia, España',
+        year: '2000-2001',
+        room: 'Palacio de las Artes Reina Sofía',
+        project: 'Ciudad de las Artes y las Ciencias',
+        description: 'La Ciudad de las Artes y las Ciencias, un complejo arquitectónico cultural ',
+        img: ciudad,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/centers/ciudad-de-las-artes',
+    },
+    {
+        id: 'mistral',
+        city: 'Buenos Aires, Argentina',
+        year: '2008-2010 y 2015',
+        room: 'Salas de música, prosa y polifuncional, etapas 1 y 2',
+        project: 'Centro cultural Gabriela Mistral',
+        description: 'El edificio original diseñado por los arquitectos José Covacevic',
+        img: mistral,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/centers/gabriela-mistral',
+    },
+    {
+        id: 'cultural',
+        city: 'Santiago, Chile',
+        year: '2013-2014',
+        room: 'Sala de teatro',
+        project: 'Centro cultural casas de lo Matta',
+        description: 'El actual Centro Cultural Casas de Lo Matta contiene un',
+        img: cultural,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/centers/cultural-casas',
+    },
+];
 ---
 
 <Layout description="" title="Proyectos">
@@ -258,35 +309,21 @@ const projects = [
                     client:visible
                     slides={SLIDES}
                     options={OPTIONS}
-                    projects={projects}
+                    projects={theaters}
                 />
             </article>
 
             <article class="mx-auto py-12 sm:py-24">
                 <h6
                     class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
-                    {titles[0].title}
+                    {titles[1].title}
                 </h6>
 
                 <EmblaCarousel
                     client:visible
                     slides={SLIDES}
                     options={OPTIONS}
-                    projects={projects}
-                />
-            </article>
-
-            <article class="mx-auto py-12 sm:py-24">
-                <h6
-                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
-                    {titles[0].title}
-                </h6>
-
-                <EmblaCarousel
-                    client:visible
-                    slides={SLIDES}
-                    options={OPTIONS}
-                    projects={projects}
+                    projects={centers}
                 />
             </article>
         </section>

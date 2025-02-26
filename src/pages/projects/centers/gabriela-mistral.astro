@@ -1,0 +1,192 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import mistral from '../../../img/projects/mistral.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import mistral1 from '../../../img/projects/mistral/mistral1.webp';
+import mistral2 from '../../../img/projects/mistral/mistral2.webp';
+import mistral3 from '../../../img/projects/mistral/mistral3.webp';
+import mistral4 from '../../../img/projects/mistral/mistral4.webp';
+import mistral5 from '../../../img/projects/mistral/mistral5.webp';
+import mistral6 from '../../../img/projects/mistral/mistral6.webp';
+import mistral7 from '../../../img/projects/mistral/mistral7.webp';
+import mistral8 from '../../../img/projects/mistral/mistral8.webp';
+import mistral9 from '../../../img/projects/mistral/mistral9.webp';
+import mistral10 from '../../../img/projects/mistral/mistral10.webp';
+import mistral11 from '../../../img/projects/mistral/mistral11.webp';
+import mistral12 from '../../../img/projects/mistral/mistral12.webp';
+import mistral13 from '../../../img/projects/mistral/mistral13.webp';
+import mistral14 from '../../../img/projects/mistral/mistral14.webp';
+import mistral15 from '../../../img/projects/mistral/mistral15.webp';
+import mistral16 from '../../../img/projects/mistral/mistral16.webp';
+import mistral17 from '../../../img/projects/mistral/mistral17.webp';
+import mistral18 from '../../../img/projects/mistral/mistral18.webp';
+import mistral19 from '../../../img/projects/mistral/mistral19.webp';
+import mistral20 from '../../../img/projects/mistral/mistral20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Centro Cultural' },
+    { label: 'Ubicación', value: "Av. Libertador Bernardo O'Higgins 227, Santiago, Chile" },
+    { label: 'Temática', value: 'Asesoramiento escenotécnico para la Inspección Fiscal de Diseño' },
+    { label: 'Servicios', value: 'Inspección fiscal de diseño y de obra' },
+    { label: 'Comitente', value: 'Ministerio de Obras Públicas' },
+    {
+        label: 'Proyecto general de arquitectura',
+        value: 'Arq. Cristian Fernández y Lateral Arquitectos',
+    },
+    {
+        label: 'Asesores',
+        value: 'Ing. Jorge Sommerhoff, Ing. Jorge Cárdena, Ing. Juan Antonio Vargas',
+    },
+    { label: 'Localidades', value: '2400' },
+    { label: 'Superficie aproximada total', value: '35.000 m2' },
+    { label: 'Monto aproximado total', value: 'US$ 45.000.000' },
+    { label: 'Año', value: 'Etapa 1- 2008-2010; Etapa 2- 2015' },
+    { web: 'http://www.gam.cl/', href: 'http://www.gam.cl/' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: mistral1.src,
+        thumbnailURL: mistral1.src,
+        width: 1131,
+        height: 727,
+    },
+    {
+        largeURL: mistral2.src,
+        thumbnailURL: mistral2.src,
+        width: 600,
+        height: 743,
+    },
+    {
+        largeURL: mistral3.src,
+        thumbnailURL: mistral3.src,
+        width: 1131,
+        height: 438,
+    },
+    {
+        largeURL: mistral4.src,
+        thumbnailURL: mistral4.src,
+        width: 1131,
+        height: 660,
+    },
+    {
+        largeURL: mistral5.src,
+        thumbnailURL: mistral5.src,
+        width: 1131,
+        height: 660,
+    },
+    {
+        largeURL: mistral6.src,
+        thumbnailURL: mistral6.src,
+        width: 963,
+        height: 531,
+    },
+    {
+        largeURL: mistral7.src,
+        thumbnailURL: mistral7.src,
+        width: 963,
+        height: 475,
+    },
+    {
+        largeURL: mistral8.src,
+        thumbnailURL: mistral8.src,
+        width: 1276,
+        height: 744,
+    },
+    {
+        largeURL: mistral9.src,
+        thumbnailURL: mistral9.src,
+        width: 963,
+        height: 645,
+    },
+    {
+        largeURL: mistral10.src,
+        thumbnailURL: mistral10.src,
+        width: 963,
+        height: 601,
+    },
+    {
+        largeURL: mistral11.src,
+        thumbnailURL: mistral11.src,
+        width: 1582,
+        height: 310,
+    },
+    {
+        largeURL: mistral12.src,
+        thumbnailURL: mistral12.src,
+        width: 1055,
+        height: 707,
+    },
+    {
+        largeURL: mistral13.src,
+        thumbnailURL: mistral13.src,
+        width: 963,
+        height: 634,
+    },
+    {
+        largeURL: mistral14.src,
+        thumbnailURL: mistral14.src,
+        width: 1133,
+        height: 707,
+    },
+    {
+        largeURL: mistral15.src,
+        thumbnailURL: mistral15.src,
+        width: 843,
+        height: 707,
+    },
+    {
+        largeURL: mistral16.src,
+        thumbnailURL: mistral16.src,
+        width: 804,
+        height: 706,
+    },
+    {
+        largeURL: mistral17.src,
+        thumbnailURL: mistral17.src,
+        width: 1663,
+        height: 584,
+    },
+    {
+        largeURL: mistral18.src,
+        thumbnailURL: mistral18.src,
+        width: 1163,
+        height: 338,
+    },
+    {
+        largeURL: mistral19.src,
+        thumbnailURL: mistral19.src,
+        width: 806,
+        height: 707,
+    },
+    {
+        largeURL: mistral20.src,
+        thumbnailURL: mistral20.src,
+        width: 695,
+        height: 707,
+    },
+];
+---
+
+<Layout description="" title="Centro cultural Gabriela Mistral">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="mistral"
+            city="Santiago, Chile"
+            year="2008-2010 y 2015"
+            room="Salas de música, prosa y polifuncional, etapas 1 y 2"
+            project="Centro cultural Gabriela Mistral"
+            description1="El edificio original diseñado por los arquitectos José Covacevic, Hugo Gaggero, Juan Echenique, José Medina y Sergio González Espinoza en el año 1972, fue utilizado por distintos organismos y para diversos usos en el transcurso de los años, hasta que luego del incendio de 2006 se reconstruyó creándose el centro cultural actual. El Centro Cultural Gabriela Mistral inaugurado en el año 2010 cuenta con una sala principal para 2400 espectadores y diez salas para espectáculos, ensayos, exhibición y seminarios; siendo resultado del concurso ganado por los estudios de arquitectura Cristian Fernández y Lateral arquitectos."
+            description2="En el año 2008 se realizó la inspección fiscal de diseño de la Sección 1 completa del proyecto ejecutivo y de las etapas de anteproyecto y proyecto de la Sección 2 para la Dirección Regional Metropolitana de Arquitectura del Ministerio de Obras Públicas. Se revisó toda la documentación gráfica y escrita realizada por el estudio Arq. Cristian Fernández, en lo concerniente a la arquitectura teatral y escenotecnia.Durante la construcción de la etapa 1 de la habilitación del Centro Cultural, se realizó la inspección de obra para la especialidad escenotecnia.Sala polifuncional, Santiago de Chile, 2015"
+            decription3="En el año 2015 se realizó la Inspección Fiscal de diseño para la Dirección Regional Metropolitana de Arquitectura del Ministerio de Obras Públicas, del proyecto del estudio del Arq. Cristián Fernández en la especialidad escenotécnica y de arquitectura teatral con análisis de documentación gráfica y especificaciones técnicas para licitación pública de la etapa 2."
+            img={mistral}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

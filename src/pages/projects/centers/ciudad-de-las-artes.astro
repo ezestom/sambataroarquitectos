@@ -1,0 +1,85 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import ciudad from '../../../img/projects/ciudad.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import ciudad1 from '../../../img/projects/ciudad/ciudad1.webp';
+import ciudad2 from '../../../img/projects/ciudad/ciudad2.webp';
+import ciudad3 from '../../../img/projects/ciudad/ciudad3.webp';
+import ciudad4 from '../../../img/projects/ciudad/ciudad4.webp';
+import ciudad5 from '../../../img/projects/ciudad/ciudad5.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Centro cultural' },
+    { label: 'Ubicación', value: 'Av. del Professor López Piñero, Valencia, España' },
+    { label: 'Temática', value: 'Proyecto de obra nueva Palacio de las Artes Reina Sofia' },
+    {
+        label: 'Servicios',
+        value: 'Anteproyecto licitatorio de sistema de maquinaria escénica de piso y rigging',
+    },
+    { label: 'Comitente', value: 'Hoffend & Sons, Inc. Rochester New York' },
+    {
+        label: 'Proyecto general de arquitectura',
+        value: 'Ing. Santiago Calatrava y Arq. Félix Candela',
+    },
+    { label: 'Localidades', value: '1500' },
+    { label: 'Superficie aproximada Palacio de las Artes', value: '60.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '15.000 m2' },
+    { label: 'Año', value: '2000-2001' },
+    { web: 'http://www.cac.es/es/home.html', href: 'http://www.cac.es/es/home.html' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: ciudad1.src,
+        thumbnailURL: ciudad1.src,
+        width: 950,
+        height: 633,
+    },
+    {
+        largeURL: ciudad2.src,
+        thumbnailURL: ciudad2.src,
+        width: 1323,
+        height: 744,
+    },
+    {
+        largeURL: ciudad3.src,
+        thumbnailURL: ciudad3.src,
+        width: 1150,
+        height: 744,
+    },
+    {
+        largeURL: ciudad4.src,
+        thumbnailURL: ciudad4.src,
+        width: 686,
+        height: 744,
+    },
+    {
+        largeURL: ciudad5.src,
+        thumbnailURL: ciudad5.src,
+        width: 745,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Ciudad de las Artes y las Ciencias">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="ciudad"
+            city="Valencia, España"
+            year="2000-2001"
+            room="Palacio de las Artes Reina Sofía"
+            project="Ciudad de las Artes y las Ciencias"
+            description1="La Ciudad de las Artes y las Ciencias, un complejo arquitectónico cultural y de entretenimiento inaugurado en el año 1998 y diseñado por el ingeniero Santiago Calatrava y el arquitecto Félix Candela, conforma una de las construcciones de arte moderno más importantes del mundo. Su teatro de la ópera de Valencia, el Palacio de las Artes Reina Sofía, fue inaugurado en 2005 y posee una capacidad para 1481 personas en su sala principal."
+            description2="El proyecto realizado incluyó la realización del anteproyecto para la oferta de licitación de maquinaria escenotécnica con sistemas de rigging y grandes plataformas escénicas. En retro escena se colocaron 2 montacargas laterales para vehículos pesados y grandes volúmenes de 17x4m y un rear wagon. También se montó una plataforma principal de 18x18m con 9 subplataformas, 8 carras laterales – 4 por hombro -  con sistema de ecualización de niveles de piso y 4 plataformas para foso de orquesta. El sistema de rigging contó con varas motorizadas automatizadas y sistemas auxiliares de montaje."
+            img={ciudad}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>
