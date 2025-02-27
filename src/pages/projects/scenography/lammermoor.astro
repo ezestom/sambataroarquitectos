@@ -1,0 +1,70 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import lammermoor from '../../../img/projects/lammermoor.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import lammermoor1 from '../../../img/projects/lammermoor/lammermoor1.webp';
+import lammermoor2 from '../../../img/projects/lammermoor/lammermoor2.webp';
+import lammermoor3 from '../../../img/projects/lammermoor/lammermoor3.webp';
+import lammermoor4 from '../../../img/projects/lammermoor/lammermoor4.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Municipal de Santiago, Santiago, Chile' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Stefano Vizioli' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Año', value: '2005' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: lammermoor1.src,
+        thumbnailURL: lammermoor1.src,
+        width: 1168,
+        height: 744,
+    },
+    {
+        largeURL: lammermoor2.src,
+        thumbnailURL: lammermoor2.src,
+        width: 1125,
+        height: 744,
+    },
+    {
+        largeURL: lammermoor3.src,
+        thumbnailURL: lammermoor3.src,
+        width: 1310,
+        height: 744,
+    },
+    {
+        largeURL: lammermoor4.src,
+        thumbnailURL: lammermoor4.src,
+        width: 1321,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Lucia di Lammermoor">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="lammermoor"
+            city="Santiago, Chile"
+            year="2005"
+            room="Teatro Municipal de Santiago"
+            project="Lucia di Lammermoor"
+            description1="Ópera en tres actos con música de Gaetano Donizetti y libreto en italiano de Salvatore Cammarano, basado en la novela The Bride of Lammermoor de Sir Walter Scott, estrenada en 1835."
+            description2="El proyecto de la producción escenográfica para el Teatro Municipal de Santiago, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={lammermoor}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

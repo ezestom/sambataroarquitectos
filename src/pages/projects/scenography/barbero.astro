@@ -1,0 +1,120 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import barbero from '../../../img/projects/barbero.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import barbero1 from '../../../img/projects/barbero/barbero1.webp';
+import barbero2 from '../../../img/projects/barbero/barbero2.webp';
+import barbero3 from '../../../img/projects/barbero/barbero3.webp';
+import barbero4 from '../../../img/projects/barbero/barbero4.webp';
+import barbero5 from '../../../img/projects/barbero/barbero5.webp';
+import barbero6 from '../../../img/projects/barbero/barbero6.webp';
+import barbero7 from '../../../img/projects/barbero/barbero7.webp';
+import barbero8 from '../../../img/projects/barbero/barbero8.webp';
+import barbero9 from '../../../img/projects/barbero/barbero9.webp';
+import barbero10 from '../../../img/projects/barbero/barbero10.webp';
+import barbero11 from '../../../img/projects/barbero/barbero11.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Municipal de Santiago, Santiago, Chile' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Eric Vigié' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2002' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: barbero1.src,
+        thumbnailURL: barbero1.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero2.src,
+        thumbnailURL: barbero2.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero3.src,
+        thumbnailURL: barbero3.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero4.src,
+        thumbnailURL: barbero4.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero5.src,
+        thumbnailURL: barbero5.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero6.src,
+        thumbnailURL: barbero6.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero7.src,
+        thumbnailURL: barbero7.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero8.src,
+        thumbnailURL: barbero8.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero9.src,
+        thumbnailURL: barbero9.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: barbero10.src,
+        thumbnailURL: barbero10.src,
+        width: 782,
+        height: 744,
+    },
+    {
+        largeURL: barbero11.src,
+        thumbnailURL: barbero11.src,
+        width: 600,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="barbero">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="barbero"
+            city="Bógota, Colombia"
+            year="2002"
+            room="Ópera de Colombia"
+            project="Barbero de Sevilla"
+            description1="La ópera bufa en dos actos con música de Gioachino Rossini y libreto de Cesare Sterbini, basado en la comedia de Pierre-Augustin de Beaumarchais, fue estrenada originalmente en 1816."
+            description2="El proyecto de la producción escenográfica para la Ópera de Colombia del año 2002 incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={barbero}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

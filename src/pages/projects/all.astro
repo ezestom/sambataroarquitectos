@@ -30,6 +30,15 @@ import arena from '../../img/projects/arena.webp';
 import ballet from '../../img/projects/ballet.webp';
 import municipal from '../../img/projects/municipal.webp';
 import superior from '../../img/projects/superior.webp';
+import boheme from '../../img/projects/boheme.webp';
+import ernani from '../../img/projects/ernani.webp';
+import turandot from '../../img/projects/turandot.webp';
+import barbero from '../../img/projects/barbero.webp';
+import trovatore from '../../img/projects/trovatore.webp';
+import schicchi from '../../img/projects/schicchi.webp';
+import pagliacci from '../../img/projects/pagliacci.webp';
+import hoffmann from '../../img/projects/hoffmann.webp';
+import lammermoor from '../../img/projects/lammermoor.webp';
 
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 5;
@@ -345,6 +354,111 @@ const buildings = [
         href: '/projects/buildings/superior-de-arte',
     },
 ];
+
+const scenography = [
+    {
+        id: 'boheme',
+        city: 'Buenos Aires, Argentina',
+        year: '1999',
+        room: 'La Bohème de Puccini',
+        project: 'La Bohème de Puccini',
+        description:
+            'Ópera en cuatro actos​ con música de Giacomo Puccini y libreto en italiano de Giuseppe Giacosa',
+        img: boheme,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/boheme',
+    },
+    {
+        id: 'ernani',
+        city: 'Santiago, Chile',
+        year: '2001',
+        room: 'Teatro municipal',
+        project: 'Ernani',
+        description:
+            'Ópera en cuatro actos con música de Giuseppe Verdi y libreto de Francesco María Piave,',
+        img: ernani,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/ernani',
+    },
+    {
+        id: 'turandot',
+        city: 'Bogotá, Colombia',
+        year: '2002',
+        room: 'Opera de Colombia',
+        project: 'Turandot',
+        description: 'Turandot es una ópera en tres actos con música de Giacomo Puccini y',
+        img: turandot,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/turandot',
+    },
+    {
+        id: 'barbero',
+        city: 'Bógota, Colombia',
+        year: '2002',
+        room: 'Ópera de Colombia',
+        project: 'Barbero de Sevilla',
+        description:
+            'La ópera bufa en dos actos con música de Gioachino Rossini y libreto de Cesare Sterbini, basado en la comedia de Pierre',
+        img: barbero,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/barbero',
+    },
+    {
+        id: 'trovatore',
+        city: 'Santiago, Chile',
+        year: '2002',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Il Trovatore',
+        description: 'Il Trovatore es una ópera en cuatro actos con música de Giuseppe Verdi',
+        img: trovatore,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/trovatore',
+    },
+    {
+        id: 'schicchi',
+        city: 'Santiago, Chile',
+        year: '2002',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Gianni Schicchi',
+        description: 'Ópera cómica en un acto con música de Giacomo Puccini y',
+        img: schicchi,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/schicchi',
+    },
+    {
+        id: 'pagliacci',
+        city: 'Santiago, Chile',
+        year: '2003',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Pagliacci',
+        description: '"El drama en dos actos con un prólogo y con música y',
+        img: pagliacci,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/pagliacci',
+    },
+    {
+        id: 'hoffmann',
+        city: 'Quebec, Canadá',
+        year: '2005',
+        room: 'Ópera de Quebec',
+        project: 'Les Contes d Hoffmann',
+        description: 'La ópera en tres actos con música de Jacques Offenbach y',
+        img: hoffmann,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/hoffmann',
+    },
+    {
+        id: 'lammermoor',
+        city: 'Santiago, Chile',
+        year: '2005',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Lucia di Lammermoor',
+        description: 'Ópera en tres actos con música de Gaetano Donizetti y',
+        img: lammermoor,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/scenography/lammermoor',
+    },
+];
 ---
 
 <Layout description="" title="Proyectos">
@@ -402,6 +516,20 @@ const buildings = [
                     slides={SLIDES}
                     options={OPTIONS}
                     projects={buildings}
+                />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[4].title}
+                </h6>
+
+                <EmblaCarousel
+                    client:visible
+                    slides={SLIDES}
+                    options={OPTIONS}
+                    projects={scenography}
                 />
             </article>
         </section>

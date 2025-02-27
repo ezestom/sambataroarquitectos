@@ -1,0 +1,78 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import trovatore from '../../../img/projects/trovatore.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import trovatore1 from '../../../img/projects/trovatore/trovatore1.webp';
+import trovatore2 from '../../../img/projects/trovatore/trovatore2.webp';
+import trovatore3 from '../../../img/projects/trovatore/trovatore3.webp';
+import trovatore4 from '../../../img/projects/trovatore/trovatore4.webp';
+import trovatore5 from '../../../img/projects/trovatore/trovatore5.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Municipal de Santiago, Santiago, Chile' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Eric Vigié' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2002' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: trovatore1.src,
+        thumbnailURL: trovatore1.src,
+        width: 994,
+        height: 516,
+    },
+    {
+        largeURL: trovatore2.src,
+        thumbnailURL: trovatore2.src,
+        width: 994,
+        height: 516,
+    },
+    {
+        largeURL: trovatore3.src,
+        thumbnailURL: trovatore3.src,
+        width: 1139,
+        height: 744,
+    },
+    {
+        largeURL: trovatore4.src,
+        thumbnailURL: trovatore4.src,
+        width: 1291,
+        height: 744,
+    },
+    {
+        largeURL: trovatore5.src,
+        thumbnailURL: trovatore5.src,
+        width: 1291,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Il Trovatore">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="trovatore"
+            city="Santiago, Chile"
+            year="2002"
+            room="Teatro Municipal de Santiago"
+            project="Il Trovatore"
+            description1="Il Trovatore es una ópera en cuatro actos con música de Giuseppe Verdi y libreto en italiano de Salvatore Cammarano, basada en la obra de teatro El trovador de Antonio García Gutiérrez, estrenada en 1853."
+            description2="El proyecto de la producción escenográfica para el Teatro Municipal de Santiago, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={trovatore}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

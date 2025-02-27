@@ -1,0 +1,57 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import pagliacci from '../../../img/projects/pagliacci.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import pagliacci1 from '../../../img/projects/pagliacci/pagliacci1.webp';
+import pagliacci2 from '../../../img/projects/pagliacci/pagliacci2.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Municipal de Santiago, Santiago, Chile' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Willy Landin' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2003' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: pagliacci1.src,
+        thumbnailURL: pagliacci1.src,
+        width: 1097,
+        height: 648,
+    },
+    {
+        largeURL: pagliacci2.src,
+        thumbnailURL: pagliacci2.src,
+        width: 1081,
+        height: 674,
+    },
+];
+---
+
+<Layout description="" title="Pagliacci">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="pagliacci"
+            city="Santiago, Chile"
+            year="2003"
+            room="Teatro Municipal de Santiago"
+            project="Pagliacci"
+            description1="El drama en dos actos con un prólogo y con música y libreto en italiano pertenecen al compositor Ruggero Leoncavallo."
+            description2="El proyecto de la producción escenográfica para el Teatro Municipal de Santiago, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={pagliacci}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>
