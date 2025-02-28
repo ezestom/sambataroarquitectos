@@ -1,0 +1,183 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import maschera from '../../../img/projects/maschera.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import maschera1 from '../../../img/projects/maschera/maschera1.webp';
+import maschera2 from '../../../img/projects/maschera/maschera2.webp';
+import maschera3 from '../../../img/projects/maschera/maschera3.webp';
+import maschera4 from '../../../img/projects/maschera/maschera4.webp';
+import maschera5 from '../../../img/projects/maschera/maschera5.webp';
+import maschera6 from '../../../img/projects/maschera/maschera6.webp';
+import maschera7 from '../../../img/projects/maschera/maschera7.webp';
+import maschera8 from '../../../img/projects/maschera/maschera8.webp';
+import maschera9 from '../../../img/projects/maschera/maschera9.webp';
+import maschera10 from '../../../img/projects/maschera/maschera10.webp';
+import maschera11 from '../../../img/projects/maschera/maschera11.webp';
+import maschera12 from '../../../img/projects/maschera/maschera12.webp';
+import maschera13 from '../../../img/projects/maschera/maschera13.webp';
+import maschera14 from '../../../img/projects/maschera/maschera14.webp';
+import maschera15 from '../../../img/projects/maschera/maschera15.webp';
+import maschera16 from '../../../img/projects/maschera/maschera16.webp';
+import maschera17 from '../../../img/projects/maschera/maschera17.webp';
+import maschera18 from '../../../img/projects/maschera/maschera18.webp';
+import maschera19 from '../../../img/projects/maschera/maschera19.webp';
+import maschera20 from '../../../img/projects/maschera/maschera20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón, Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Eric Vigié' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2008' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: maschera1.src,
+        thumbnailURL: maschera1.src,
+        width: 1020,
+        height: 707,
+    },
+    {
+        largeURL: maschera2.src,
+        thumbnailURL: maschera2.src,
+        width: 1040,
+        height: 707,
+    },
+    {
+        largeURL: maschera3.src,
+        thumbnailURL: maschera3.src,
+        width: 1040,
+        height: 707,
+    },
+    {
+        largeURL: maschera4.src,
+        thumbnailURL: maschera4.src,
+        width: 1040,
+        height: 707,
+    },
+    {
+        largeURL: maschera5.src,
+        thumbnailURL: maschera5.src,
+        width: 1040,
+        height: 707,
+    },
+    {
+        largeURL: maschera6.src,
+        thumbnailURL: maschera6.src,
+        width: 1040,
+        height: 707,
+    },
+    {
+        largeURL: maschera7.src,
+        thumbnailURL: maschera7.src,
+        width: 1040,
+        height: 707,
+    },
+    {
+        largeURL: maschera8.src,
+        thumbnailURL: maschera8.src,
+        width: 1044,
+        height: 529,
+    },
+    {
+        largeURL: maschera9.src,
+        thumbnailURL: maschera9.src,
+        width: 1495,
+        height: 744,
+    },
+    {
+        largeURL: maschera10.src,
+        thumbnailURL: maschera10.src,
+        width: 1498,
+        height: 744,
+    },
+    {
+        largeURL: maschera11.src,
+        thumbnailURL: maschera11.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: maschera12.src,
+        thumbnailURL: maschera12.src,
+        width: 986,
+        height: 744,
+    },
+    {
+        largeURL: maschera13.src,
+        thumbnailURL: maschera13.src,
+        width: 1142,
+        height: 744,
+    },
+    {
+        largeURL: maschera14.src,
+        thumbnailURL: maschera14.src,
+        width: 1142,
+        height: 744,
+    },
+    {
+        largeURL: maschera15.src,
+        thumbnailURL: maschera15.src,
+        width: 1332,
+        height: 744,
+    },
+    {
+        largeURL: maschera16.src,
+        thumbnailURL: maschera16.src,
+        width: 1142,
+        height: 744,
+    },
+    {
+        largeURL: maschera17.src,
+        thumbnailURL: maschera17.src,
+        width: 1182,
+        height: 744,
+    },
+    {
+        largeURL: maschera18.src,
+        thumbnailURL: maschera18.src,
+        width: 1142,
+        height: 744,
+    },
+    {
+        largeURL: maschera19.src,
+        thumbnailURL: maschera19.src,
+        width: 1142,
+        height: 744,
+    },
+    {
+        largeURL: maschera20.src,
+        thumbnailURL: maschera20.src,
+        width: 1142,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Un ballo in Maschera">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="maschera"
+            city="Santiago, Chile"
+            year="2008"
+            room="Teatro municipal de Santiago"
+            project="Un ballo in Maschera"
+            description1="Ópera en tres actos con música de Giuseppe Verdi y libreto en italiano de Antonio Somma, basado en el libreto de Eugène Scribe para la ópera Gustave III de Daniel-François Auber."
+            description2="El proyecto de la producción escenográfica para el Teatro Municipal de Santiago, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={maschera}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

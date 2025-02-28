@@ -1,0 +1,134 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import giovanni from '../../../img/projects/giovanni.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import giovanni1 from '../../../img/projects/giovanni/giovanni1.webp';
+import giovanni2 from '../../../img/projects/giovanni/giovanni2.webp';
+import giovanni3 from '../../../img/projects/giovanni/giovanni3.webp';
+import giovanni4 from '../../../img/projects/giovanni/giovanni4.webp';
+import giovanni5 from '../../../img/projects/giovanni/giovanni5.webp';
+import giovanni6 from '../../../img/projects/giovanni/giovanni6.webp';
+import giovanni7 from '../../../img/projects/giovanni/giovanni7.webp';
+import giovanni8 from '../../../img/projects/giovanni/giovanni8.webp';
+import giovanni9 from '../../../img/projects/giovanni/giovanni9.webp';
+import giovanni10 from '../../../img/projects/giovanni/giovanni10.webp';
+import giovanni11 from '../../../img/projects/giovanni/giovanni11.webp';
+import giovanni12 from '../../../img/projects/giovanni/giovanni12.webp';
+import giovanni13 from '../../../img/projects/giovanni/giovanni13.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón, Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Alejandro Chacón' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Vestuario', value: 'Adán Martínez' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2006' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: giovanni1.src,
+        thumbnailURL: giovanni1.src,
+        width: 1204,
+        height: 744,
+    },
+    {
+        largeURL: giovanni2.src,
+        thumbnailURL: giovanni2.src,
+        width: 923,
+        height: 631,
+    },
+    {
+        largeURL: giovanni3.src,
+        thumbnailURL: giovanni3.src,
+        width: 699,
+        height: 478,
+    },
+    {
+        largeURL: giovanni4.src,
+        thumbnailURL: giovanni4.src,
+        width: 1189,
+        height: 744,
+    },
+    {
+        largeURL: giovanni5.src,
+        thumbnailURL: giovanni5.src,
+        width: 1259,
+        height: 740,
+    },
+    {
+        largeURL: giovanni6.src,
+        thumbnailURL: giovanni6.src,
+        width: 1229,
+        height: 734,
+    },
+    {
+        largeURL: giovanni7.src,
+        thumbnailURL: giovanni7.src,
+        width: 1176,
+        height: 744,
+    },
+    {
+        largeURL: giovanni8.src,
+        thumbnailURL: giovanni8.src,
+        width: 1157,
+        height: 744,
+    },
+    {
+        largeURL: giovanni9.src,
+        thumbnailURL: giovanni9.src,
+        width: 1543,
+        height: 744,
+    },
+    {
+        largeURL: giovanni10.src,
+        thumbnailURL: giovanni10.src,
+        width: 1257,
+        height: 744,
+    },
+    {
+        largeURL: giovanni11.src,
+        thumbnailURL: giovanni11.src,
+        width: 1305,
+        height: 744,
+    },
+    {
+        largeURL: giovanni12.src,
+        thumbnailURL: giovanni12.src,
+        width: 1303,
+        height: 744,
+    },
+    {
+        largeURL: giovanni13.src,
+        thumbnailURL: giovanni13.src,
+        width: 1235,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Don Giovanni">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="giovanni"
+            city="Bogotá, Colombia"
+            year="2006"
+            room="Ópera de Colombia"
+            project="Don Giovanni"
+            description1="Drama jocoso en dos actos con música de Wolfgang Amadeus Mozart y libreto en italiano de Lorenzo da Ponte basado en la obra de Antonio de Zamora. Se estrenó en el Teatro de Praga el 29 de octubre de 1787."
+            description2="El proyecto de la producción escenográfica para la Ópera de Colombia, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={giovanni}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

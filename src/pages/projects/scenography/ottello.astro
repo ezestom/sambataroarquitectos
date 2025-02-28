@@ -1,0 +1,119 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import ottello from '../../../img/projects/ottello.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import ottello1 from '../../../img/projects/ottello/ottello1.webp';
+import ottello2 from '../../../img/projects/ottello/ottello2.webp';
+import ottello3 from '../../../img/projects/ottello/ottello3.webp';
+import ottello4 from '../../../img/projects/ottello/ottello4.webp';
+import ottello5 from '../../../img/projects/ottello/ottello5.webp';
+import ottello6 from '../../../img/projects/ottello/ottello6.webp';
+import ottello7 from '../../../img/projects/ottello/ottello7.webp';
+import ottello8 from '../../../img/projects/ottello/ottello8.webp';
+import ottello9 from '../../../img/projects/ottello/ottello9.webp';
+import ottello10 from '../../../img/projects/ottello/ottello10.webp';
+import ottello11 from '../../../img/projects/ottello/ottello11.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Ópera de Colombia, Bogotá, Colombia' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Rosetta Cucchi' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Adán Martínez' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2005' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: ottello1.src,
+        thumbnailURL: ottello1.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ottello2.src,
+        thumbnailURL: ottello2.src,
+        width: 1280,
+        height: 744,
+    },
+    {
+        largeURL: ottello3.src,
+        thumbnailURL: ottello3.src,
+        width: 1000,
+        height: 598,
+    },
+    {
+        largeURL: ottello4.src,
+        thumbnailURL: ottello4.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ottello5.src,
+        thumbnailURL: ottello5.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ottello6.src,
+        thumbnailURL: ottello6.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ottello7.src,
+        thumbnailURL: ottello7.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ottello8.src,
+        thumbnailURL: ottello8.src,
+        width: 1042,
+        height: 744,
+    },
+    {
+        largeURL: ottello9.src,
+        thumbnailURL: ottello9.src,
+        width: 1317,
+        height: 744,
+    },
+    {
+        largeURL: ottello10.src,
+        thumbnailURL: ottello10.src,
+        width: 1073,
+        height: 744,
+    },
+    {
+        largeURL: ottello11.src,
+        thumbnailURL: ottello11.src,
+        width: 1402,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Ottello">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="ottello"
+            city="Bogotá, Colombia"
+            year="2005"
+            room="Ópera de Colombia"
+            project="Ottello"
+            description1="Con música de Guiseppe Verdi y libreto de Arrigo Boito a partir de la obra de Shakespeare estrenada en el año 1887, el proyecto de la producción escenográfica incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={ottello}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

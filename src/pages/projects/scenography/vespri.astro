@@ -1,0 +1,70 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import vespri from '../../../img/projects/vespri.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import vespri1 from '../../../img/projects/vespri/vespri1.webp';
+import vespri2 from '../../../img/projects/vespri/vespri2.webp';
+import vespri3 from '../../../img/projects/vespri/vespri3.webp';
+import vespri4 from '../../../img/projects/vespri/vespri4.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón, Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Eric Vigié' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Año', value: '2006' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: vespri1.src,
+        thumbnailURL: vespri1.src,
+        width: 722,
+        height: 415,
+    },
+    {
+        largeURL: vespri2.src,
+        thumbnailURL: vespri2.src,
+        width: 722,
+        height: 415,
+    },
+    {
+        largeURL: vespri3.src,
+        thumbnailURL: vespri3.src,
+        width: 722,
+        height: 415,
+    },
+    {
+        largeURL: vespri4.src,
+        thumbnailURL: vespri4.src,
+        width: 722,
+        height: 415,
+    },
+];
+---
+
+<Layout description="" title="Il Vespri Siciliani">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="vespri"
+            city="Buenos Aires, Argentina"
+            year="2006"
+            room="Teatro Colón"
+            project="Il Vespri Siciliani"
+            description1="Ópera en cinco actos con música de Giuseppe Verdi y libreto en francés de Charles Duveyrier y Eugène Scribe a partir de su obra Le duc d'Albe, estrenada en 1855."
+            description2="El proyecto de la producción escenográfica para el Teatro Colón del año 2006, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={vespri}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

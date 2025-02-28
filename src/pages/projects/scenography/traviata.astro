@@ -1,0 +1,113 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import traviata from '../../../img/projects/traviata.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import traviata1 from '../../../img/projects/traviata/traviata1.webp';
+import traviata2 from '../../../img/projects/traviata/traviata2.webp';
+import traviata3 from '../../../img/projects/traviata/traviata3.webp';
+import traviata4 from '../../../img/projects/traviata/traviata4.webp';
+import traviata5 from '../../../img/projects/traviata/traviata5.webp';
+import traviata6 from '../../../img/projects/traviata/traviata6.webp';
+import traviata7 from '../../../img/projects/traviata/traviata7.webp';
+import traviata8 from '../../../img/projects/traviata/traviata8.webp';
+import traviata9 from '../../../img/projects/traviata/traviata9.webp';
+import traviata10 from '../../../img/projects/traviata/traviata10.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón, Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Eric Vigié' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2007' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: traviata1.src,
+        thumbnailURL: traviata1.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: traviata2.src,
+        thumbnailURL: traviata2.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: traviata3.src,
+        thumbnailURL: traviata3.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: traviata4.src,
+        thumbnailURL: traviata4.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: traviata5.src,
+        thumbnailURL: traviata5.src,
+        width: 1202,
+        height: 744,
+    },
+    {
+        largeURL: traviata6.src,
+        thumbnailURL: traviata6.src,
+        width: 1269,
+        height: 744,
+    },
+    {
+        largeURL: traviata7.src,
+        thumbnailURL: traviata7.src,
+        width: 1246,
+        height: 744,
+    },
+    {
+        largeURL: traviata8.src,
+        thumbnailURL: traviata8.src,
+        width: 1269,
+        height: 744,
+    },
+    {
+        largeURL: traviata9.src,
+        thumbnailURL: traviata9.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: traviata10.src,
+        thumbnailURL: traviata10.src,
+        width: 1282,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="La Traviata">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="traviata"
+            city="Buenos Aires, Argentina"
+            year="2007"
+            room="Teatro Colón"
+            project="La Traviata"
+            description1="La traviata es una ópera en tres actos con música de Giuseppe Verdi y libreto en italiano de Francesco Maria Piave, basado en la novela de Alexandre Dumas.`La dame aux camélias` "
+            description2="El proyecto de la producción escenográfica para el Teatro Colón, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={traviata}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>
