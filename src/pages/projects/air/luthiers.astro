@@ -1,0 +1,61 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import luthiers from '../../../img/projects/luthiers.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import luthiers1 from '../../../img/projects/luthiers/luthiers1.webp';
+import luthiers2 from '../../../img/projects/luthiers/luthiers2.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenarios y Producciones al Aire libre' },
+    {
+        label: 'Ubicación',
+        value: 'Predio del Monumento a Güemes, Ciudad Autónoma de Buenos Aires, Argentina',
+    },
+    { label: 'Producción general', value: 'Lino Patalano' },
+    { label: 'Artistas', value: 'Les Luthiers' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo y Dirección técnica de producción' },
+    { label: 'Comitente', value: 'Lino Patalano' },
+    {
+        label: 'Proyecto escenotécnico',
+        value: 'Tina Di Sarcina, Sandro Massironi, Arq. Alfio Sambataro',
+    },
+    { label: 'Año', value: '2007' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: luthiers1.src,
+        thumbnailURL: luthiers1.src,
+        width: 1605,
+        height: 744,
+    },
+    {
+        largeURL: luthiers2.src,
+        thumbnailURL: luthiers2.src,
+        width: 992,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Les Luthiers 40 años">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="luthiers"
+            city="Buenos Aires, Argentina"
+            year="2007"
+            room="Aniversario nr 40, Parque Monumento a Güemes"
+            project="Les Luthiers 40 años"
+            description1="Con motivo de sus 40 años de trayectoria artística, el grupo de instrumentos informales Les Luthiers realizó un espectáculo frente a más de 60.000 personas en el predio del Monumento a Güemes, en un espectáculo público y gratuito."
+            description2="En el proyecto de la producción al aire libre se realizaron el diseño y la dirección técnica de la producción, tanto de los sistemas constructivos escénicos como de los sistemas de iluminación, sonido y video."
+            img={luthiers}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

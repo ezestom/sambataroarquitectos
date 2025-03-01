@@ -1,0 +1,69 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import domingo from '../../../img/projects/domingo.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import domingo1 from '../../../img/projects/domingo/domingo1.webp';
+import domingo2 from '../../../img/projects/domingo/domingo2.webp';
+import domingo3 from '../../../img/projects/domingo/domingo3.webp';
+import domingo4 from '../../../img/projects/domingo/domingo4.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenarios y Producciones al Aire libre' },
+    { label: 'Ubicación', value: 'Movistar Arena, Santiago, Chile' },
+    { label: 'Producción general', value: 'Teatro Municipal de Santiago' },
+    { label: 'Artistas', value: 'Plácido Domingo' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo y Dirección técnica de producción' },
+    { label: 'Comitente', value: 'Teatro Municipal de Santiago' },
+    { label: 'Proyecto general de arquitectura', value: 'Enrique Bordolini, Arq. Alfio Sambataro' },
+    { label: 'Año', value: '2012' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: domingo1.src,
+        thumbnailURL: domingo1.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: domingo2.src,
+        thumbnailURL: domingo2.src,
+        width: 540,
+        height: 744,
+    },
+    {
+        largeURL: domingo3.src,
+        thumbnailURL: domingo3.src,
+        width: 1114,
+        height: 744,
+    },
+    {
+        largeURL: domingo4.src,
+        thumbnailURL: domingo4.src,
+        width: 1116,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Plácido Domingo">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="domingo"
+            city="Santiago, Chile"
+            year="2012"
+            room="Concierto en Movistar Arena"
+            project="Plácido Domingo"
+            description1="El reconocido tenor, director de orquesta, compositor y productor español de más de 50 años de trayectoria brindó un concierto en Movistar Arena de Santiago de Chile frente a más de 12.000 personas en un espectáctulo a beneficio."
+            description2="En el proyecto de la producción al aire libre se realizaron el diseño y la dirección técnica de la producción, tanto de los sistemas constructivos escénicos como de los sistemas de iluminación, sonido y video."
+            img={domingo}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

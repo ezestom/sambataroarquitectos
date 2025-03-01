@@ -48,6 +48,10 @@ import maschera from '../../img/projects/maschera.webp';
 import boris from '../../img/projects/boris.webp';
 import soldaten from '../../img/projects/soldaten.webp';
 import egitto from '../../img/projects/egitto.webp';
+import gracias from '../../img/projects/gracias.webp';
+import luthiers from '../../img/projects/luthiers.webp';
+import domingo from '../../img/projects/domingo.webp';
+import orquesta from '../../img/projects/orquesta.webp';
 
 const OPTIONS = { loop: true };
 const SLIDE_COUNT = 5;
@@ -570,6 +574,54 @@ const scenography = [
         href: '/projects/scenography/egitto',
     },
 ];
+
+const air = [
+    {
+        id: 'gracias',
+        city: 'Buenos Aires, Argentina',
+        year: '2007',
+        room: 'Despedida de Julio Bocca, Av. 9 de Julio',
+        project: 'Gracias 2007',
+        description:
+            'Con motivo de su despedida como bailarín profesional, el renombrado Julio Bocca ',
+        img: gracias,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/air/gracias',
+    },
+    {
+        id: 'luthiers',
+        city: 'Buenos Aires, Argentina',
+        year: '2007',
+        room: 'Aniversario nr 40, Parque Monumento a Güemes',
+        project: 'Les Luthiers 40 años',
+        description: 'Con motivo de sus 40 años de trayectoria artística, el grupo de ',
+        img: luthiers,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/air/luthiers',
+    },
+    {
+        id: 'domingo',
+        city: 'Santiago, Chile',
+        year: '2012',
+        room: 'Concierto en Movistar Arena',
+        project: 'Plácido Domingo',
+        description: 'Con motivo de sus 40 años de trayectoria artística, el grupo de ',
+        img: domingo,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/air/domingo',
+    },
+    {
+        id: 'orquesta',
+        city: 'Mar del Plata, Argentina',
+        year: '2018',
+        room: 'Concierto Parque San Martín',
+        project: 'Orquesta Filarmónica de Buenos Aires',
+        description: 'Como parte de la programación de la quinta temporada de Espacio Clarín ',
+        img: orquesta,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/air/orquesta',
+    },
+];
 ---
 
 <Layout description="" title="Proyectos">
@@ -579,7 +631,7 @@ const scenography = [
             <h1>
                 <Heading title="Proyectos" subtitle="" />
             </h1>
-            <article class="mx-auto py-12 sm:py-24">
+            <article class="overlow-hidden max-w-screen mx-auto py-12 sm:py-24">
                 <h6
                     class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
                     {titles[0].title}
@@ -593,7 +645,7 @@ const scenography = [
                 />
             </article>
 
-            <article class="mx-auto py-12 sm:py-24">
+            <article class="overlow-hidden max-w-screen mx-auto py-12 sm:py-24">
                 <h6
                     class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
                     {titles[1].title}
@@ -607,7 +659,7 @@ const scenography = [
                 />
             </article>
 
-            <article class="mx-auto py-12 sm:py-24">
+            <article class="overlow-hidden max-w-screen mx-auto py-12 sm:py-24">
                 <h6
                     class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
                     {titles[2].title}
@@ -616,7 +668,7 @@ const scenography = [
                 <EmblaCarousel client:visible slides={SLIDES} options={OPTIONS} projects={sands} />
             </article>
 
-            <article class="mx-auto py-12 sm:py-24">
+            <article class="overlow-hidden max-w-screen mx-auto py-12 sm:py-24">
                 <h6
                     class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
                     {titles[3].title}
@@ -630,7 +682,7 @@ const scenography = [
                 />
             </article>
 
-            <article class="mx-auto py-12 sm:py-24">
+            <article class="overlow-hidden max-w-screen mx-auto py-12 sm:py-24">
                 <h6
                     class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
                     {titles[4].title}
@@ -642,6 +694,15 @@ const scenography = [
                     options={OPTIONS}
                     projects={scenography}
                 />
+            </article>
+
+            <article class="overlow-hidden max-w-screen mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[5].title}
+                </h6>
+
+                <EmblaCarousel client:visible slides={SLIDES} options={OPTIONS} projects={air} />
             </article>
         </section>
         <Footer />
