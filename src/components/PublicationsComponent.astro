@@ -96,11 +96,11 @@ const notes = [
                 <ul role="list" class="grid gap-8 lg:grid-cols-3">
                     {
                         notes.map((item) => (
-                            <li class="rounded-3xl  border border-primary-900/10 p-2 dark:border-primary-300/10 ">
+                            <li class="rounded-xl bg-primary-200/50 p-2 shadow-md  dark:bg-primary-900">
                                 <div class="flex h-full flex-col justify-start">
                                     {item.images?.[0] && (
                                         <img
-                                            class="mx-auto h-[350px] w-full rounded-2xl bg-transparent object-cover"
+                                            class="mx-auto h-[350px] w-full rounded-md bg-transparent object-cover"
                                             src={item.images[0]}
                                             alt={item.title}
                                         />

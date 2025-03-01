@@ -486,12 +486,11 @@ const publi = [
             <ul role="list" class="grid grid-cols-2 gap-2 lg:grid-cols-4">
                 {
                     publi.map((item, index) => (
-                        <li                            
-                            class="rounded-3xl  border border-primary-900/10 p-2 dark:border-primary-300/10 ">
+                        <li class="rounded-xl bg-primary-200/50 p-2 shadow-md  dark:bg-primary-900">
                             <div class="flex h-full flex-col justify-start">
                                 {item.images?.[0] && (
                                     <img
-                                        class="mx-auto h-[300px] w-full rounded-2xl object-cover"
+                                        class="mx-auto h-[300px] w-full rounded-md object-cover"
                                         src={item.images[0]}
                                         alt={item.title}
                                     />
@@ -504,7 +503,7 @@ const publi = [
                                     </p>
                                 </div>
                                 <button
-                                    class="open-dialog-button mx-auto w-full rounded-3xl border border-primary-900/10 px-4 py-2 transition hover:bg-primary-200 dark:border-primary-300/10 hover:dark:bg-primary-900/10"
+                                    class="open-dialog-button dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400"
                                     data-index={index}>
                                     Leer más
                                 </button>
@@ -533,7 +532,7 @@ const publi = [
                                         <div class="flex h-full  flex-col items-center overflow-y-auto p-4">
                                             <div class="grid w-full grid-cols-2  place-items-center items-center gap-2 lg:grid-cols-3">
                                                 {item.images?.map((image) => (
-                                                    <img                                        
+                                                    <img
                                                         class="mx-auto h-[200px] w-full rounded-2xl object-cover lg:h-[300px] "
                                                         src={image}
                                                         alt={image}
@@ -552,7 +551,7 @@ const publi = [
                                             <a
                                                 href={item.link}
                                                 target="_blank"
-                                                class="inline-flex h-12 items-center justify-center rounded-full bg-primary-200/50 p-2 px-8 text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
+                                                class="dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400">
                                                 Ir a la nota
                                             </a>
                                         </div>
