@@ -78,7 +78,7 @@ const team2 = [
             <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {
                     team.map((item, index) => (
-                        <li class="rounded-3xl border border-primary-900/10  px-2 lg:px-6 py-8 dark:border-primary-300/10">
+                        <li class=" rounded-xl border  border-primary-900/10 bg-primary-200/50 p-2 px-2 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900  lg:px-6">
                             <div class="space-y-6">
                                 <img
                                     class="mx-auto h-40 w-40 rounded-full object-cover"
@@ -95,7 +95,7 @@ const team2 = [
                                     </p>
                                 </div>
                                 <button
-                                    class="open-dialog-button mx-auto w-full rounded-3xl border border-primary-900/10 px-4 py-2 transition hover:bg-primary-200 dark:border-primary-300/10 hover:dark:bg-primary-900/10"
+                                    class="open-dialog-button dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400"
                                     data-index={index}>
                                     Ver más
                                 </button>
@@ -121,7 +121,7 @@ const team2 = [
                                                 />
                                             </svg>
                                         </button>
-                                        <div class="flex h-full flex-col items-center space-y-4 overflow-auto  lg:p-8">
+                                        <div class="flex h-full flex-col items-center space-y-4 overflow-auto lg:p-8 ">
                                             <img
                                                 class="h-40 w-40 rounded-full  object-cover"
                                                 src={item.image}
@@ -133,7 +133,7 @@ const team2 = [
                                             <p class="text-base font-semibold text-primary-950/70 dark:text-primary-100/70">
                                                 {item.job}
                                             </p>
-                                            <p class="text-pretty text-pretty px-4 lg:px-8 text-xs text-primary-950/70 dark:text-primary-200/70 lg:text-base">
+                                            <p class="text-pretty text-pretty px-4 text-xs text-primary-950/70 dark:text-primary-200/70 lg:px-8 lg:text-base">
                                                 {item.full_description}
                                             </p>
                                             <a
@@ -154,7 +154,7 @@ const team2 = [
             <ul role="list" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {
                     team2.map((item) => (
-                        <li class="flex min-h-[200px] items-center justify-center rounded-3xl border border-primary-900/10 px-6 py-8 dark:border-primary-300/10">
+                        <li class="flex min-h-[200px] items-center justify-center rounded-xl border border-primary-900/10  bg-primary-200/50 px-6   py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 ">
                             <div class="space-y-6">
                                 <div class="text-center">
                                     <p class="text-base text-primary-950/70 dark:text-primary-200/70">
