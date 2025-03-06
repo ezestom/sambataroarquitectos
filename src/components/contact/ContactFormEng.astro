@@ -1,0 +1,33 @@
+---
+import { Form } from '../Form/Form.jsx';
+---
+
+<section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
+            <div class="flex flex-col gap-4 sm:gap-6">
+                <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Work together</h2>
+                <p class="max-w-lg text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+                    We are always looking for new talents. If you want to be considered for future
+                    scenotechnical consulting projects, we will review your resume and keep you in
+                    mind if a position becomes available. We are happy to receive initiatives!
+                </p>
+            </div>
+            <Form
+                name="Name"
+                name_placeholder="John Doe"
+                company={'Company'}
+                company_placeholder="Sabataro Arquitectos S.A."
+                email={'Email'}
+                email_placeholder="johndoe@sambataroarquitectos.com"
+                phone={'Phone'}
+                phone_placeholder="+54 9 11 1234 5678"
+                message={'Message'}
+                message_placeholder="Hi there, I would like to know more about your services."
+                send="Send"
+                message_2="Thank you for contacting us! We will get back to you shortly. 📩"
+                client:visible
+            />
+        </div>
+    </div>
+</section>

@@ -1,84 +1,84 @@
 ---
-import Heading from '../components/about/Heading.astro';
+import Heading from '../../components/about/Heading.astro';
 import { Image } from 'astro:assets';
-import orquesta from '../img/colon.webp';
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/layout/Header.astro';
-import Footer from '../components/layout/Footer.astro';
+import orquesta from '../../img/colon.webp';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
 
 const arquitecturaTeatral = [
     {
         tema: 'tema',
-        description: 'Arquitectura Teatral',
+        description: 'Theatrical Architecture',
     },
     {
         tema: 'descripcion',
         description:
-            'La arquitectura teatral abarca el diseño arquitectónico de todos los aspectos que conciernen a una sala de espectáculos.',
+            'Theatrical architecture encompasses the architectural design of all aspects concerning a performance venue.',
     },
     {
         tema: 'servicios',
         description: [
-            'Informes técnicos y de diagnóstico',
-            'Programa de necesidades',
-            'Planteos preliminares (con zonificaciones), anteproyecto y proyecto licitatorio o ejecutivo',
-            'Estudio de factibilidad',
-            'Reuniones interdisciplinarias',
-            'Análisis técnico de ofertas',
-            'Diseño arquitectural de áreas públicas (sala, foyer, hall, áreas complementarias)',
-            'Diseño arquitectural de áreas de apoyo técnico y artístico (camarines, salas de maquillaje, talleres de vestuario y complementarios, depósitos y bodegas, etc.)',
-            'Estudio de visuales',
-            'Sembrado de butacas',
-            'Ingeniería acústica',
-            'Detalles constructivos y de mobiliario específicos',
-            'Especificaciones técnicas particulares',
+            'Technical and diagnostic reports',
+            'Needs program',
+            'Preliminary layouts (with zoning), preliminary design, and bidding or executive project',
+            'Feasibility study',
+            'Interdisciplinary meetings',
+            'Technical analysis of bids',
+            'Architectural design of public areas (hall, foyer, lobby, complementary areas)',
+            'Architectural design of technical and artistic support areas (dressing rooms, makeup rooms, costume and complementary workshops, storage and warehouses, etc.)',
+            'Visual studies',
+            'Seating layout',
+            'Acoustic engineering',
+            'Specific construction and furniture details',
+            'Specific technical specifications',
         ],
     },
 ];
 const equipamientoEscenotecnico = [
     {
         tema: 'tema',
-        description: 'Equipamiento Escenotécnico',
+        description: 'Stage Technology Equipment',
     },
     {
         tema: 'descripcion',
         description:
-            'El equipamiento escenotécnico abarca los sistemas que funcionan detrás de escena de forma eficiente, segura, silenciosa e invisible. Definimos y coordinamos dichos sistemas con la estructura del edificio y sus instalaciones, asesorando en la elección de estos de acuerdo a los recursos económicos, de espacio y de tiempo.',
+            'Stage technology equipment encompasses the systems that function behind the scenes efficiently, safely, quietly, and invisibly. We define and coordinate these systems with the building’s structure and its installations, advising on their selection according to economic, space, and time resources.',
     },
     {
         tema: 'servicios',
         description: [
-            'Informes técnicos y de diagnóstico',
-            'Programa de necesidades',
-            'Planteos preliminares (con zonificaciones), anteproyecto y proyecto licitatorio o ejecutivo',
-            'Estudio de factibilidad',
-            'Reuniones interdisciplinarias',
-            'Análisis técnico de ofertas',
-            'Diseño arquitectural de cajas escénicas (sistema de parrillas y puentes)',
-            'Diseño de sistemas de suspensión de decorados (sistemas manuales, motorizados y auxiliares)',
-            'Diseño de sistemas de maquinaria escenotécnica (grandes plataformas de movimientos horizontales y verticales, embocadura variable)',
-            'Diseño de sistemas complementarios (telón cortafuegos, piso de escenario, pisos de rebote de ballet, intercomunicación técnica, stage manager, cabinas de control, vestimenta teatral y cámara acústica)',
-            'Diseño de sistemas de iluminación escénica',
-            'Diseño de sistemas de audio y video',
-            'Especificaciones técnicas particulares',
+            'Technical and diagnostic reports',
+            'Needs program',
+            'Preliminary layouts (with zoning), preliminary design, and bidding or executive project',
+            'Feasibility study',
+            'Interdisciplinary meetings',
+            'Technical analysis of bids',
+            'Architectural design of stage houses (grid and bridge system)',
+            'Design of scenery suspension systems (manual, motorized, and auxiliary systems)',
+            'Design of stage machinery systems (large horizontal and vertical movement platforms, variable proscenium)',
+            'Design of complementary systems (fire curtain, stage floor, ballet rebound floors, technical intercom, stage manager, control booths, theatrical drapery, and acoustic chamber)',
+            'Design of stage lighting systems',
+            'Design of audio and video systems',
+            'Specific technical specifications',
         ],
     },
 ];
 
 const contenido = [
     {
-        tema: 'Asesoría Escenotécnica',
+        tema: 'Stage Technology Consulting',
         descripcion:
-            'Brindamos consultoría especializada en diseño y planificación de espacios escénicos, asegurando eficiencia y funcionalidad.',
+            'We provide specialized consulting in the design and planning of stage spaces, ensuring efficiency and functionality.',
         items: [
-            'Diseño de escenarios',
-            'Optimización acústica',
-            'Planificación de sistemas de iluminación',
-            'Integración de tecnología audiovisual',
-            'Proyectos licitatorios y ejecutivos',
-            'Dirección y Supervisión de Obra',
-            'Control de calidad en fábrica',
-            'Dirección técnica y de montaje de producciones de espectáculos',
+            'Stage design',
+            'Acoustic optimization',
+            'Lighting system planning',
+            'Audiovisual technology integration',
+            'Bidding and executive projects',
+            'Construction management and supervision',
+            'Factory quality control',
+            'Technical direction and assembly of show productions',
         ],
     },
 ];
@@ -95,16 +95,17 @@ const equipamentos = equipamientoEscenotecnico.find(
     (item) => item.tema === 'servicios'
 )?.description;
 
-const tema3 = contenido.find((item) => item.tema === 'Asesoría Escenotécnica')?.tema;
-const descripcion3 = contenido.find((item) => item.tema === 'Asesoría Escenotécnica')?.descripcion;
-const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécnica')?.items;
+const tema3 = contenido.find((item) => item.tema === 'Stage Technology Consulting')?.tema;
+const descripcion3 = contenido.find(
+    (item) => item.tema === 'Stage Technology Consulting'
+)?.descripcion;
+const contenidos = contenido.find((item) => item.tema === 'Stage Technology Consulting')?.items;
 ---
 
-<Layout title="Servicio" description="Conoce más sobre nuestro servicio">
+<Layout title="Services" description="Know our comprehensive services">
     <Header id="top" />
     <section class="py-16 sm:py-20">
-        <Heading title="Servicios" subtitle="Conocé nuestro servicios integrales" />
-
+        <Heading title="Services" subtitle="Know our comprehensive services" />
         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
             <div class="mb-12 grid gap-16 lg:grid-cols-2 lg:gap-12">
                 <Image
@@ -118,22 +119,23 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
                         <div class="space-y-6">
                             <p
                                 class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-                                Prestamos servicios integrales de asesoría escenotécnica respecto a
-                                proyectos y desarrollos de salas líricas, de prosa, de concierto,
-                                polivalentes, arenas, edificios complementarios y diseño técnico de
-                                escenografías para ópera y ballet. Nos caracterizamos por brindar
-                                respuestas concretas y a medida. Asesoramos proyectos que abarcan
-                                una amplia gama, como salas de teatro y música, centros de
-                                conferencias y exhibiciones, escuelas de ballet y grandes centros
-                                culturales, entre otros, ya sea obra nueva o remodelación.
+                                We provide comprehensive stage technology consulting services
+                                regarding projects and developments of opera houses, drama theaters,
+                                concert halls, multi-purpose halls, arenas, complementary buildings,
+                                and technical design of scenography for opera and ballet. We are
+                                characterized by providing concrete and tailored responses. We
+                                advise on projects that encompass a wide range, such as theater and
+                                music halls, conference and exhibition centers, ballet schools, and
+                                large cultural centers, among others, whether it be new construction
+                                or remodeling.
                             </p>
                             <p
                                 class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-                                Nuestra metodología de trabajo incluye la realización de la
-                                documentación gráfica y escrita necesaria para establecer
-                                correctamente los alcances del proyecto escenotécnico y la
-                                tecnología de los equipos a proveer. Los servicios de asesoría
-                                incorporan el equipamiento escenotécnico y la arquitectura teatral.
+                                Our work methodology includes the creation of the necessary graphic
+                                and written documentation to correctly establish the scope of the
+                                stage technology project and the technology of the equipment to be
+                                provided. The consulting services incorporate stage technology
+                                equipment and theater architecture.
                             </p>
                         </div>
                     </div>
