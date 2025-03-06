@@ -1,0 +1,191 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import lago from '../../../img/projects/lago.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import lago1 from '../../../img/projects/lago/lago1.webp';
+import lago2 from '../../../img/projects/lago/lago2.webp';
+import lago3 from '../../../img/projects/lago/lago3.webp';
+import lago4 from '../../../img/projects/lago/lago4.webp';
+import lago5 from '../../../img/projects/lago/lago5.webp';
+import lago6 from '../../../img/projects/lago/lago6.webp';
+import lago7 from '../../../img/projects/lago/lago7.webp';
+import lago8 from '../../../img/projects/lago/lago8.webp';
+import lago9 from '../../../img/projects/lago/lago9.webp';
+import lago10 from '../../../img/projects/lago/lago10.webp';
+import lago11 from '../../../img/projects/lago/lago11.webp';
+import lago12 from '../../../img/projects/lago/lago12.webp';
+import lago13 from '../../../img/projects/lago/lago13.webp';
+import lago14 from '../../../img/projects/lago/lago14.webp';
+import lago15 from '../../../img/projects/lago/lago15.webp';
+import lago16 from '../../../img/projects/lago/lago16.webp';
+import lago17 from '../../../img/projects/lago/lago17.webp';
+import lago18 from '../../../img/projects/lago/lago18.webp';
+import lago19 from '../../../img/projects/lago/lago19.webp';
+import lago20 from '../../../img/projects/lago/lago20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Av. Philippi 1000, Frutillar, Chile' },
+    { label: 'Temática', value: 'Proyecto de obra nueva adaptada sobre bases existentes' },
+    {
+        label: 'Servicios',
+        value: 'Proyecto ejecutivo escenotécnico y de cámara acústica, Inspección de obra',
+    },
+    { label: 'Comitente', value: 'Inmobiliaria Frutillar S.A.' },
+    {
+        label: 'Proyecto de arquitectura general',
+        value: 'Arq. Gerardo Köster, Arq. Gustavo Greene, Arq. Bernd Haller, Arq. Cristián Valdés, Arq. Pablo Cordua y Arq. Andrés Alvear',
+    },
+    { label: 'Proyecto escenotécnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Localidades', value: '1200' },
+    { label: 'Superficie aproximada total', value: '10.000 m2' },
+    { label: 'Monto aproximado total', value: 'US$ 10.000.000' },
+    { label: 'Año', value: '2009-2010' },
+    { web: 'http://www.teatrodellago.cl/', href: 'http://www.teatrodellago.cl/' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: lago1.src,
+        thumbnailURL: lago1.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: lago2.src,
+        thumbnailURL: lago2.src,
+        width: 1323,
+        height: 744,
+    },
+    {
+        largeURL: lago3.src,
+        thumbnailURL: lago3.src,
+        width: 1111,
+        height: 744,
+    },
+    {
+        largeURL: lago4.src,
+        thumbnailURL: lago4.src,
+        width: 1000,
+        height: 666,
+    },
+    {
+        largeURL: lago5.src,
+        thumbnailURL: lago5.src,
+        width: 1000,
+        height: 666,
+    },
+    {
+        largeURL: lago6.src,
+        thumbnailURL: lago6.src,
+        width: 911,
+        height: 610,
+    },
+    {
+        largeURL: lago7.src,
+        thumbnailURL: lago7.src,
+        width: 800,
+        height: 531,
+    },
+    {
+        largeURL: lago8.src,
+        thumbnailURL: lago8.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: lago9.src,
+        thumbnailURL: lago9.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: lago10.src,
+        thumbnailURL: lago10.src,
+        width: 600,
+        height: 707,
+    },
+    {
+        largeURL: lago11.src,
+        thumbnailURL: lago1.src,
+        width: 921,
+        height: 744,
+    },
+    {
+        largeURL: lago12.src,
+        thumbnailURL: lago12.src,
+        width: 921,
+        height: 744,
+    },
+    {
+        largeURL: lago13.src,
+        thumbnailURL: lago13.src,
+        width: 900,
+        height: 744,
+    },
+    {
+        largeURL: lago14.src,
+        thumbnailURL: lago14.src,
+        width: 905,
+        height: 666,
+    },
+    {
+        largeURL: lago15.src,
+        thumbnailURL: lago15.src,
+        width: 957,
+        height: 744,
+    },
+    {
+        largeURL: lago16.src,
+        thumbnailURL: lago16.src,
+        width: 898,
+        height: 744,
+    },
+    {
+        largeURL: lago17.src,
+        thumbnailURL: lago17.src,
+        width: 921,
+        height: 744,
+    },
+    {
+        largeURL: lago18.src,
+        thumbnailURL: lago18.src,
+        width: 1343,
+        height: 744,
+    },
+    {
+        largeURL: lago19.src,
+        thumbnailURL: lago19.src,
+        width: 921,
+        height: 744,
+    },
+    {
+        largeURL: lago20.src,
+        thumbnailURL: lago20.src,
+        width: 1343,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Teatro del Lago">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="lago"
+            city="Frutillar, Chile"
+            year="2009-2010"
+            room="Espacio Tronador, Sala Nestlé"
+            project="Teatro del Lago"
+            description1="El Teatro del Lago de Frutillar, Chile, inaugurado en el año 2010 y diseñado inicialmente por los arquitectos Gerardo Köster, Gustavo Greene en una primera etapa, estaba concebido para realizar conciertos. Posteriormente, en una segunda etapa realizada por los arquitectos Bernd Haller, Cristián Valdés, Pablo Cordua y Andrés Alvear, se adaptó el diseño para funcionar como un teatro capaz de albergar la más variada clase de espectáculos. Se destaca por ser el teatro internacional más austral del mundo con una de las mejores acústicas del país. Su sala principal, “Espacio Tronador Sala Nestlé”, posee una capacidad para 1178 espectadores y un foso para 100 músicos. El teatro posee además un anfiteatro con un aforo de 270 personas y 4 salas multipropósito."
+            description2="Dentro de este contexto, se realizó el proyecto ejecutivo completo de rigging y equipamiento escenotécnico general para la sala principal. Se instalaron varas motorizadas automatizadas bajo norma DIN 56950 con estándar de seguridad SIL 3, sistemas de suspensión manuales auxiliares y contrapesados, monorriel con motores puntuales, y parrillas y puentes de maniobras con piso modulado desmontable. El foso de orquesta posee dos plataformas automatizadas impulsadas por actuadores eléctricos helicoidales. También se realizó el diseño de la Cámara Acústica de concierto bajo normas de BBM Müller Alemania, junto con la Inspección de obra."
+            img={lago}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

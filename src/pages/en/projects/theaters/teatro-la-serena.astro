@@ -1,0 +1,95 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import serena from '../../../img/projects/serena.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import serena1 from '../../../img/projects/serena/serena1.webp';
+import serena2 from '../../../img/projects/serena/serena2.webp';
+import serena3 from '../../../img/projects/serena/serena3.webp';
+import serena4 from '../../../img/projects/serena/serena4.webp';
+import serena5 from '../../../img/projects/serena/serena5.webp';
+import serena6 from '../../../img/projects/serena/serena6.webp';
+import serena7 from '../../../img/projects/serena/serena7.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'La Serena, Chile' },
+    { label: 'Temática', value: 'Proyecto de obra nueva' },
+    {
+        label: 'Servicios',
+        value: 'Asesoría Escenotécnica para la Inspección Fiscal de Diseño del Ministerio de Obras Públicas',
+    },
+    { label: 'Comitente', value: 'MOP, Dirección de Arquitectura Región de Coquimbo' },
+    { label: 'Proyecto de arquitectura general', value: 'Holmes Labbe Portugueis Spichiger' },
+    { label: 'Localidades', value: '1500 + 800' },
+    { label: 'Superficie aproximada total', value: '20.000 m2' },
+    { label: 'Monto aproximado total', value: 'US$ 18.000.000' },
+    { label: 'Año', value: '2011-2012' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: serena1.src,
+        thumbnailURL: serena1.src,
+        width: 1276,
+        height: 638,
+    },
+    {
+        largeURL: serena2.src,
+        thumbnailURL: serena2.src,
+        width: 800,
+        height: 600,
+    },
+    {
+        largeURL: serena3.src,
+        thumbnailURL: serena3.src,
+        width: 1013,
+        height: 660,
+    },
+    {
+        largeURL: serena4.src,
+        thumbnailURL: serena4.src,
+        width: 1010,
+        height: 660,
+    },
+    {
+        largeURL: serena5.src,
+        thumbnailURL: serena5.src,
+        width: 1366,
+        height: 660,
+    },
+    {
+        largeURL: serena6.src,
+        thumbnailURL: serena6.src,
+        width: 1490,
+        height: 453,
+    },
+    {
+        largeURL: serena7.src,
+        thumbnailURL: serena7.src,
+        width: 905,
+        height: 660,
+    },
+];
+---
+
+<Layout description="" title="Teatro Municipal la Serena">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="serena"
+            city="La serena, Chile"
+            year="2011-2012"
+            room="Sala Principal y Secundaria"
+            project="Teatro Municipal la Serena"
+            description1="Con una sala principal para 1500 localidades y una sala secundaria para 800 personas, el Teatro Regional de la Serena, producto del concurso realizado por el Consejo de la Cultura, el Ministerio de Obras Públicas y el municipio de La Serena en el año 2011, fue diseñado por el estudio Holmes Labbe Portugueis Spichiger. "
+            description2="Dentro del asesoramiento escenotécnico, se realizó la inspección de diseño de arquitectura teatral del proyecto integral para licitación. Sus cajas escénicas se proyectaron de manera tal que sean totalmente automatizadas, con equipamiento de suspensión de decorados e iluminación y plataformas controlados por software computarizado."
+            img={serena}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

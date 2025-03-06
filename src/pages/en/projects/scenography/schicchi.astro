@@ -1,0 +1,57 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import schicchi from '../../../img/projects/schicchi.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import schicchi1 from '../../../img/projects/schicchi/schicchi1.webp';
+import schicchi2 from '../../../img/projects/schicchi/schicchi2.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Willy Landin' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2003' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: schicchi1.src,
+        thumbnailURL: schicchi1.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: schicchi2.src,
+        thumbnailURL: schicchi2.src,
+        width: 992,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Gianni Schicchi">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="schicchi"
+            city="Santiago, Chile"
+            year="2002"
+            room="Teatro Municipal de Santiago"
+            project="Gianni Schicchi"
+            description1="Ópera cómica en un acto con música de Giacomo Puccini y libreto en italiano de Giovacchino Forzano, compuesta en 1917-18 y estrenada en la ópera del Metropolitan Opera House de Nueva York el 14 de diciembre de 1918."
+            description2="El proyecto de la producción escenográfica para el Teatro Municipal de Santiago, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={schicchi}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

@@ -1,0 +1,67 @@
+---
+import Project from '../../components/Project.astro';
+import Base from '../../layouts/Base.astro';
+import colon from '../../img/projects/colon.webp';
+import kimmel from '../../img/projects/kimmel.webp';
+import eastman from '../../img/projects/eastman.webp';
+import lago from '../../img/projects/lago.webp';
+import ciudad from '../../img/projects/ciudad.webp';
+---
+
+<Base>
+    <Project
+        id="colon"
+        city="Buenos Aires, Argentina"
+        year="1987-1990"
+        room="Sala Lírica"
+        project="Teatro Colón"
+        description="The Teatro Colón in Buenos Aires, inaugurated in 1908 and designed by architects Francesco Tamburini, Vittorio Meano, and Jules Dormal, has a seating capacity of 2,487 and is considered one of the most important theaters in the world, both for its acoustics and its architecture."
+        img={colon}
+        anchor="See more about this project"
+        href="/projects/theaters/teatro-colon"
+    />
+    <Project
+        id="ciudad"
+        city="Valencia, Spain"
+        year="2000-2001"
+        room="Palacio de las Artes Reina Sofía"
+        project="City of Arts and Sciences"
+        description="The City of Arts and Sciences, a cultural and entertainment architectural complex inaugurated in 1998 and designed by engineer Santiago Calatrava and architect Félix Candela, is one of the most important modern art constructions in the world."
+        img={ciudad}
+        anchor="See more about this project"
+        href="/projects/theaters/ciudad-de-las-artes"
+    />
+    <Project
+        id="kimmel"
+        city="Philadelphia, United States"
+        year="2002"
+        room="Verizon Hall Acoustic Canopy System"
+        project="Kimmel Center for the Performing Arts"
+        description="The Kimmel Center for the Performing Arts, inaugurated in 2001 and designed by architect Rafael Viñoly, is Philadelphia’s premier theater. It houses the Verizon Hall, a concert hall with a capacity of 2,547 spectators, and the Perelman Theater, a multipurpose hall accommodating 650 spectators."
+        img={kimmel}
+        anchor="See more about this project"
+        href="/projects/theaters/kimmel-center"
+    />
+    <Project
+        id="eastman"
+        city="Rochester, United States"
+        year="2004"
+        room="Kodak Hall Acoustic Shell System"
+        project="Eastman Theater - Rochester"
+        description="The Eastman Theater, inaugurated in 1922 as a center for music, dance, and visual arts, features its main hall, Kodak Hall, with a seating capacity of 2,260. It serves as the principal theater of the Eastman School of Music at the University of Rochester."
+        img={eastman}
+        anchor="See more about this project"
+        href="/projects/theaters/eastman-theater"
+    />
+    <Project
+        id="lago"
+        city="Frutillar, Chile"
+        year="2009-2010"
+        room="Espacio Tronador, Nestlé Hall"
+        project="Teatro del Lago"
+        description="The Teatro del Lago in Frutillar, Chile, inaugurated in 2010, was initially designed by architects Gerardo Köster and Gustavo Greene in the first phase, followed by Bernd Haller, Cristián Valdés, Pablo Cordua, and Andrés Alvear in the second phase. It stands out as the southernmost international theater in the world, boasting one of the best acoustics in the country."
+        img={lago}
+        anchor="See more about this project"
+        href="/projects/theaters/teatro-del-lago"
+    />
+</Base>

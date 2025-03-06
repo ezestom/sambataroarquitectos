@@ -1,0 +1,166 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import artes from '../../../img/projects/artes.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import artes1 from '../../../img/projects/artes/artes1.webp';
+import artes2 from '../../../img/projects/artes/artes2.webp';
+import artes3 from '../../../img/projects/artes/artes3.webp';
+import artes4 from '../../../img/projects/artes/artes4.webp';
+import artes5 from '../../../img/projects/artes/artes5.webp';
+import artes6 from '../../../img/projects/artes/artes6.webp';
+import artes7 from '../../../img/projects/artes/artes7.webp';
+import artes8 from '../../../img/projects/artes/artes8.webp';
+import artes9 from '../../../img/projects/artes/artes9.webp';
+import artes10 from '../../../img/projects/artes/artes10.webp';
+import artes11 from '../../../img/projects/artes/artes11.webp';
+import artes12 from '../../../img/projects/artes/artes12.webp';
+import artes13 from '../../../img/projects/artes/artes13.webp';
+import artes14 from '../../../img/projects/artes/artes14.webp';
+import artes15 from '../../../img/projects/artes/artes15.webp';
+import artes16 from '../../../img/projects/artes/artes16.webp';
+import artes17 from '../../../img/projects/artes/artes17.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Ak 68, Bogotá, Colombia' },
+    { label: 'Temática', value: 'Proyecto de Obra nueva' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo escenotécnico' },
+    { label: 'Comitente', value: 'Cafam' },
+    { label: 'Localidades', value: '1000' },
+    { label: 'Superficie aproximada total', value: '15.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '9.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 3.500.000' },
+    { label: 'Año', value: '2006-2007' },
+    {
+        web: 'https://www.cafam.com.co/cultura/',
+        href: 'https://www.cafam.com.co/cultura/',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: artes1.src,
+        thumbnailURL: artes1.src,
+        width: 600,
+        height: 367,
+    },
+    {
+        largeURL: artes2.src,
+        thumbnailURL: artes2.src,
+        width: 989,
+        height: 660,
+    },
+    {
+        largeURL: artes3.src,
+        thumbnailURL: artes3.src,
+        width: 600,
+        height: 235,
+    },
+    {
+        largeURL: artes4.src,
+        thumbnailURL: artes4.src,
+        width: 968,
+        height: 660,
+    },
+    {
+        largeURL: artes5.src,
+        thumbnailURL: artes5.src,
+        width: 951,
+        height: 660,
+    },
+    {
+        largeURL: artes6.src,
+        thumbnailURL: artes6.src,
+        width: 967,
+        height: 660,
+    },
+    {
+        largeURL: artes7.src,
+        thumbnailURL: artes7.src,
+        width: 951,
+        height: 660,
+    },
+    {
+        largeURL: artes8.src,
+        thumbnailURL: artes8.src,
+        width: 990,
+        height: 660,
+    },
+    {
+        largeURL: artes9.src,
+        thumbnailURL: artes9.src,
+        width: 935,
+        height: 660,
+    },
+    {
+        largeURL: artes10.src,
+        thumbnailURL: artes10.src,
+        width: 998,
+        height: 660,
+    },
+    {
+        largeURL: artes11.src,
+        thumbnailURL: artes11.src,
+        width: 934,
+        height: 660,
+    },
+    {
+        largeURL: artes12.src,
+        thumbnailURL: artes12.src,
+        width: 986,
+        height: 660,
+    },
+    {
+        largeURL: artes13.src,
+        thumbnailURL: artes13.src,
+        width: 963,
+        height: 660,
+    },
+    {
+        largeURL: artes14.src,
+        thumbnailURL: artes14.src,
+        width: 961,
+        height: 660,
+    },
+    {
+        largeURL: artes15.src,
+        thumbnailURL: artes15.src,
+        width: 661,
+        height: 660,
+    },
+    {
+        largeURL: artes16.src,
+        thumbnailURL: artes16.src,
+        width: 967,
+        height: 660,
+    },
+    {
+        largeURL: artes17.src,
+        thumbnailURL: artes17.src,
+        width: 935,
+        height: 660,
+    },
+];
+---
+
+<Layout description="" title="Teatro Bellas Artes">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="artes"
+            city="Bogotá, Colombia"
+            year="2006-2007"
+            room="Sala de Teatro"
+            project="Teatro Bellas Artes"
+            description1="El Teatro Bellas Artes de Bogotá, Colombia realizado por la caja de compensación familiar Cafam e inaugurado en el año 2008, cuenta con capacidad para 1200 localidades al aire libre y 1000 dentro del recinto. El encargo incluyó la realización del proyecto ejecutivo de maquinaria escenotécnica, sistemas de iluminación, audio y video. Se instaló un sistema de parrillas y puentes con tableros de piso modulados desmontables. "
+            description2="A su vez contó con telón de seguridad, telón principal con apertura americana, sistema de varas motorizadas automatizadas, sistema de iluminación escénica y plataformas de foso de orquesta. Se realizó la adaptación de la estructura existente que originalmente había sido diseñada como sala de conciertos, para convertirla en una sala de teatro polifuncional."
+            img={artes}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

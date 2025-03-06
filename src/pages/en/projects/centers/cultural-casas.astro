@@ -1,0 +1,192 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import cultural from '../../../img/projects/cultural.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import cultural1 from '../../../img/projects/cultural/cultural1.webp';
+import cultural2 from '../../../img/projects/cultural/cultural2.webp';
+import cultural3 from '../../../img/projects/cultural/cultural3.webp';
+import cultural4 from '../../../img/projects/cultural/cultural4.webp';
+import cultural5 from '../../../img/projects/cultural/cultural5.webp';
+import cultural6 from '../../../img/projects/cultural/cultural6.webp';
+import cultural7 from '../../../img/projects/cultural/cultural7.webp';
+import cultural8 from '../../../img/projects/cultural/cultural8.webp';
+import cultural9 from '../../../img/projects/cultural/cultural9.webp';
+import cultural10 from '../../../img/projects/cultural/cultural10.webp';
+import cultural11 from '../../../img/projects/cultural/cultural11.webp';
+import cultural12 from '../../../img/projects/cultural/cultural12.webp';
+import cultural13 from '../../../img/projects/cultural/cultural13.webp';
+import cultural14 from '../../../img/projects/cultural/cultural14.webp';
+import cultural15 from '../../../img/projects/cultural/cultural15.webp';
+import cultural16 from '../../../img/projects/cultural/cultural16.webp';
+import cultural17 from '../../../img/projects/cultural/cultural17.webp';
+import cultural18 from '../../../img/projects/cultural/cultural18.webp';
+import cultural19 from '../../../img/projects/cultural/cultural19.webp';
+import cultural20 from '../../../img/projects/cultural/cultural20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Centro Cultural' },
+    { label: 'Ubicación', value: 'Av. Kennedy 9350, Santiago, Chile' },
+    { label: 'Temática', value: 'Proyecto de obra nueva' },
+    {
+        label: 'Servicios',
+        value: 'Proyecto licitatorio de escenotecnia para sala de espectáculos y exposiciones',
+    },
+    { label: 'Comitente', value: 'Corporación Cultural Vitacura' },
+    { label: 'Proyecto de arquitectura general', value: 'Arq. Gonzalo Mardones' },
+    { label: 'Asesores', value: 'Ing. Juan Antonio Vargas' },
+    { label: 'Colaboradores', value: 'Arq. María Paz Carvajal' },
+    { label: 'Localidades', value: '700' },
+    { label: 'Superficie aproximada de intervención', value: '7.200 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 6.000.000' },
+    { label: 'Año', value: '2013-2014' },
+    {
+        web: 'http://www.corporacionculturalvitacura.cl/programas/casas-de-lo-matta/',
+        href: 'http://www.corporacionculturalvitacura.cl/programas/casas-de-lo-matta/',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: cultural1.src,
+        thumbnailURL: cultural1.src,
+        width: 1119,
+        height: 744,
+    },
+    {
+        largeURL: cultural2.src,
+        thumbnailURL: cultural2.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: cultural3.src,
+        thumbnailURL: cultural3.src,
+        width: 1130,
+        height: 744,
+    },
+    {
+        largeURL: cultural4.src,
+        thumbnailURL: cultural4.src,
+        width: 1119,
+        height: 744,
+    },
+    {
+        largeURL: cultural5.src,
+        thumbnailURL: cultural5.src,
+        width: 1663,
+        height: 439,
+    },
+    {
+        largeURL: cultural6.src,
+        thumbnailURL: cultural6.src,
+        width: 1663,
+        height: 277,
+    },
+    {
+        largeURL: cultural7.src,
+        thumbnailURL: cultural7.src,
+        width: 1663,
+        height: 544,
+    },
+    {
+        largeURL: cultural8.src,
+        thumbnailURL: cultural8.src,
+        width: 1119,
+        height: 744,
+    },
+    {
+        largeURL: cultural9.src,
+        thumbnailURL: cultural9.src,
+        width: 1663,
+        height: 721,
+    },
+    {
+        largeURL: cultural10.src,
+        thumbnailURL: cultural10.src,
+        width: 1158,
+        height: 744,
+    },
+    {
+        largeURL: cultural11.src,
+        thumbnailURL: cultural11.src,
+        width: 1158,
+        height: 744,
+    },
+    {
+        largeURL: cultural12.src,
+        thumbnailURL: cultural12.src,
+        width: 1156,
+        height: 744,
+    },
+    {
+        largeURL: cultural13.src,
+        thumbnailURL: cultural13.src,
+        width: 1157,
+        height: 744,
+    },
+    {
+        largeURL: cultural14.src,
+        thumbnailURL: cultural14.src,
+        width: 1145,
+        height: 744,
+    },
+    {
+        largeURL: cultural15.src,
+        thumbnailURL: cultural15.src,
+        width: 1142,
+        height: 744,
+    },
+    {
+        largeURL: cultural16.src,
+        thumbnailURL: cultural16.src,
+        width: 1143,
+        height: 744,
+    },
+    {
+        largeURL: cultural17.src,
+        thumbnailURL: cultural17.src,
+        width: 1142,
+        height: 744,
+    },
+    {
+        largeURL: cultural18.src,
+        thumbnailURL: cultural18.src,
+        width: 1145,
+        height: 744,
+    },
+    {
+        largeURL: cultural19.src,
+        thumbnailURL: cultural19.src,
+        width: 1146,
+        height: 744,
+    },
+    {
+        largeURL: cultural20.src,
+        thumbnailURL: cultural20.src,
+        width: 1149,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Centro cultural casas de lo Matta">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="cultural"
+            city="Santiago, Chile"
+            year="2013-2014"
+            room="Sala de teatro"
+            project="Centro cultural casas de lo Matta"
+            description1="El actual Centro Cultural Casas de Lo Matta contiene un Monumento Histórico Nacional que data de la época colonial cuando se erigió por primera vez como vivienda. La casa fue restaurada en 1988 por el arquitecto Patricio Gross y nuevamente en 2010 donde se reinauguró el actual centro cultural. En el año 2013 se decidió realizar un edificio anexo conteniendo diversas actividades como salas de exposición, audiovisuales y una sala de espectáculos con 700 localidades para presentaciones de teatro, conciertos y ballet."
+            description2="La asesoría escenotécnica consistió en la realización de arquitectura teatral del proyecto integral. Se proyectaron para la caja escénica de sala una parrilla y 2 niveles de puentes con estructuras metálicas totalmente moduladas. Incluyó sistemas de suspensión motorizados automatizados según normativa internacional (DIN 56950 – SIL3) para otorgarle la capacidad operativa y de seguridad acorde con el uso teatral. Además de las 25 varas motorizadas, se diseñaron monorrieles motorizados. El piso de escenario modulado y con tableros de madera desmontables, permite lograr aberturas de distintas dimensiones que sirven para apariciones de personajes como para instalación de pequeñas plataformas elevadoras. El foso de orquesta se proyectó con plataforma automatizada. Se diseñó un nuevo sistema de iluminación escénica con su correspondiente cabina de control principal de audio, video e iluminación. El proyecto contempla un sistema de telón cortafuego y telón principal automatizado con apertura a la americana, así como también un piso especial para danza."
+            img={cultural}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

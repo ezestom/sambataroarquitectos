@@ -1,0 +1,168 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import boheme from '../../../img/projects/boheme.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import boheme1 from '../../../img/projects/boheme/boheme1.webp';
+import boheme2 from '../../../img/projects/boheme/boheme2.webp';
+import boheme3 from '../../../img/projects/boheme/boheme3.webp';
+import boheme4 from '../../../img/projects/boheme/boheme4.webp';
+import boheme5 from '../../../img/projects/boheme/boheme5.webp';
+import boheme6 from '../../../img/projects/boheme/boheme6.webp';
+import boheme7 from '../../../img/projects/boheme/boheme7.webp';
+import boheme8 from '../../../img/projects/boheme/boheme8.webp';
+import boheme9 from '../../../img/projects/boheme/boheme9.webp';
+import boheme10 from '../../../img/projects/boheme/boheme10.webp';
+import boheme11 from '../../../img/projects/boheme/boheme11.webp';
+import boheme12 from '../../../img/projects/boheme/boheme12.webp';
+import boheme13 from '../../../img/projects/boheme/boheme13.webp';
+import boheme14 from '../../../img/projects/boheme/boheme14.webp';
+import boheme15 from '../../../img/projects/boheme/boheme15.webp';
+import boheme16 from '../../../img/projects/boheme/boheme16.webp';
+import boheme17 from '../../../img/projects/boheme/boheme17.webp';
+import boheme18 from '../../../img/projects/boheme/boheme18.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Grischa Asagaroff' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Año', value: '1999' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: boheme1.src,
+        thumbnailURL: boheme1.src,
+        width: 1663,
+        height: 564,
+    },
+    {
+        largeURL: boheme2.src,
+        thumbnailURL: boheme2.src,
+        width: 260,
+        height: 744,
+    },
+    {
+        largeURL: boheme3.src,
+        thumbnailURL: boheme3.src,
+        width: 260,
+        height: 744,
+    },
+    {
+        largeURL: boheme4.src,
+        thumbnailURL: boheme4.src,
+        width: 260,
+        height: 744,
+    },
+    {
+        largeURL: boheme5.src,
+        thumbnailURL: boheme5.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme6.src,
+        thumbnailURL: boheme6.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme7.src,
+        thumbnailURL: boheme7.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme8.src,
+        thumbnailURL: boheme8.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme9.src,
+        thumbnailURL: boheme9.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme10.src,
+        thumbnailURL: boheme10.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme11.src,
+        thumbnailURL: boheme11.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme12.src,
+        thumbnailURL: boheme12.src,
+        width: 877,
+        height: 744,
+    },
+    {
+        largeURL: boheme13.src,
+        thumbnailURL: boheme13.src,
+        width: 676,
+        height: 744,
+    },
+    {
+        largeURL: boheme14.src,
+        thumbnailURL: boheme14.src,
+        width: 659,
+        height: 744,
+    },
+    {
+        largeURL: boheme15.src,
+        thumbnailURL: boheme15.src,
+        width: 756,
+        height: 744,
+    },
+    {
+        largeURL: boheme16.src,
+        thumbnailURL: boheme16.src,
+        width: 757,
+        height: 744,
+    },
+    {
+        largeURL: boheme17.src,
+        thumbnailURL: boheme17.src,
+        width: 1262,
+        height: 744,
+    },
+    {
+        largeURL: boheme18.src,
+        thumbnailURL: boheme18.src,
+        width: 1417,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="La Bohème de Puccini">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="boheme"
+            city="Buenos Aires, Argentina"
+            year="1999"
+            room=""
+            project="La Bohème de Puccini"
+            description1="Ópera en cuatro actos​ con música de Giacomo Puccini y libreto en italiano de Giuseppe Giacosa y Luigi Illica, quienes simplificaron los diferentes episodios de la novela “Escenas de la vida bohemia” de Henri Murger,​ publicada en el periódico El Corsario a lo largo de cinco años (1845-49). La obra fue estrenada por primera vez en el Teatro Regio de Turín el 1 de febrero de 1896, dirigida por Arturo Toscanini."
+            description2="El proyecto de la producción escenográfica para el Teatro Colón, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={boheme}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

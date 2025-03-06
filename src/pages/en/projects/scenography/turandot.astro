@@ -1,0 +1,77 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import turandot from '../../../img/projects/turandot.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import turandot1 from '../../../img/projects/turandot/turandot1.webp';
+import turandot2 from '../../../img/projects/turandot/turandot2.webp';
+import turandot3 from '../../../img/projects/turandot/turandot3.webp';
+import turandot4 from '../../../img/projects/turandot/turandot4.webp';
+import turandot5 from '../../../img/projects/turandot/turandot5.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Ópera de Colombia, Bogotá, Colombia' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Alejandro Chacón' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Adán Martínez' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Año', value: '2002' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: turandot1.src,
+        thumbnailURL: turandot1.src,
+        width: 1344,
+        height: 744,
+    },
+    {
+        largeURL: turandot2.src,
+        thumbnailURL: turandot2.src,
+        width: 1414,
+        height: 744,
+    },
+    {
+        largeURL: turandot3.src,
+        thumbnailURL: turandot3.src,
+        width: 1408,
+        height: 744,
+    },
+    {
+        largeURL: turandot4.src,
+        thumbnailURL: turandot4.src,
+        width: 1474,
+        height: 744,
+    },
+    {
+        largeURL: turandot5.src,
+        thumbnailURL: turandot5.src,
+        width: 1097,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Turandot">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="turandot"
+            city="Bogotá, Colombia"
+            year="2002"
+            room="Opera de Colombia"
+            project="Turandot"
+            description1="Turandot es una ópera en tres actos con música de Giacomo Puccini y libreto en italiano de Giuseppe Adami y Renato Simoni, completada por Franco Alfano y estrenada en 1926."
+            description2="El proyecto de la producción escenográfica de la Ópera de Colombia incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={turandot}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

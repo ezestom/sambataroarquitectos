@@ -1,0 +1,176 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import orquesta from '../../../img/projects/orquesta.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import orquesta1 from '../../../img/projects/orquesta/orquesta1.webp';
+import orquesta2 from '../../../img/projects/orquesta/orquesta2.webp';
+import orquesta3 from '../../../img/projects/orquesta/orquesta3.webp';
+import orquesta4 from '../../../img/projects/orquesta/orquesta4.webp';
+import orquesta5 from '../../../img/projects/orquesta/orquesta5.webp';
+import orquesta6 from '../../../img/projects/orquesta/orquesta6.webp';
+import orquesta7 from '../../../img/projects/orquesta/orquesta7.webp';
+import orquesta8 from '../../../img/projects/orquesta/orquesta8.webp';
+import orquesta9 from '../../../img/projects/orquesta/orquesta9.webp';
+import orquesta10 from '../../../img/projects/orquesta/orquesta10.webp';
+import orquesta11 from '../../../img/projects/orquesta/orquesta11.webp';
+import orquesta12 from '../../../img/projects/orquesta/orquesta12.webp';
+import orquesta13 from '../../../img/projects/orquesta/orquesta13.webp';
+import orquesta14 from '../../../img/projects/orquesta/orquesta14.webp';
+import orquesta15 from '../../../img/projects/orquesta/orquesta15.webp';
+import orquesta16 from '../../../img/projects/orquesta/orquesta16.webp';
+import orquesta17 from '../../../img/projects/orquesta/orquesta17.webp';
+import orquesta18 from '../../../img/projects/orquesta/orquesta18.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenarios y Producciones al Aire libre' },
+    { label: 'Ubicación', value: 'Parque San Martín, Mar del Plata, Buenos Aires, Argentina' },
+    {
+        label: 'Producción general',
+        value: 'Teatro Colón, Ministerio de Gestión Cultural de la Provincia de Buenos Aires, Wam Entertainment Company',
+    },
+    { label: 'Artistas', value: 'Orquesta Filarmónica de Buenos Aires' },
+    {
+        label: 'Servicios',
+        value: 'Asesoramiento escenotécnico, Proyecto ejecutivo y Dirección técnica de producción',
+    },
+    { label: 'Dirección ejecutiva', value: 'Enrique Bordolini' },
+    {
+        label: 'Asesoramiento escenotécnico',
+        value: 'Arq. Alfio Sambataro, Arq. Agostina Sambataro',
+    },
+    { label: 'Año', value: '2018' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: orquesta1.src,
+        thumbnailURL: orquesta1.src,
+        width: 1663,
+        height: 544,
+    },
+    {
+        largeURL: orquesta2.src,
+        thumbnailURL: orquesta2.src,
+        width: 1663,
+        height: 436,
+    },
+    {
+        largeURL: orquesta3.src,
+        thumbnailURL: orquesta3.src,
+        width: 1119,
+        height: 744,
+    },
+    {
+        largeURL: orquesta4.src,
+        thumbnailURL: orquesta4.src,
+        width: 1663,
+        height: 278,
+    },
+    {
+        largeURL: orquesta5.src,
+        thumbnailURL: orquesta5.src,
+        width: 1663,
+        height: 258,
+    },
+    {
+        largeURL: orquesta6.src,
+        thumbnailURL: orquesta6.src,
+        width: 1119,
+        height: 744,
+    },
+    {
+        largeURL: orquesta7.src,
+        thumbnailURL: orquesta7.src,
+        width: 1119,
+        height: 744,
+    },
+    {
+        largeURL: orquesta8.src,
+        thumbnailURL: orquesta8.src,
+        width: 750,
+        height: 744,
+    },
+    {
+        largeURL: orquesta9.src,
+        thumbnailURL: orquesta9.src,
+        width: 1119,
+        height: 744,
+    },
+    {
+        largeURL: orquesta10.src,
+        thumbnailURL: orquesta10.src,
+        width: 1663,
+        height: 443,
+    },
+    {
+        largeURL: orquesta11.src,
+        thumbnailURL: orquesta11.src,
+        width: 1663,
+        height: 431,
+    },
+    {
+        largeURL: orquesta12.src,
+        thumbnailURL: orquesta12.src,
+        width: 930,
+        height: 744,
+    },
+    {
+        largeURL: orquesta13.src,
+        thumbnailURL: orquesta13.src,
+        width: 707,
+        height: 744,
+    },
+    {
+        largeURL: orquesta14.src,
+        thumbnailURL: orquesta14.src,
+        width: 1663,
+        height: 583,
+    },
+    {
+        largeURL: orquesta15.src,
+        thumbnailURL: orquesta15.src,
+        width: 800,
+        height: 531,
+    },
+    {
+        largeURL: orquesta16.src,
+        thumbnailURL: orquesta16.src,
+        width: 1200,
+        height: 674,
+    },
+    {
+        largeURL: orquesta17.src,
+        thumbnailURL: orquesta17.src,
+        width: 1280,
+        height: 720,
+    },
+    {
+        largeURL: orquesta18.src,
+        thumbnailURL: orquesta18.src,
+        width: 1280,
+        height: 720,
+    },
+];
+---
+
+<Layout description="" title="Orquesta Filarmónica de Buenos Aires">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="orquesta"
+            city="Mar del Plata, Argentina"
+            year="2018"
+            room="Concierto Parque San Martín"
+            project="Orquesta Filarmónica de Buenos Aires"
+            description1="Como parte de la programación de la quinta temporada de Espacio Clarín, los gobiernos bonaerense y municipal participaron de la convocatoria en el parque San Martín en Playa Grande, Mar del Plata. En un escenario montado frente al mar, el grupo de ochenta músicos de la Orquesta Filarmónica del Teatro Colón dirigida por el maestro Enrique Arturo Diemecke realizó un espectáculo frente a más de 40.000 personas, en un concierto público y gratuito, interpretando obras de Ludwig Van Beethoven y Leonard Bernstein así como también tangos tradicionales."
+            description2="En el proyecto de la producción al aire libre se realizaron dentro del marco del asesoramiento escenotécnico, el diseño y la dirección técnica de la producción, tanto de los sistemas constructivos escénicos como de los sistemas de iluminación, sonido y video."
+            img={orquesta}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

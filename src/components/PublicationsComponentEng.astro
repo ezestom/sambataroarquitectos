@@ -1,0 +1,129 @@
+---
+import Base from '../layouts/Base.astro';
+
+const notes = [
+    {
+        magazine: 'Revista ARQ',
+        title: '"Full Renovation of a Cultural Icon from Mar del Plata". Article about the rehabilitation of the Teatro Tronador in Mar del Plata. Architecture supplement of Clarín newspaper from March 20, 2018, pages 6-9',
+        images: ['/notes/1.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista Summa+',
+        title: '"Renovation of a Modern Classic". Article about the renovation of the Teatro Coliseo. Magazine n°153, pages 110-111',
+        images: ['/notes/2.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: 'Publication of the technical school project of the University of Buenos Aires. Architecture magazine of the Pontifical Catholic University of Chile, n° 86, April 2014, page 95',
+        images: ['/notes/3.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"Heritage Recovery with Cutting-Edge Technology". Article written by Agostina Sambataro about the renovation of the Teatro Coliseo. Magazine n°793, pages 10-14.',
+        images: ['/notes/4.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"The Architects of Tomorrow". Article about the winners of the Clarín-SCA 2013 awards. Cover of the architecture magazine from December 10, 2013, pages 12-18',
+        images: ['/notes/5.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista Color y Textura',
+        title: 'Publication of the modernization project of the Teatro Coliseo',
+        images: ['/notes/6.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"Ten Life Stories After the Award". Article about the professional careers of the winners of the Clarín-SCA 2013 awards. Architecture magazine from August 16, 2014, pages 16-18.',
+        images: ['/notes/7.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Clarín Newspaper',
+        title: '"The Coliseo, a Classic Amid Renovation". Article about the renovation of the Teatro Coliseo. Clarín newspaper from May 15, 2014',
+        images: ['/notes/8.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista Diseño & Decoración',
+        title: '"Teatro Coliseo, the Restoration". Article about the renovation of the Teatro Coliseo. Design magazine from November 2, 2016.',
+        images: ['/notes/9.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Revista ARQ',
+        title: '"The Coliseo Ready: Value Enhancement and New Technology". Article about the renovation of the Teatro Coliseo. Architecture magazine from May 17, 2016, pages 20-24.',
+        images: ['/notes/10.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Clarín Newspaper',
+        title: '"The New Coliseo". "The Teatro Coliseo, renovated and modern, showed its new face". Article about the renovation of the Teatro Coliseo. Clarín newspaper from May 6, 2016, page 53',
+        images: ['/notes/11.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Clarín Newspaper',
+        title: '"Teatro Tronador, Between Nostalgia and the Dream of a New Splendor". Article about the rehabilitation of the Teatro Tronador in Mar del Plata. Newspaper from January 30, 2018, page 285',
+        images: ['/notes/12.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Escuela de Ballet de Santiago',
+        title: '"Municipal Theater: Ballet School". Publication about the rehabilitation of the Ballet School in Santiago.',
+        images: ['/notes/13.webp'],
+        link: '#',
+    },
+    {
+        magazine: 'Teatro del Lago',
+        title: '"Teatro del Lago: A Project to Highlight". Article about the construction of the Teatro del Lago in Frutillar, Chile.',
+        images: ['/notes/14.webp'],
+        link: '#',
+    },
+];
+---
+
+<Base>
+    <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="flex flex-col gap-12 sm:gap-16">
+                <ul role="list" class="grid gap-8 lg:grid-cols-3">
+                    {
+                        notes.map((item) => (
+                            <li class="rounded-xl bg-primary-200/50 p-2 shadow-md  dark:bg-primary-900">
+                                <div class="flex h-full flex-col justify-start">
+                                    {item.images?.[0] && (
+                                        <img
+                                            class="mx-auto h-[350px] w-full rounded-md bg-transparent object-cover"
+                                            src={item.images[0]}
+                                            alt={item.title}
+                                        />
+                                    )}
+
+                                    <div class="flex flex-1 flex-col py-2 text-start">
+                                        <p class="text-sm font-light opacity-50">{item.magazine}</p>
+                                        <p class="pb-2 text-base leading-relaxed text-primary-950/70 dark:text-primary-200/70">
+                                            {item.title}
+                                        </p>
+                                    </div>
+                                    {/* <a
+                                        href={item.link}
+                                        class="flex w-full items-center justify-center rounded-3xl border border-primary-900/10 px-4 py-2 transition hover:bg-primary-200 dark:border-primary-300/10 hover:dark:bg-primary-900/10"
+                                        data-index={index}>
+                                        Ir a la publicación
+                                    </a> */}
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+</Base>

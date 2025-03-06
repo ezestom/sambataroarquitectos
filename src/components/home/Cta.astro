@@ -1,20 +1,30 @@
+---
+interface CtaProps {
+    title: string;
+    description: string;
+    anchor: string;
+}
+
+const { title, description, anchor } = Astro.props as CtaProps;
+---
+
 <section class="py-16 sm:py-20">
     <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
         <div
             class="flex flex-col items-center gap-8 rounded-xl bg-primary-200/50 p-2 px-5 py-16 shadow-md dark:bg-primary-900 sm:gap-10">
             <div class="flex flex-col gap-4 sm:gap-6">
-                <h2 class="mx-auto max-w-sm text-3xl font-medium tracking-tight sm:text-4xl">
-                    Construyendo el futuro
+                <h2 class="text-4xl font-light tracking-tight sm:text-5xl lg:text-[4vw]">
+                    {title}
                 </h2>
-                <p class="mx-auto max-w-2xl text-lg text-primary-950/70 dark:text-primary-200/70">
-                    En Sambataro Arquitectos estamos comprometidos con la calidad y la innovación en
-                    cada uno de nuestros proyectos.
+                <p
+                    class="mx-auto max-w-xl text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+                    {description}
                 </p>
             </div>
             <a
                 href="/contact"
-                class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400">
-                Contactanos
+                class="dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400 max-w-sm">
+                {anchor}
             </a>
         </div>
     </div>

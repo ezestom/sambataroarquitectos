@@ -1,0 +1,96 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import colon from '../../../img/projects/colon.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import colon1 from '../../../img/projects/colon/colon1.webp';
+import colon2 from '../../../img/projects/colon/colon2.webp';
+import colon3 from '../../../img/projects/colon/colon3.webp';
+import colon4 from '../../../img/projects/colon/colon4.webp';
+import colon5 from '../../../img/projects/colon/colon5.webp';
+import colon6 from '../../../img/projects/colon/colon6.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Cerrito 628, Ciudad Autónoma de Buenos Aires, Argentina' },
+    { label: 'Temática', value: 'Remodelación, Modernización y Equipamiento Escénico' },
+    { label: 'Servicios', value: 'Proyecto licitatorio, proyecto ejecutivo, dirección de obra' },
+    { label: 'Comitente', value: 'Municipalidad de la Ciudad de Buenos Aires' },
+    { label: 'Dirección Ejecutiva', value: 'Enrique Bordolini' },
+    { label: 'Proyecto escenotécnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Dirección de obra', value: 'Alfio Sambataro' },
+    { label: 'Localidades', value: '2500' },
+    { label: 'Superficie aproximada total', value: '58.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '7.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 14.000.000' },
+    { label: 'Año', value: '1987-1990' },
+    { web: 'http://www.teatrocolon.org.ar/', href: 'http://www.teatrocolon.org.ar/' },
+];
+
+const asesores = [
+    'Theater Projects',
+    'Ing. Federico Malvares',
+    'Ing. Fink',
+    'José Luis Fiorruccio',
+    'Rolando Sadra',
+];
+
+const images = [
+    {
+        largeURL: colon1.src,
+        thumbnailURL: colon1.src,
+        width: 1102,
+        height: 744,
+    },
+    {
+        largeURL: colon2.src,
+        thumbnailURL: colon2.src,
+        width: 490,
+        height: 744,
+    },
+    {
+        largeURL: colon3.src,
+        thumbnailURL: colon3.src,
+        width: 1162,
+        height: 744,
+    },
+    {
+        largeURL: colon4.src,
+        thumbnailURL: colon4.src,
+        width: 1104,
+        height: 744,
+    },
+    {
+        largeURL: colon5.src,
+        thumbnailURL: colon5.src,
+        width: 1079,
+        height: 744,
+    },
+    {
+        largeURL: colon6.src,
+        thumbnailURL: colon6.src,
+        width: 1541,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Teatro Colón">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="colon"
+            city="Buenos Aires, Argentina"
+            year="1987-1990"
+            room="Sala Lírica"
+            project="Teatro Colón"
+            description1="El Teatro Colón de Buenos Aires, inaugurado en el año 1908 y diseñado por los arquitectos Francesco Tamburini, Vittorio Meano y Jules Dormal, posee una capacidad para 2487 espectadores sentados y es considerado tanto por su acústica como por su arquitectura, uno de los teatros más importantes del mundo."
+            description2="El proyecto escenotécnico para un edificio de estas características, requirió un profundo análisis de diagnóstico, concluyendo que su caja escénica, como corazón de todo teatro, se encontraba obsoleta, operando con sistemas de suspensión del siglo pasado; lo que impedía al teatro estar a la altura de la demanda cultural del momento."
+            description3="En este contexto, el proyecto abarcó la remodelación completa de la caja escénica incluyendo el refuerzo y adecuación de la estructura resistente de rigging del centenario edificio. Involucró el diseño de doble parrilla y 3 niveles de puentes de maniobras y técnicos. Los sistemas de suspensión comprendieron un total de 30 varas manuales contrapesadas, 36 varas motorizadas, 60 malacates de 12 líneas de 5 puntuales, 2 puentes de iluminación y sistema de embocadura variable compuesto de torres laterales y puente portal. Se instalaron en total 100 motores controlados por un sistema central computarizado. También se incluyeron nuevos sistemas de intercomunicación técnica, llamadores a escena, audio y video."
+            img={colon}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

@@ -51,6 +51,11 @@ const bottomLinks = [
         ],
     },
 ];
+
+interface FooterLink {
+    description: string;
+}
+const { description } = Astro.props as FooterLink;
 ---
 
 <footer
@@ -62,9 +67,7 @@ const bottomLinks = [
             <div class="flex max-w-sm flex-col gap-6 sm:gap-8">
                 <p
                     class="text-balance text-center text-sm text-primary-950/70 dark:text-primary-200/70 sm:text-start">
-                    Sambataro Arquitectos, estudio de arquitectura con más de 40 años de
-                    experiencia en asesoría esceno-técnica y maquinaria escénica de mantenimiento
-                    preventivo y correctivo.
+                    {description}
                 </p>
                 <p class="text-sm text-primary-950/70 dark:text-primary-200/70">
                     © 2025 - <span class="font-semibold">Sambataro Arquitectos</span>

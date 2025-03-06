@@ -1,0 +1,193 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import ballet from '../../../img/projects/ballet.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import ballet1 from '../../../img/projects/ballet/ballet1.webp';
+import ballet2 from '../../../img/projects/ballet/ballet2.webp';
+import ballet3 from '../../../img/projects/ballet/ballet3.webp';
+import ballet4 from '../../../img/projects/ballet/ballet4.webp';
+import ballet5 from '../../../img/projects/ballet/ballet5.webp';
+import ballet6 from '../../../img/projects/ballet/ballet6.webp';
+import ballet7 from '../../../img/projects/ballet/ballet7.webp';
+import ballet8 from '../../../img/projects/ballet/ballet8.webp';
+import ballet9 from '../../../img/projects/ballet/ballet9.webp';
+import ballet10 from '../../../img/projects/ballet/ballet10.webp';
+import ballet11 from '../../../img/projects/ballet/ballet11.webp';
+import ballet12 from '../../../img/projects/ballet/ballet12.webp';
+import ballet13 from '../../../img/projects/ballet/ballet13.webp';
+import ballet14 from '../../../img/projects/ballet/ballet14.webp';
+import ballet15 from '../../../img/projects/ballet/ballet15.webp';
+import ballet16 from '../../../img/projects/ballet/ballet16.webp';
+import ballet17 from '../../../img/projects/ballet/ballet17.webp';
+import ballet18 from '../../../img/projects/ballet/ballet18.webp';
+import ballet19 from '../../../img/projects/ballet/ballet19.webp';
+import ballet20 from '../../../img/projects/ballet/ballet20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Edificio complementario' },
+    { label: 'Ubicación', value: 'Moneda 759, Santiago, Chile' },
+    { label: 'Temática', value: 'Refuncionalización' },
+    { label: 'Servicios', value: 'Proyecto ejecutivo general de arquitectura, Dirección de obra' },
+    { label: 'Comitente', value: 'Municipalidad de Santiago' },
+    { label: 'Proyecto general de arquitectura', value: 'Arq. Alfio Sambataro' },
+    {
+        label: 'Colaboradores',
+        value: 'Arq. María Paz Carvajal V., Carolina Díaz S., Arq. Marcela Durán G., Macarena Aranda J.',
+    },
+    { label: 'Asesores', value: 'Arq. Andrés Cumsille, Ing. Jorge Sommerhoff; Ing. Gastón Klein' },
+    { label: 'Fotografías', value: 'Arq. María Paz Carvajal V.' },
+    { label: 'Superficie aproximada total', value: '1.800 m2' },
+    { label: 'Superficie aproximada intervenida', value: '1.800 m2' },
+    { label: 'Año', value: '2013' },
+    {
+        web: 'http://www.municipal.cl/page/escuela-de-ballet-del-teatro-municipal',
+        href: 'http://www.municipal.cl/page/escuela-de-ballet-del-teatro-municipal',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: ballet1.src,
+        thumbnailURL: ballet1.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ballet2.src,
+        thumbnailURL: ballet2.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet3.src,
+        thumbnailURL: ballet3.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: ballet4.src,
+        thumbnailURL: ballet4.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: ballet5.src,
+        thumbnailURL: ballet5.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet6.src,
+        thumbnailURL: ballet6.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet7.src,
+        thumbnailURL: ballet7.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet8.src,
+        thumbnailURL: ballet8.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ballet9.src,
+        thumbnailURL: ballet9.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: ballet10.src,
+        thumbnailURL: ballet10.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ballet11.src,
+        thumbnailURL: ballet11.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet12.src,
+        thumbnailURL: ballet12.src,
+        width: 1116,
+        height: 744,
+    },
+    {
+        largeURL: ballet13.src,
+        thumbnailURL: ballet13.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: ballet14.src,
+        thumbnailURL: ballet14.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet15.src,
+        thumbnailURL: ballet15.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet16.src,
+        thumbnailURL: ballet16.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet17.src,
+        thumbnailURL: ballet17.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet18.src,
+        thumbnailURL: ballet18.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet19.src,
+        thumbnailURL: ballet19.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: ballet20.src,
+        thumbnailURL: ballet20.src,
+        width: 896,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Escuela de ballet de Santiago">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="ballet"
+            city="Santiago, Chile"
+            year="2013"
+            room="Escuela de ballet"
+            project="Escuela de ballet de Santiago"
+            description1="El edificio Moneda 759, adyacente al Teatro Municipal de Santiago, se encuentra ubicado en un sector de Conservación Histórica. Su historia data del año 1757, a partir del cual sufrió grandes mutaciones adoptando finalmente un marcado estilo neorrenacentista hacia principios del siglo veinte. En 1987 pasó a depender del Teatro Municipal de Santiago, funcionando principalmente como escuela de ballet hasta la actualidad. Los grandes daños producidos por el sismo del año 2010 dieron origen a un proyecto de reparación y refuncionalización del edificio a cargo del Arq. Alfio Sambataro."
+            description2="El diseño del masterplan para el proyecto de recuperación, remodelación y reorganización programática para la Escuela de Ballet, requirió de estudios previos, a cargo de ingenieros que determinaron el nivel de daño estructural y las soluciones a ejecutar para la recuperación patrimonial. Como fórmula preventiva ante futuros sismos, se incluyeron una serie de refuerzos y nuevas estructuras metálicas para que trabajaran conjuntamente con el sistema mixto original del edificio, conformado por mampostería portante, metal y madera. Los espacios de valor arquitectónico, como las fachadas, la cubierta vidriada del patio central interior y el hall de acceso, fueron especialmente tratados de modo de recuperar su valor y diseño original. También se repararon los cielorrasos, revoques, puertas y ventanas de madera."
+            description3="Se diseñaron nuevas salas y camarines para el ballet, así como también se reacondicionaron las salas del coro profesional y se habilitaron nuevas oficinas administrativas. Se renovó la infraestructura de instalaciones sanitarias, eléctricas y climatización. A su vez, sumaron adecuaciones tecnológicas, como la instalación de pisos de rebote tipo spring wood en las salas de ballet y el acondicionamiento acústico en las salas corales. El proyecto incluyó la ubicación del DAE -centro de difusión de las artes escénicas- entidad que se dedica a la recopilación, tratamiento y difusión pública de valioso material histórico de la actividad."
+            img={ballet}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

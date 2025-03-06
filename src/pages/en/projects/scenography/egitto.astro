@@ -1,0 +1,183 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import egitto from '../../../img/projects/egitto.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import egitto1 from '../../../img/projects/egitto/egitto1.webp';
+import egitto2 from '../../../img/projects/egitto/egitto2.webp';
+import egitto3 from '../../../img/projects/egitto/egitto3.webp';
+import egitto4 from '../../../img/projects/egitto/egitto4.webp';
+import egitto5 from '../../../img/projects/egitto/egitto5.webp';
+import egitto6 from '../../../img/projects/egitto/egitto6.webp';
+import egitto7 from '../../../img/projects/egitto/egitto7.webp';
+import egitto8 from '../../../img/projects/egitto/egitto8.webp';
+import egitto9 from '../../../img/projects/egitto/egitto9.webp';
+import egitto10 from '../../../img/projects/egitto/egitto10.webp';
+import egitto11 from '../../../img/projects/egitto/egitto11.webp';
+import egitto12 from '../../../img/projects/egitto/egitto12.webp';
+import egitto13 from '../../../img/projects/egitto/egitto13.webp';
+import egitto14 from '../../../img/projects/egitto/egitto14.webp';
+import egitto15 from '../../../img/projects/egitto/egitto15.webp';
+import egitto16 from '../../../img/projects/egitto/egitto16.webp';
+import egitto17 from '../../../img/projects/egitto/egitto17.webp';
+import egitto18 from '../../../img/projects/egitto/egitto18.webp';
+import egitto19 from '../../../img/projects/egitto/egitto19.webp';
+import egitto20 from '../../../img/projects/egitto/egitto20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón, Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Pablo Maritano' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Diseño de vestuario', value: 'Sofía di Nunzio' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro, Arq. Agostina Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2017' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: egitto1.src,
+        thumbnailURL: egitto1.src,
+        width: 1000,
+        height: 619,
+    },
+    {
+        largeURL: egitto2.src,
+        thumbnailURL: egitto2.src,
+        width: 960,
+        height: 540,
+    },
+    {
+        largeURL: egitto3.src,
+        thumbnailURL: egitto3.src,
+        width: 1000,
+        height: 510,
+    },
+    {
+        largeURL: egitto4.src,
+        thumbnailURL: egitto4.src,
+        width: 1000,
+        height: 576,
+    },
+    {
+        largeURL: egitto5.src,
+        thumbnailURL: egitto5.src,
+        width: 1278,
+        height: 744,
+    },
+    {
+        largeURL: egitto6.src,
+        thumbnailURL: egitto6.src,
+        width: 1183,
+        height: 744,
+    },
+    {
+        largeURL: egitto7.src,
+        thumbnailURL: egitto7.src,
+        width: 1259,
+        height: 744,
+    },
+    {
+        largeURL: egitto8.src,
+        thumbnailURL: egitto8.src,
+        width: 1237,
+        height: 744,
+    },
+    {
+        largeURL: egitto9.src,
+        thumbnailURL: egitto9.src,
+        width: 1086,
+        height: 744,
+    },
+    {
+        largeURL: egitto10.src,
+        thumbnailURL: egitto10.src,
+        width: 1211,
+        height: 744,
+    },
+    {
+        largeURL: egitto11.src,
+        thumbnailURL: egitto11.src,
+        width: 1219,
+        height: 744,
+    },
+    {
+        largeURL: egitto12.src,
+        thumbnailURL: egitto12.src,
+        width: 1232,
+        height: 744,
+    },
+    {
+        largeURL: egitto13.src,
+        thumbnailURL: egitto13.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: egitto14.src,
+        thumbnailURL: egitto14.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: egitto15.src,
+        thumbnailURL: egitto15.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: egitto16.src,
+        thumbnailURL: egitto16.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: egitto17.src,
+        thumbnailURL: egitto17.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: egitto18.src,
+        thumbnailURL: egitto18.src,
+        width: 901,
+        height: 744,
+    },
+    {
+        largeURL: egitto19.src,
+        thumbnailURL: egitto19.src,
+        width: 908,
+        height: 744,
+    },
+    {
+        largeURL: egitto20.src,
+        thumbnailURL: egitto20.src,
+        width: 1188,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Giulio Cesare in Egitto">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="egitto"
+            city="Buenos Aires, Argentina"
+            year="2017"
+            room="Teatro Colón"
+            project="Giulio Cesare in Egitto"
+            description1="Ópera en tres actos con música de Georg Friedrich Händel y libreto en italiano de Nicola Francesco Haym quien usó un libreto anterior por Giacomo Francesco Bussani musicado por Antonio Sartorio."
+            description2="El proyecto de la producción escenográfica para el Teatro Colón de Buenos Aires, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos, sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto y mecanismos de efectos especiales."
+            img={egitto}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

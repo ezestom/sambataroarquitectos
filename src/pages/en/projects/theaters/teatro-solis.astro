@@ -1,0 +1,134 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import solis from '../../../img/projects/solis.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import solis1 from '../../../img/projects/solis/solis1.webp';
+import solis2 from '../../../img/projects/solis/solis2.webp';
+import solis3 from '../../../img/projects/solis/solis3.webp';
+import solis4 from '../../../img/projects/solis/solis4.webp';
+import solis5 from '../../../img/projects/solis/solis5.webp';
+import solis6 from '../../../img/projects/solis/solis6.webp';
+import solis7 from '../../../img/projects/solis/solis7.webp';
+import solis8 from '../../../img/projects/solis/solis8.webp';
+import solis9 from '../../../img/projects/solis/solis9.webp';
+import solis10 from '../../../img/projects/solis/solis10.webp';
+import solis11 from '../../../img/projects/solis/solis11.webp';
+import solis12 from '../../../img/projects/solis/solis12.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Reconquista s/n esq. Bartolomé Mitre, Montevideo, Uruguay' },
+    {
+        label: 'Temática',
+        value: 'Proyecto de remodelación y modernización de maquinaria escenotécnica',
+    },
+    { label: 'Servicios', value: 'Proyecto licitatorio de escenotecnia' },
+    { label: 'Comitente', value: 'Hoffend & Sons, Inc.' },
+    { label: 'Localidades', value: '1.200' },
+    { label: 'Superficie aproximada total', value: '20.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '7.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 3.000.000' },
+    { label: 'Año', value: '2003' },
+    {
+        web: 'http://www.teatrosolis.org.uy/index_1.html',
+        href: 'http://www.teatrosolis.org.uy/index_1.html',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: solis1.src,
+        thumbnailURL: solis1.src,
+        width: 1005,
+        height: 744,
+    },
+    {
+        largeURL: solis2.src,
+        thumbnailURL: solis2.src,
+        width: 952,
+        height: 744,
+    },
+    {
+        largeURL: solis3.src,
+        thumbnailURL: solis3.src,
+        width: 921,
+        height: 744,
+    },
+    {
+        largeURL: solis4.src,
+        thumbnailURL: solis4.src,
+        width: 806,
+        height: 744,
+    },
+    {
+        largeURL: solis5.src,
+        thumbnailURL: solis5.src,
+        width: 888,
+        height: 744,
+    },
+    {
+        largeURL: solis6.src,
+        thumbnailURL: solis6.src,
+        width: 764,
+        height: 744,
+    },
+    {
+        largeURL: solis7.src,
+        thumbnailURL: solis7.src,
+        width: 764,
+        height: 744,
+    },
+    {
+        largeURL: solis8.src,
+        thumbnailURL: solis8.src,
+        width: 1169,
+        height: 744,
+    },
+    {
+        largeURL: solis9.src,
+        thumbnailURL: solis9.src,
+        width: 1024,
+        height: 392,
+    },
+    {
+        largeURL: solis10.src,
+        thumbnailURL: solis10.src,
+        width: 1024,
+        height: 685,
+    },
+    {
+        largeURL: solis11.src,
+        thumbnailURL: solis1.src,
+        width: 1016,
+        height: 744,
+    },
+    {
+        largeURL: solis12.src,
+        thumbnailURL: solis12.src,
+        width: 959,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Teatro Municipal Solís">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="solis"
+            city="Montevideo, Uruguay"
+            year="2003"
+            room="Sala Lírica"
+            project="Teatro Municipal Solís"
+            description1="El Teatro Municipal Solís de Montevideo, Uruguay fue por primera vez inaugurado en el año 1856. En el año 2004 fue reinaugurado tras su reforma principal en la cual la mejora más importante fue la ocurrida en su escenario, aumentándose en un 80% su superficie y un 100% en volumen. Este cambio fue fundamental para poder recibir espectáculos locales e internacionales de gran infraestructura."
+            description2="Se logró a partir de la realización del proyecto de equipamiento de la caja escénica con las correspondientes soluciones para maquinaria escenotécnica, sistemas de suspensión y sistemas de iluminación y auxiliares. Todo se concretó utilizando las estructuras metálicas de parrillas y puentes de maniobras existentes en el proyecto original."
+            img={solis}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

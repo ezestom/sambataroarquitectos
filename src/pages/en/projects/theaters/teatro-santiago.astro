@@ -1,0 +1,142 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import santiago from '../../../img/projects/santiago.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import santiago1 from '../../../img/projects/santiago/santiago1.webp';
+import santiago2 from '../../../img/projects/santiago/santiago2.webp';
+import santiago3 from '../../../img/projects/santiago/santiago3.webp';
+import santiago4 from '../../../img/projects/santiago/santiago4.webp';
+import santiago5 from '../../../img/projects/santiago/santiago5.webp';
+import santiago6 from '../../../img/projects/santiago/santiago6.webp';
+import santiago7 from '../../../img/projects/santiago/santiago7.webp';
+import santiago8 from '../../../img/projects/santiago/santiago8.webp';
+import santiago9 from '../../../img/projects/santiago/santiago9.webp';
+import santiago10 from '../../../img/projects/santiago/santiago10.webp';
+import santiago11 from '../../../img/projects/santiago/santiago11.webp';
+import santiago12 from '../../../img/projects/santiago/santiago12.webp';
+import santiago13 from '../../../img/projects/santiago/santiago13.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Agustinas 794, Santiago, Chile' },
+    {
+        label: 'Temática',
+        value: 'Proyecto de remodelación de áreas de apoyo y Correctivo de Maquinaria Escenotécnica',
+    },
+    { label: 'Servicios', value: 'Proyecto ejecutivo, Dirección e Inspección de calidad' },
+    { label: 'Comitente', value: 'Teatro Municipal de Santiago' },
+    { label: 'Proyecto de arquitectura general', value: 'Arq. Alfio Sambataro' },
+    { label: 'Localidades', value: '1500' },
+    { label: 'Superficie aproximada total', value: '25.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '5.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 3.000.000' },
+    { label: 'Año', value: '2002-2014' },
+    {
+        web: 'http://www.municipal.cl/',
+        href: 'http://www.municipal.cl/',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: santiago1.src,
+        thumbnailURL: santiago1.src,
+        width: 1135,
+        height: 744,
+    },
+    {
+        largeURL: santiago2.src,
+        thumbnailURL: santiago2.src,
+        width: 1172,
+        height: 480,
+    },
+    {
+        largeURL: santiago3.src,
+        thumbnailURL: santiago3.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: santiago4.src,
+        thumbnailURL: santiago4.src,
+        width: 1123,
+        height: 744,
+    },
+    {
+        largeURL: santiago5.src,
+        thumbnailURL: santiago5.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: santiago6.src,
+        thumbnailURL: santiago6.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: santiago7.src,
+        thumbnailURL: santiago7.src,
+        width: 1107,
+        height: 744,
+    },
+    {
+        largeURL: santiago8.src,
+        thumbnailURL: santiago8.src,
+        width: 1082,
+        height: 744,
+    },
+    {
+        largeURL: santiago9.src,
+        thumbnailURL: santiago9.src,
+        width: 1082,
+        height: 744,
+    },
+    {
+        largeURL: santiago10.src,
+        thumbnailURL: santiago10.src,
+        width: 716,
+        height: 744,
+    },
+    {
+        largeURL: santiago11.src,
+        thumbnailURL: santiago11.src,
+        width: 668,
+        height: 744,
+    },
+    {
+        largeURL: santiago12.src,
+        thumbnailURL: santiago12.src,
+        width: 685,
+        height: 744,
+    },
+    {
+        largeURL: santiago13.src,
+        thumbnailURL: santiago13.src,
+        width: 748,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Teatro Municipal de Santiago">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="santiago"
+            city="Santiago, Chile"
+            year="2002-2014"
+            room="Sala Lírica"
+            project="Teatro Municipal de Santiago"
+            description1="El Teatro Municipal de Santiago, inaugurado originalmente en el año 1857 y diseñado por el arquitecto François Brunet de Baines y el ingeniero Felipe Augusto Charme de l´Isle, es la Ópera Nacional de Chile y principal escenario para la música clásica del país. Su sala principal posee una capacidad para 1500 espectadores."
+            description2="Dentro de la asesoría escenotécnica del teatro, se comenzó por realizar una inspección e informe técnico de diagnóstico de los sistemas de maquinaria escénica existentes y un estudio de factibilidad. Se desarrolló luego el proyecto de mantenimiento, correctivo, preventivo y de modernización del equipamiento. Las tareas realizadas incluyeron el proyecto, control de calidad de fabricación e inspección de obra de la maquinaria escénica y sistemas escenotécnicos del escenario. También se ejecutó la remodelación completa de los tres niveles de camarines."
+            img={santiago}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

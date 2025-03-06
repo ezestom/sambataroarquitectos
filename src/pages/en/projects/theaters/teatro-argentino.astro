@@ -1,0 +1,142 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import argentino from '../../../img/projects/argentino.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import argentino1 from '../../../img/projects/argentino/argentino1.webp';
+import argentino2 from '../../../img/projects/argentino/argentino2.webp';
+import argentino3 from '../../../img/projects/argentino/argentino3.webp';
+import argentino4 from '../../../img/projects/argentino/argentino4.webp';
+import argentino5 from '../../../img/projects/argentino/argentino5.webp';
+import argentino6 from '../../../img/projects/argentino/argentino6.webp';
+import argentino7 from '../../../img/projects/argentino/argentino7.webp';
+import argentino8 from '../../../img/projects/argentino/argentino8.webp';
+import argentino9 from '../../../img/projects/argentino/argentino9.webp';
+import argentino10 from '../../../img/projects/argentino/argentino10.webp';
+import argentino11 from '../../../img/projects/argentino/argentino11.webp';
+import argentino12 from '../../../img/projects/argentino/argentino12.webp';
+import argentino13 from '../../../img/projects/argentino/argentino13.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Av. 51 502, La Plata, Buenos Aires, Argentina' },
+    { label: 'Temática', value: 'Proyecto de Equipamiento de Maquinaria Escénica' },
+    { label: 'Servicios', value: 'Proyecto licitatorio, proyecto ejecutivo, Dirección de obra' },
+    { label: 'Comitente', value: 'Gobierno de la Provincia de Buenos Aires' },
+    {
+        label: 'Proyecto de arquitectura general',
+        value: 'Arq. Enrique Bares, Arq. Tomás García, Arq. Roberto Germani, Arq. Ines Rubio, Arq. Alberto Sbarra y Arq. Carlos Ucar.',
+    },
+    { label: 'Localidades', value: '2000' },
+    { label: 'Superficie aproximada total', value: '60.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '12.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 23.000.000' },
+    { label: 'Año', value: '1998-2001' },
+    {
+        web: 'https://www.gba.gob.ar/es/teatroargentino',
+        href: 'https://www.gba.gob.ar/es/teatroargentino',
+    },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: argentino1.src,
+        thumbnailURL: argentino1.src,
+        width: 1024,
+        height: 685,
+    },
+    {
+        largeURL: argentino2.src,
+        thumbnailURL: argentino2.src,
+        width: 1165,
+        height: 744,
+    },
+    {
+        largeURL: argentino3.src,
+        thumbnailURL: argentino3.src,
+        width: 1035,
+        height: 744,
+    },
+    {
+        largeURL: argentino4.src,
+        thumbnailURL: argentino4.src,
+        width: 1024,
+        height: 744,
+    },
+    {
+        largeURL: argentino5.src,
+        thumbnailURL: argentino5.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: argentino6.src,
+        thumbnailURL: argentino6.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: argentino7.src,
+        thumbnailURL: argentino7.src,
+        width: 1107,
+        height: 744,
+    },
+    {
+        largeURL: argentino8.src,
+        thumbnailURL: argentino8.src,
+        width: 1082,
+        height: 744,
+    },
+    {
+        largeURL: argentino9.src,
+        thumbnailURL: argentino9.src,
+        width: 1082,
+        height: 744,
+    },
+    {
+        largeURL: argentino10.src,
+        thumbnailURL: argentino10.src,
+        width: 1085,
+        height: 744,
+    },
+    {
+        largeURL: argentino11.src,
+        thumbnailURL: argentino11.src,
+        width: 1085,
+        height: 744,
+    },
+    {
+        largeURL: argentino12.src,
+        thumbnailURL: argentino12.src,
+        width: 989,
+        height: 744,
+    },
+    {
+        largeURL: argentino13.src,
+        thumbnailURL: argentino13.src,
+        width: 989,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Teatro Argentino de La Plata">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="argentino"
+            city="La Plata, Buenos Aires, Argentina"
+            year="1998-2001"
+            room="Sala Lírica"
+            project="Teatro Argentino de La Plata"
+            description1="El nuevo Teatro Argentino de La Plata, re-inaugurado en el año 1999 tras el incendio que devastó al edificio original de 1890, fue diseñado por los arquitectos Enrique Bares, Tomás García, Roberto Germani, Ines Rubio, Alberto Sbarra y Carlos Ucar, conteniendo una de las salas líricas más destacadas de Argentina. Su sala principal “Alberto Ginastera” posee una capacidad para 2000 espectadores."
+            description2="El trabajo comprendió la realización de la ingeniería y montaje de los distintos sistemas de equipamiento escenotécnico. Estos incluyeron parrillas y puentes de maniobras, 30 varas contrapesadas, 36 varas motorizadas, 60 malacates en 12 varas puntuales, sistemas de suspensión auxiliares manuales y motorizados, módulos de iluminación y embocadura variable compuesta por torres laterales y puente de luz de boca, telón de seguridad y telón principal de apertura a la italiana. La maquinaria de piso de escenario comprende 2 plataformas principales, 12 sub-plataformas, 3 vagones laterales por hombro, compensadores de nivelación de piso y 2 montacargas. Un sistema de control general computarizado regula todos los elementos."
+            img={argentino}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

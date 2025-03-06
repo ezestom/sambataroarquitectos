@@ -1,0 +1,145 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import arena from '../../../img/projects/arena.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import arena1 from '../../../img/projects/arena/arena1.webp';
+import arena2 from '../../../img/projects/arena/arena2.webp';
+import arena3 from '../../../img/projects/arena/arena3.webp';
+import arena4 from '../../../img/projects/arena/arena4.webp';
+import arena5 from '../../../img/projects/arena/arena5.webp';
+import arena6 from '../../../img/projects/arena/arena6.webp';
+import arena7 from '../../../img/projects/arena/arena7.webp';
+import arena8 from '../../../img/projects/arena/arena8.webp';
+import arena9 from '../../../img/projects/arena/arena9.webp';
+import arena10 from '../../../img/projects/arena/arena10.webp';
+import arena11 from '../../../img/projects/arena/arena11.webp';
+import arena12 from '../../../img/projects/arena/arena12.webp';
+import arena13 from '../../../img/projects/arena/arena13.webp';
+import arena14 from '../../../img/projects/arena/arena14.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Estadio' },
+    { label: 'Ubicación', value: 'Av. Beauchef 1204, Santiago, Chile' },
+    { label: 'Temática', value: 'Proyecto de remodelación y modernización' },
+    { label: 'Servicios', value: 'Proyecto licitatorio escenotécnico' },
+    { label: 'Comitente', value: 'Arena Santiago' },
+    { label: 'Director ejecutivo', value: 'Enrique Bordolini' },
+    { label: 'Asesores', value: 'Ing. Juan Antonio Vargas, Ing. Jorge Sommerhoff' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Localidades', value: '16.500' },
+    { label: 'Superficie aproximada total', value: '28.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '7.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 2.000.000' },
+    { label: 'Año', value: '2005-2006' },
+    { web: 'http://movistararena.cl/', href: 'http://movistararena.cl/' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: arena1.src,
+        thumbnailURL: arena1.src,
+        width: 831,
+        height: 224,
+    },
+    {
+        largeURL: arena2.src,
+        thumbnailURL: arena2.src,
+        width: 831,
+        height: 343,
+    },
+    {
+        largeURL: arena3.src,
+        thumbnailURL: arena3.src,
+        width: 831,
+        height: 556,
+    },
+    {
+        largeURL: arena4.src,
+        thumbnailURL: arena4.src,
+        width: 716,
+        height: 476,
+    },
+    {
+        largeURL: arena5.src,
+        thumbnailURL: arena5.src,
+        width: 716,
+        height: 476,
+    },
+    {
+        largeURL: arena6.src,
+        thumbnailURL: arena6.src,
+        width: 831,
+        height: 623,
+    },
+    {
+        largeURL: arena7.src,
+        thumbnailURL: arena7.src,
+        width: 831,
+        height: 623,
+    },
+    {
+        largeURL: arena8.src,
+        thumbnailURL: arena8.src,
+        width: 800,
+        height: 533,
+    },
+    {
+        largeURL: arena9.src,
+        thumbnailURL: arena9.src,
+        width: 831,
+        height: 623,
+    },
+    {
+        largeURL: arena10.src,
+        thumbnailURL: arena10.src,
+        width: 831,
+        height: 623,
+    },
+    {
+        largeURL: arena11.src,
+        thumbnailURL: arena11.src,
+        width: 831,
+        height: 623,
+    },
+    {
+        largeURL: arena12.src,
+        thumbnailURL: arena12.src,
+        width: 831,
+        height: 558,
+    },
+    {
+        largeURL: arena13.src,
+        thumbnailURL: arena13.src,
+        width: 831,
+        height: 587,
+    },
+    {
+        largeURL: arena14.src,
+        thumbnailURL: arena14.src,
+        width: 831,
+        height: 587,
+    },
+];
+---
+
+<Layout description="" title="Arena Santiago">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="arena"
+            city="Santiago, Chile"
+            year="2005-2006"
+            room="Arena"
+            project="Arena Santiago"
+            description1="La Arena Santiago es un edificio tipo estadio, con capacidad para 16.500 espectadores, construido a partir del inconcluso Patio Techado Parque O’Higgins concebido por primera vez por el arquitecto Mario Recordón en 1956 e inaugurado en 2006 con diseño para albergar eventos deportivos, comerciales, culturales y de ocio."
+            description2="El proyecto escenotécnico contó con un estudio para ampliar la flexibilidad en la configuración escénica y del recinto. Se realizaron proyectos alternativos para el sistema de rigging, escenario desmontable y sus correspondientes sistemas de suspensión e iluminación escénica. Se diseñó una parrilla metálica, colgada de la estructura resistente de la cubierta, que permitía la instalación de los sistemas motorizados de suspensión automatizados; de refuerzo sonoro; de proyección de video y de iluminación."
+            img={arena}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

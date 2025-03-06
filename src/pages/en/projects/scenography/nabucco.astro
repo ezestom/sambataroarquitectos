@@ -1,0 +1,183 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import nabucco from '../../../img/projects/nabucco.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import nabucco1 from '../../../img/projects/nabucco/nabucco1.webp';
+import nabucco2 from '../../../img/projects/nabucco/nabucco2.webp';
+import nabucco3 from '../../../img/projects/nabucco/nabucco3.webp';
+import nabucco4 from '../../../img/projects/nabucco/nabucco4.webp';
+import nabucco5 from '../../../img/projects/nabucco/nabucco5.webp';
+import nabucco6 from '../../../img/projects/nabucco/nabucco6.webp';
+import nabucco7 from '../../../img/projects/nabucco/nabucco7.webp';
+import nabucco8 from '../../../img/projects/nabucco/nabucco8.webp';
+import nabucco9 from '../../../img/projects/nabucco/nabucco9.webp';
+import nabucco10 from '../../../img/projects/nabucco/nabucco10.webp';
+import nabucco11 from '../../../img/projects/nabucco/nabucco11.webp';
+import nabucco12 from '../../../img/projects/nabucco/nabucco12.webp';
+import nabucco13 from '../../../img/projects/nabucco/nabucco13.webp';
+import nabucco14 from '../../../img/projects/nabucco/nabucco14.webp';
+import nabucco15 from '../../../img/projects/nabucco/nabucco15.webp';
+import nabucco16 from '../../../img/projects/nabucco/nabucco16.webp';
+import nabucco17 from '../../../img/projects/nabucco/nabucco17.webp';
+import nabucco18 from '../../../img/projects/nabucco/nabucco18.webp';
+import nabucco19 from '../../../img/projects/nabucco/nabucco19.webp';
+import nabucco20 from '../../../img/projects/nabucco/nabucco20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Escenografías' },
+    { label: 'Ubicación', value: 'Teatro Colón, Buenos Aires, Argentina' },
+    { label: 'Servicios', value: 'Ingeniería y sistemas constructivos escenográficos' },
+    { label: 'Regisseur', value: 'Eric Vigié' },
+    { label: 'Diseño escenográfico', value: 'Enrique Bordolini' },
+    { label: 'Diseño de iluminación', value: 'Enrique Bordolini' },
+    { label: 'Vestuario', value: 'Imme Möller' },
+    { label: 'Diseño técnico', value: 'Arq. Alfio Sambataro' },
+    { label: 'Visualización arquitectónica digital', value: 'Alfredo Santis' },
+    { label: 'Año', value: '2007' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: nabucco1.src,
+        thumbnailURL: nabucco1.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: nabucco2.src,
+        thumbnailURL: nabucco2.src,
+        width: 1000,
+        height: 645,
+    },
+    {
+        largeURL: nabucco3.src,
+        thumbnailURL: nabucco3.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: nabucco4.src,
+        thumbnailURL: nabucco4.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: nabucco5.src,
+        thumbnailURL: nabucco5.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: nabucco6.src,
+        thumbnailURL: nabucco6.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: nabucco7.src,
+        thumbnailURL: nabucco7.src,
+        width: 992,
+        height: 744,
+    },
+    {
+        largeURL: nabucco8.src,
+        thumbnailURL: nabucco8.src,
+        width: 862,
+        height: 744,
+    },
+    {
+        largeURL: nabucco9.src,
+        thumbnailURL: nabucco9.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco10.src,
+        thumbnailURL: nabucco10.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco11.src,
+        thumbnailURL: nabucco11.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco12.src,
+        thumbnailURL: nabucco12.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco13.src,
+        thumbnailURL: nabucco13.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco14.src,
+        thumbnailURL: nabucco14.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco15.src,
+        thumbnailURL: nabucco15.src,
+        width: 1282,
+        height: 744,
+    },
+    {
+        largeURL: nabucco16.src,
+        thumbnailURL: nabucco16.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco17.src,
+        thumbnailURL: nabucco17.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco18.src,
+        thumbnailURL: nabucco18.src,
+        width: 999,
+        height: 744,
+    },
+    {
+        largeURL: nabucco19.src,
+        thumbnailURL: nabucco19.src,
+        width: 600,
+        height: 744,
+    },
+    {
+        largeURL: nabucco20.src,
+        thumbnailURL: nabucco20.src,
+        width: 1486,
+        height: 744,
+    },
+];
+---
+
+<Layout description="" title="Nabucco">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="nabucco"
+            city="Santiago, Chile"
+            year="2007"
+            room="Teatro municipal de Santiago"
+            project="Nabucco"
+            description1="Nabucco es una tragedia lírica en cuatro partes con música de Giuseppe Verdi y libreto en italiano de Temistocle Solera, basada en el Antiguo Testamento y la obra Nabuchodonosor, de Anicète Bourgeois y Francis Cornue. Fue estrenada el 9 de marzo de 1842 en La Scala de Milán."
+            description2="El proyecto de la producción escenográfica para el Teatro Municipal de Santiago, incluyó el diseño de la ingeniería y sistemas constructivos escenográficos; sistemas de maquinaria de tramoya, sistemas modulares para unidades de transporte compacto; y mecanismos de efectos especiales."
+            img={nabucco}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

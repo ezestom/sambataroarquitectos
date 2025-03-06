@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+
+const notes = [
+    {
+        title: "Plaza del Agua, an 'abandoned' emblem of Mar del Plata",
+        date: 'May 14, 2018 - El Marplatense',
+        images: ['/publications/plaza1.avif'],
+    },
+    {
+        title: '‘The number of people who attended shows the interest and impact’',
+        date: 'Mar 4, 2018 - El Marplatense',
+        images: ['/publications/nelson1.avif'],
+    },
+    {
+        title: 'Mar del Plata anticipates the historic Philharmonic concert',
+        date: 'Mar 3, 2018 - El Marplatense',
+        images: ['/publications/fila1.avif'],
+    },
+];
+---
+
+<Base>
+    <section class="py-16 sm:py-20">
+        <div class="mx-auto max-w-xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="flex flex-col gap-12 sm:gap-16">
+                <ul role="list" class="grid gap-8 lg:grid-cols-3">
+                    {
+                        notes.map((item, index) => (
+                            <li class="rounded-xl bg-primary-200/50 p-2 shadow-md  dark:bg-primary-900">
+                                <div class="flex h-full flex-col justify-start">
+                                    {item.images?.[0] && (
+                                        <img
+                                            class="mx-auto h-[300px] w-full rounded-md object-cover"
+                                            src={item.images[0]}
+                                            alt={item.title}
+                                        />
+                                    )}
+
+                                    <div class="flex flex-1 flex-col py-2 text-start">
+                                        <date class="text-sm font-light opacity-50">
+                                            {item.date}
+                                        </date>
+                                        <p class="pb-2 text-base leading-relaxed text-primary-950/70 dark:text-primary-200/70">
+                                            {item.title}
+                                        </p>
+                                    </div>
+                                    <button
+                                        onclick="location.href='/news'"
+                                        class="dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400"
+                                        data-index={index}>
+                                        Read more
+                                    </button>
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+</Base>

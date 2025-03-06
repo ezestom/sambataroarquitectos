@@ -1,0 +1,136 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import libertador from '../../../img/projects/libertador.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import libertador1 from '../../../img/projects/libertador/libertador1.webp';
+import libertador2 from '../../../img/projects/libertador/libertador2.webp';
+import libertador3 from '../../../img/projects/libertador/libertador3.webp';
+import libertador4 from '../../../img/projects/libertador/libertador4.webp';
+import libertador5 from '../../../img/projects/libertador/libertador5.webp';
+import libertador6 from '../../../img/projects/libertador/libertador6.webp';
+import libertador7 from '../../../img/projects/libertador/libertador7.webp';
+import libertador8 from '../../../img/projects/libertador/libertador8.webp';
+import libertador9 from '../../../img/projects/libertador/libertador9.webp';
+import libertador10 from '../../../img/projects/libertador/libertador10.webp';
+import libertador11 from '../../../img/projects/libertador/libertador11.webp';
+import libertador12 from '../../../img/projects/libertador/libertador12.webp';
+import libertador13 from '../../../img/projects/libertador/libertador13.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Teatro' },
+    { label: 'Ubicación', value: 'Av. Velez Sarsfield 365, Córdoba, Argentina' },
+    { label: 'Temática', value: 'Proyecto de refuncionalización, modernización y equipamiento' },
+    { label: 'Servicios', value: 'Proyecto licitatorio de escenotecnia' },
+    { label: 'Comitente', value: 'Secretaría de Arquitectura, Agencia Córdoba Cultura S.E.' },
+    { label: 'Proyecto general de arquitectura', value: 'Arq. Gabriela Casasnovas' },
+    { label: 'Asesores', value: 'Enrique Bordolini, Ing. Juan Antonio Vargas' },
+    { label: 'Localidades', value: '1000' },
+    { label: 'Superficie aproximada total', value: '12.000 m2' },
+    { label: 'Superficie aproximada intervenida', value: '4.000 m2' },
+    { label: 'Año', value: '2017-2018' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: libertador1.src,
+        thumbnailURL: libertador1.src,
+        width: 800,
+        height: 531,
+    },
+    {
+        largeURL: libertador2.src,
+        thumbnailURL: libertador2.src,
+        width: 990,
+        height: 660,
+    },
+    {
+        largeURL: libertador3.src,
+        thumbnailURL: libertador3.src,
+        width: 979,
+        height: 660,
+    },
+    {
+        largeURL: libertador4.src,
+        thumbnailURL: libertador4.src,
+        width: 993,
+        height: 660,
+    },
+    {
+        largeURL: libertador5.src,
+        thumbnailURL: libertador5.src,
+        width: 859,
+        height: 660,
+    },
+    {
+        largeURL: libertador6.src,
+        thumbnailURL: libertador6.src,
+        width: 743,
+        height: 660,
+    },
+    {
+        largeURL: libertador7.src,
+        thumbnailURL: libertador7.src,
+        width: 815,
+        height: 660,
+    },
+    {
+        largeURL: libertador8.src,
+        thumbnailURL: libertador8.src,
+        width: 698,
+        height: 660,
+    },
+    {
+        largeURL: libertador9.src,
+        thumbnailURL: libertador9.src,
+        width: 845,
+        height: 660,
+    },
+    {
+        largeURL: libertador10.src,
+        thumbnailURL: libertador10.src,
+        width: 846,
+        height: 660,
+    },
+    {
+        largeURL: libertador11.src,
+        thumbnailURL: libertador11.src,
+        width: 845,
+        height: 660,
+    },
+    {
+        largeURL: libertador12.src,
+        thumbnailURL: libertador12.src,
+        width: 838,
+        height: 660,
+    },
+    {
+        largeURL: libertador13.src,
+        thumbnailURL: libertador13.src,
+        width: 800,
+        height: 531,
+    },
+];
+---
+
+<Layout description="" title="Teatro del Libertador General San Martín">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="libertador"
+            city="Córdoba, Argentina"
+            year="2017-2018"
+            room="Sala Lírica"
+            project="Teatro del Libertador General San Martín"
+            description1="El Teatro Rivera Indarte, actualmente conocido como Teatro Libertador General San Martín, es el principal teatro de la ciudad argentina de Córdoba y se destaca como sala de conciertos, ópera y ballet, siendo a su vez Monumento Histórico Nacional. Su diseño fue concebido por el arquitecto Francesco Tamburini en el año 1891 con una sala principal de 1000 localidades. El Teatro posee también la sala Luis Tejeda con capacidad para 100 personas y un museo. Para el proyecto de refuncionalización, modernización y equipamiento, se trabajó en conjunto con los especialistas de restauración y el departamento de Monumentos Nacionales, generando una solución especial para cumplir con los objetivos principales de la intervención: lograr equipar al escenario con una maquinaria escénica capaz de responder a los requerimientos de las producciones actuales y conservando la antigua parrilla de 1900."
+            description2="Se proyectó con sistemas de suspensión motorizados automatizados según normativa internacional (DIN 56960 – SIL3) para otorgarle la capacidad operativa y de seguridad acorde con el uso teatral. Además de las 30 varas motorizadas y el nuevo sistema manual auxiliar, se diseñaron monorrieles motorizados. El foso de orquesta se proyectó con plataformas automatizadas. Se diseñó un nuevo sistema de iluminación escénica con sus correspondientes cabinas de control principal y auxiliares de audio, video e iluminación. El proyecto contempla un sistema de telón principal automatizado con apertura a la italiana, americana y guillotina."
+            description3="La remodelación incluye dentro de la arquitectura teatral la redistribución del área de apoyo técnica y artística. Se diferencian dos sectores independientes para cada uso. El área técnica cuenta con oficinas, depósitos de luminotecnia, bodegas estáticas y dinámicas y utilería.  El área artística cuenta con 5 camarines para primeras figuras (incluyendo uno exclusivo para el director), 6 camarines grupales, 2 salas de sastrería, 1 sala de maquillaje y archivo de partituras. Cada uno posee audio-video y llamado a escena. Se genera para los artistas un espacio tipo green room con acceso compartido desde los camarines de la sala Tejeda."
+            img={libertador}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

@@ -1,0 +1,709 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/layout/Header.astro';
+import Footer from '../../../components/layout/Footer.astro';
+import EmblaCarousel from '../../../components/EmblaCarousel/EmblaCarousel.jsx';
+import Heading from '../../../components/about/Heading.astro';
+
+import colon from '../../../img/projects/colon.webp';
+import argentino from '../../../img/projects/argentino.webp';
+import kimmel from '../../../img/projects/kimmel.webp';
+import solis from '../../../img/projects/solis.webp';
+import eastman from '../../../img/projects/eastman.webp';
+import santiago from '../../../img/projects/santiago.webp';
+import pane from '../../../img/projects/pane.webp';
+import condes from '../../../img/projects/condes.webp';
+import artes from '../../../img/projects/artes.webp';
+import lago from '../../../img/projects/lago.webp';
+import serena from '../../../img/projects/serena.webp';
+import coliseo from '../../../img/projects/coliseo.webp';
+import fierro from '../../../img/projects/fierro.webp';
+import tronador from '../../../img/projects/tronador.webp';
+import libertador from '../../../img/projects/libertador.webp';
+import dehesa from '../../../img/projects/dehesa.webp';
+import recoleta from '../../../img/projects/recoleta.webp';
+import ciudad from '../../../img/projects/ciudad.webp';
+import mistral from '../../../img/projects/mistral.webp';
+import cultural from '../../../img/projects/cultural.webp';
+import arena from '../../../img/projects/arena.webp';
+import ballet from '../../../img/projects/ballet.webp';
+import municipal from '../../../img/projects/municipal.webp';
+import superior from '../../../img/projects/superior.webp';
+import boheme from '../../../img/projects/boheme.webp';
+import ernani from '../../../img/projects/ernani.webp';
+import turandot from '../../../img/projects/turandot.webp';
+import barbero from '../../../img/projects/barbero.webp';
+import trovatore from '../../../img/projects/trovatore.webp';
+import schicchi from '../../../img/projects/schicchi.webp';
+import pagliacci from '../../../img/projects/pagliacci.webp';
+import hoffmann from '../../../img/projects/hoffmann.webp';
+import lammermoor from '../../../img/projects/lammermoor.webp';
+import vespri from '../../../img/projects/vespri.webp';
+import ottello from '../../../img/projects/ottello.webp';
+import giovanni from '../../../img/projects/giovanni.webp';
+import traviata from '../../../img/projects/traviata.webp';
+import nabucco from '../../../img/projects/nabucco.webp';
+import maschera from '../../../img/projects/maschera.webp';
+import boris from '../../../img/projects/boris.webp';
+import soldaten from '../../../img/projects/soldaten.webp';
+import egitto from '../../../img/projects/egitto.webp';
+import gracias from '../../../img/projects/gracias.webp';
+import luthiers from '../../../img/projects/luthiers.webp';
+import domingo from '../../../img/projects/domingo.webp';
+import orquesta from '../../../img/projects/orquesta.webp';
+
+const OPTIONS = { loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+const titles = [
+    {
+        title: 'Theaters',
+    },
+    {
+        title: 'Cultural Centers',
+    },
+    {
+        title: 'Arenas',
+    },
+    {
+        title: 'Complementary Buildings',
+    },
+    {
+        title: 'Scenographies',
+    },
+    {
+        title: 'Open-Air Productions',
+    },
+];
+
+const theaters = [
+    {
+        id: 'colon',
+        city: 'Buenos Aires, Argentina',
+        year: '1987-1990',
+        room: 'Lyrical Hall',
+        project: 'Teatro Colón',
+        description: 'The Teatro Colón in Buenos Aires, inaugurated in 1908',
+        img: colon,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-colon',
+    },
+    {
+        id: 'argentino',
+        city: 'La Plata, Buenos Aires, Argentina',
+        year: '1998-2001',
+        room: 'Lyrical Hall',
+        project: 'Teatro Argentino de La Plata',
+        description: 'The new Teatro Argentino de La Plata, re-inaugurated in 1999',
+        img: argentino,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-argentino',
+    },
+    {
+        id: 'kimmel',
+        city: 'Philadelphia, United States',
+        year: '2002',
+        room: 'Acoustic Canopy System, Verizon Hall',
+        project: 'The Kimmel Center for the Performing Arts',
+        description: 'The Kimmel Center for the Performing Arts, inaugurated in 2001',
+        img: kimmel,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/kimmel-center',
+    },
+    {
+        id: 'solis',
+        city: 'Montevideo, Uruguay',
+        year: '2003',
+        room: 'Lyrical Hall',
+        project: 'Teatro Municipal Solís',
+        description: 'The Teatro Municipal Solís in Montevideo, Uruguay, first inaugurated in 1856',
+        img: solis,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-solis',
+    },
+    {
+        id: 'eastman',
+        city: 'Rochester, United States',
+        year: '2004',
+        room: 'Acoustic Shell System, Kodak Hall',
+        project: 'Eastman Theater - Rochester',
+        description:
+            'The Eastman Theater, inaugurated in 1922 as a center for music, dance, and visual arts, with its main hall, Kodak Hall',
+        img: eastman,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/eastman-theater',
+    },
+    {
+        id: 'santiago',
+        city: 'Santiago, Chile',
+        year: '2002-2014',
+        room: 'Lyrical Hall',
+        project: 'Teatro Municipal de Santiago',
+        description:
+            'The Teatro Municipal de Santiago, originally inaugurated in 1857 and designed by architect François Brunet',
+        img: santiago,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-santiago',
+    },
+    {
+        id: 'pane',
+        city: 'Asunción, Paraguay',
+        year: '2005-2006',
+        room: 'Lyrical Hall',
+        project: 'Teatro Municipal Ignacio A. Pane',
+        description:
+            'The Teatro Municipal Ignacio A. Pane in Paraguay, restored in 2005 following the criteria of the original 1894 building',
+        img: pane,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-pane',
+    },
+    {
+        id: 'condes',
+        city: 'Santiago, Chile',
+        year: '2005-2006',
+        room: 'Lyrical Hall',
+        project: 'Teatro Municipal de Las Condes',
+        description:
+            'Inaugurated in 2010, the Teatro Municipal de Las Condes, designed by architects Eduardo San Martín and Pedro Gastón Pascal, replaced the small Teatro Apoquindo; it has a total capacity of 874 seats.',
+        img: condes,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-condes',
+    },
+    {
+        id: 'artes',
+        city: 'Bogotá, Colombia',
+        year: '2006-2007',
+        room: 'Theater Room',
+        project: 'Teatro Bellas Artes',
+        description:
+            'The Teatro Bellas Artes in Bogotá, Colombia, built by the family compensation fund Cafam and inaugurated in 2008, has a capacity of 1200 outdoor seats and 1000 inside the building.',
+        img: artes,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-bellas-artes',
+    },
+    {
+        id: 'lago',
+        city: 'Frutillar, Chile',
+        year: '2009-2010',
+        room: 'Nestlé Hall',
+        project: 'Teatro del Lago',
+        description:
+            'The Teatro del Lago in Frutillar, Chile, inaugurated in 2010 and originally designed by architect Gerardo Köster',
+        img: lago,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-del-lago',
+    },
+    {
+        id: 'serena',
+        city: 'La Serena, Chile',
+        year: '2011-2012',
+        room: 'Main and Secondary Halls',
+        project: 'Teatro Municipal La Serena',
+        description:
+            'With a main hall for 1500 people and a secondary hall for 800, the Teatro Regional de La Serena',
+        img: serena,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-la-serena',
+    },
+    {
+        id: 'coliseo',
+        city: 'Buenos Aires, Argentina',
+        year: '2013-2017',
+        room: 'Theater Room',
+        project: 'Teatro Coliseo',
+        description:
+            'Teatro Coliseo in Buenos Aires is a traditional theater with a capacity of 1700 people, owned by the Italian Consulate. Its history dates back to the late 19th century',
+        img: coliseo,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-coliseo',
+    },
+    {
+        id: 'fierro',
+        city: 'La Plata, Argentina',
+        year: '2016',
+        room: 'Outdoor Hall',
+        project: 'Teatro Martin Fierro',
+        description:
+            'The Teatro Martín Fierro, commonly known as “Teatro del Lago” and located on the “Paseo del Lago” island, is an outdoor space whose history dates back to the early 20th century',
+        img: fierro,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-martin-fierro',
+    },
+    {
+        id: 'tronador',
+        city: 'Mar del Plata, Argentina',
+        year: '2017-2018',
+        room: 'Theater Room',
+        project: 'Teatro Tronador',
+        description:
+            'The traditional theater in Mar del Plata was completely remodeled, becoming a new performance hall with a capacity for 800 people',
+        img: tronador,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-tronador',
+    },
+    {
+        id: 'libertador',
+        city: 'Córdoba, Argentina',
+        year: '2017-2018',
+        room: 'Lyrical Hall',
+        project: 'Teatro del Libertador General San Martín',
+        description:
+            'The Teatro Rivera Indarte, currently known as Teatro Libertador General San Martín, is the main theater in the Argentine city of Córdoba and is known as a concert, opera, and ballet hall',
+        img: libertador,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-del-libertador',
+    },
+    {
+        id: 'dehesa',
+        city: 'Santiago, Chile',
+        year: '2015-2016',
+        room: 'Theater Room',
+        project: 'Teatro La Dehesa',
+        description:
+            'The La Dehesa complex is a multi-use building with residential, commercial, and cultural spaces, located in La Dehesa',
+        img: dehesa,
+        anchor: 'See more about this project',
+        href: '/projects/theaters/teatro-la-dehesa',
+    },
+];
+
+const centers = [
+    {
+        id: 'recoleta',
+        city: 'Buenos Aires, Argentina',
+        year: '2016',
+        room: 'Salas el Aleph and Villa Villa',
+        project: 'Centro Cultural Recoleta',
+        description: 'The Centro Cultural Recoleta is a complex for exhibitions',
+        img: recoleta,
+        anchor: 'See more about this project',
+        href: '/projects/centers/cultural-recoleta',
+    },
+    {
+        id: 'ciudad',
+        city: 'Valencia, Spain',
+        year: '2000-2001',
+        room: 'Palacio de las Artes Reina Sofía',
+        project: 'City of Arts and Sciences',
+        description: 'The City of Arts and Sciences, an architectural and cultural complex',
+        img: ciudad,
+        anchor: 'See more about this project',
+        href: '/projects/centers/ciudad-de-las-artes',
+    },
+    {
+        id: 'mistral',
+        city: 'Buenos Aires, Argentina',
+        year: '2008-2010 and 2015',
+        room: 'Music, prose, and multifunctional rooms, stages 1 and 2',
+        project: 'Gabriela Mistral Cultural Center',
+        description: 'The original building was designed by architect José Covacevic',
+        img: mistral,
+        anchor: 'See more about this project',
+        href: '/projects/centers/gabriela-mistral',
+    },
+    {
+        id: 'cultural',
+        city: 'Santiago, Chile',
+        year: '2013-2014',
+        room: 'Theater room',
+        project: 'Casa de Lo Matta Cultural Center',
+        description: 'The current Casa de Lo Matta Cultural Center contains a',
+        img: cultural,
+        anchor: 'See more about this project',
+        href: '/projects/centers/cultural-casas',
+    },
+];
+
+const sands = [
+    {
+        id: 'arena',
+        city: 'Santiago, Chile',
+        year: '2005-2006',
+        room: 'Arena',
+        project: 'Arena Santiago',
+        description:
+            'Arena Santiago is a stadium-like building with a capacity for 16,500 spectators',
+        img: arena,
+        anchor: 'See more about this project',
+        href: '/projects/sands/arena-santiago',
+    },
+];
+
+const buildings = [
+    {
+        id: 'ballet',
+        city: 'Santiago, Chile',
+        year: '2013',
+        room: 'Escuela de ballet',
+        project: 'Escuela de ballet de Santiago',
+        description: 'El edificio Moneda 759, adyacente al Teatro Municipal de Santiago ',
+        img: ballet,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/buildings/ballet-santiago',
+    },
+    {
+        id: 'municipal',
+        city: 'Santiago, Chile',
+        year: '2014',
+        room: 'Camarines',
+        project: 'Teatro Municipal de Santiago',
+        description: 'El Teatro Municipal de Santiago, inaugurado originalmente en el año 1857',
+        img: municipal,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/buildings/teatro-municipal',
+    },
+    {
+        id: 'superior',
+        city: 'Mar del Plata, Argentina',
+        year: '2017-2018',
+        room: 'Escuela de ballet',
+        project: 'Instituto Superior de Arte del teatro Colón',
+        description: 'Se ejecutó el programa integral de la escuela de ballet',
+        img: superior,
+        anchor: 'Ver más sobre este proyecto',
+        href: '/projects/buildings/superior-de-arte',
+    },
+];
+
+const scenography = [
+    {
+        id: 'boheme',
+        city: 'Buenos Aires, Argentina',
+        year: '1999',
+        room: 'La Bohème by Puccini',
+        project: 'La Bohème by Puccini',
+        description:
+            'Opera in four acts with music by Giacomo Puccini and an Italian libretto by Giuseppe Giacosa',
+        img: boheme,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/boheme',
+    },
+    {
+        id: 'ernani',
+        city: 'Santiago, Chile',
+        year: '2001',
+        room: 'Municipal Theater',
+        project: 'Ernani',
+        description:
+            'Opera in four acts with music by Giuseppe Verdi and a libretto by Francesco Maria Piave',
+        img: ernani,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/ernani',
+    },
+    {
+        id: 'turandot',
+        city: 'Bogotá, Colombia',
+        year: '2002',
+        room: 'Opera of Colombia',
+        project: 'Turandot',
+        description: 'Turandot is an opera in three acts with music by Giacomo Puccini',
+        img: turandot,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/turandot',
+    },
+    {
+        id: 'barbero',
+        city: 'Bogotá, Colombia',
+        year: '2002',
+        room: 'Opera of Colombia',
+        project: 'Barbero de Sevilla',
+        description:
+            'Comic opera in two acts with music by Gioachino Rossini and a libretto by Cesare Sterbini, based on Pierre’s comedy',
+        img: barbero,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/barbero',
+    },
+    {
+        id: 'trovatore',
+        city: 'Santiago, Chile',
+        year: '2002',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Il Trovatore',
+        description: 'Il Trovatore is an opera in four acts with music by Giuseppe Verdi',
+        img: trovatore,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/trovatore',
+    },
+    {
+        id: 'schicchi',
+        city: 'Santiago, Chile',
+        year: '2002',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Gianni Schicchi',
+        description: 'Comic opera in one act with music by Giacomo Puccini',
+        img: schicchi,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/schicchi',
+    },
+    {
+        id: 'pagliacci',
+        city: 'Santiago, Chile',
+        year: '2003',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Pagliacci',
+        description: 'Drama in two acts with a prologue, music by Ruggero Leoncavallo',
+        img: pagliacci,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/pagliacci',
+    },
+    {
+        id: 'hoffmann',
+        city: 'Quebec, Canada',
+        year: '2005',
+        room: 'Opera of Quebec',
+        project: 'Les Contes d Hoffmann',
+        description: 'Opera in three acts with music by Jacques Offenbach',
+        img: hoffmann,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/hoffmann',
+    },
+    {
+        id: 'lammermoor',
+        city: 'Santiago, Chile',
+        year: '2005',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Lucia di Lammermoor',
+        description: 'Opera in three acts with music by Gaetano Donizetti',
+        img: lammermoor,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/lammermoor',
+    },
+    {
+        id: 'vespri',
+        city: 'Buenos Aires, Argentina',
+        year: '2006',
+        room: 'Teatro Colón',
+        project: 'Il Vespri Siciliani',
+        description: 'Opera in five acts with music by Giuseppe Verdi',
+        img: vespri,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/vespri',
+    },
+    {
+        id: 'ottello',
+        city: 'Bogotá, Colombia',
+        year: '2005',
+        room: 'Opera of Colombia',
+        project: 'Ottello',
+        description:
+            'Opera with music by Giuseppe Verdi and a libretto by Arrigo Boito based on Shakespeare’s play',
+        img: ottello,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/ottello',
+    },
+    {
+        id: 'giovanni',
+        city: 'Bogotá, Colombia',
+        year: '2006',
+        room: 'Opera of Colombia',
+        project: 'Don Giovanni',
+        description: 'Dramatic comedy in two acts with music by Wolfgang Amadeus Mozart',
+        img: giovanni,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/giovanni',
+    },
+    {
+        id: 'traviata',
+        city: 'Buenos Aires, Argentina',
+        year: '2007',
+        room: 'Teatro Colón',
+        project: 'La Traviata',
+        description: 'La Traviata is an opera in three acts with music by Giuseppe Verdi',
+        img: traviata,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/traviata',
+    },
+    {
+        id: 'nabucco',
+        city: 'Santiago, Chile',
+        year: '2007',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Nabucco',
+        description: 'Nabucco is a lyrical tragedy in four parts with music by Giuseppe Verdi',
+        img: nabucco,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/nabucco',
+    },
+    {
+        id: 'maschera',
+        city: 'Santiago, Chile',
+        year: '2008',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Un ballo in Maschera',
+        description: 'Opera in three acts with music by Giuseppe Verdi and an Italian libretto',
+        img: maschera,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/maschera',
+    },
+    {
+        id: 'boris',
+        city: 'Santiago, Chile',
+        year: '2011',
+        room: 'Teatro Municipal de Santiago',
+        project: 'Boris Godunov',
+        description:
+            'Opera in four acts and a prologue with music and libretto in Russian by Modest Mussorgsky',
+        img: boris,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/boris',
+    },
+    {
+        id: 'soldaten',
+        city: 'Buenos Aires, Argentina',
+        year: '2016',
+        room: 'Teatro Colón',
+        project: 'Die Soldaten',
+        description:
+            'Opera in four acts with music and libretto in German by Bernd Alois Zimmermann',
+        img: soldaten,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/soldaten',
+    },
+    {
+        id: 'egitto',
+        city: 'Buenos Aires, Argentina',
+        year: '2017',
+        room: 'Teatro Colón',
+        project: 'Giulio Cesare in Egitto',
+        description: 'Opera in three acts with music by Georg Friedrich Handel',
+        img: egitto,
+        anchor: 'See more about this project',
+        href: '/projects/scenography/egitto',
+    },
+];
+
+const air = [
+    {
+        id: 'gracias',
+        city: 'Buenos Aires, Argentina',
+        year: '2007',
+        room: 'Farewell of Julio Bocca, Av. 9 de Julio',
+        project: 'Gracias 2007',
+        description:
+            'On the occasion of his farewell as a professional dancer, the renowned Julio Bocca ',
+        img: gracias,
+        anchor: 'See more about this project',
+        href: '/projects/air/gracias',
+    },
+    {
+        id: 'luthiers',
+        city: 'Buenos Aires, Argentina',
+        year: '2007',
+        room: '40th Anniversary, Parque Monumento a Güemes',
+        project: 'Les Luthiers 40 years',
+        description: 'On the occasion of their 40 years of artistic career, the group of ',
+        img: luthiers,
+        anchor: 'See more about this project',
+        href: '/projects/air/luthiers',
+    },
+    {
+        id: 'domingo',
+        city: 'Santiago, Chile',
+        year: '2012',
+        room: 'Concert at Movistar Arena',
+        project: 'Plácido Domingo',
+        description: 'On the occasion of his 40 years of artistic career, the group of ',
+        img: domingo,
+        anchor: 'See more about this project',
+        href: '/projects/air/domingo',
+    },
+    {
+        id: 'orquesta',
+        city: 'Mar del Plata, Argentina',
+        year: '2018',
+        room: 'Concert at Parque San Martín',
+        project: 'Buenos Aires Philharmonic Orchestra',
+        description: 'As part of the fifth season of Espacio Clarín programming ',
+        img: orquesta,
+        anchor: 'See more about this project',
+        href: '/projects/air/orquesta',
+    },
+];
+---
+
+<Layout description="" title="Projects">
+    <Base>
+        <Header />
+        <section class="w-screen overflow-hidden py-12">
+            <h1>
+                <Heading title="Projects" subtitle="" />
+            </h1>
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[0].title}
+                </h6>
+
+                <EmblaCarousel
+                    client:visible
+                    slides={SLIDES}
+                    options={OPTIONS}
+                    projects={theaters}
+                />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[1].title}
+                </h6>
+
+                <EmblaCarousel
+                    client:visible
+                    slides={SLIDES}
+                    options={OPTIONS}
+                    projects={centers}
+                />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[2].title}
+                </h6>
+
+                <EmblaCarousel client:visible slides={SLIDES} options={OPTIONS} projects={sands} />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[3].title}
+                </h6>
+
+                <EmblaCarousel
+                    client:visible
+                    slides={SLIDES}
+                    options={OPTIONS}
+                    projects={buildings}
+                />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[4].title}
+                </h6>
+
+                <EmblaCarousel
+                    client:visible
+                    slides={SLIDES}
+                    options={OPTIONS}
+                    projects={scenography}
+                />
+            </article>
+
+            <article class="mx-auto py-12 sm:py-24">
+                <h6
+                    class="mx-auto w-full py-4 text-center text-2xl font-light tracking-tight sm:py-12 lg:text-[3vw]">
+                    {titles[5].title}
+                </h6>
+
+                <EmblaCarousel client:visible slides={SLIDES} options={OPTIONS} projects={air} />
+            </article>
+        </section>
+        <Footer />
+    </Base>
+</Layout>

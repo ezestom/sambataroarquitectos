@@ -1,0 +1,199 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import recoleta from '../../../img/projects/recoleta.webp';
+import Base from '../../../layouts/Base.astro';
+import Layout from '../../../layouts/Layout.astro';
+
+import recoleta1 from '../../../img/projects/recoleta/recoleta1.webp';
+import recoleta2 from '../../../img/projects/recoleta/recoleta2.webp';
+import recoleta3 from '../../../img/projects/recoleta/recoleta3.webp';
+import recoleta4 from '../../../img/projects/recoleta/recoleta4.webp';
+import recoleta5 from '../../../img/projects/recoleta/recoleta5.webp';
+import recoleta6 from '../../../img/projects/recoleta/recoleta6.webp';
+import recoleta7 from '../../../img/projects/recoleta/recoleta7.webp';
+import recoleta8 from '../../../img/projects/recoleta/recoleta8.webp';
+import recoleta9 from '../../../img/projects/recoleta/recoleta9.webp';
+import recoleta10 from '../../../img/projects/recoleta/recoleta10.webp';
+import recoleta11 from '../../../img/projects/recoleta/recoleta11.webp';
+import recoleta12 from '../../../img/projects/recoleta/recoleta12.webp';
+import recoleta13 from '../../../img/projects/recoleta/recoleta13.webp';
+import recoleta14 from '../../../img/projects/recoleta/recoleta14.webp';
+import recoleta15 from '../../../img/projects/recoleta/recoleta15.webp';
+import recoleta16 from '../../../img/projects/recoleta/recoleta16.webp';
+import recoleta17 from '../../../img/projects/recoleta/recoleta17.webp';
+import recoleta18 from '../../../img/projects/recoleta/recoleta18.webp';
+import recoleta19 from '../../../img/projects/recoleta/recoleta19.webp';
+import recoleta20 from '../../../img/projects/recoleta/recoleta20.webp';
+
+const datosTecnicos = [
+    { label: 'Tipología', value: 'Centro Cultural' },
+    { label: 'Ubicación', value: 'Junín 1930, Ciudad Autónoma de Buenos Aires, Argentina' },
+    {
+        label: 'Temática',
+        value: 'Proyecto de Restauración, refuncionalización y equipamiento de las salas de espectáculos “El Aleph” y “Villa Villa”',
+    },
+    { label: 'Servicios', value: 'Proyecto licitatorio escenotécnico' },
+    {
+        label: 'Comitente',
+        value: 'Subsecretaría de Políticas Culturales y Nuevas Audiencias, Ministerio de Cultura de la Ciudad de Buenos Aires',
+    },
+    { label: 'Proyecto general de arquitectura', value: 'Arq. Jerónimo Bedel' },
+    {
+        label: 'Asesores',
+        value: 'Arq. Andrés Cumsille, Ing. Gustavo Basso, Ing. Juan Antonio Vargas',
+    },
+    { label: 'Colaboradores', value: 'Arq. María Virginia Castro' },
+    { label: 'Localidades', value: '130 (El Aleph) + 350 (Villa Villa)' },
+    { label: 'Superficie aproximada total', value: '19.000 m2' },
+    { label: 'Monto aproximado de intervención', value: 'US$ 5.000.000' },
+    { label: 'Año', value: '2016' },
+    { web: 'http://centroculturalrecoleta.org/', href: 'http://centroculturalrecoleta.org/' },
+];
+
+const asesores = ['-'];
+
+const images = [
+    {
+        largeURL: recoleta1.src,
+        thumbnailURL: recoleta1.src,
+        width: 1064,
+        height: 707,
+    },
+    {
+        largeURL: recoleta2.src,
+        thumbnailURL: recoleta2.src,
+        width: 1064,
+        height: 564,
+    },
+    {
+        largeURL: recoleta3.src,
+        thumbnailURL: recoleta3.src,
+        width: 550,
+        height: 743,
+    },
+    {
+        largeURL: recoleta4.src,
+        thumbnailURL: recoleta4.src,
+        width: 1064,
+        height: 231,
+    },
+    {
+        largeURL: recoleta5.src,
+        thumbnailURL: recoleta5.src,
+        width: 600,
+        height: 743,
+    },
+
+    {
+        largeURL: recoleta6.src,
+        thumbnailURL: recoleta6.src,
+        width: 1064,
+        height: 607,
+    },
+    {
+        largeURL: recoleta7.src,
+        thumbnailURL: recoleta7.src,
+        width: 1064,
+        height: 607,
+    },
+    {
+        largeURL: recoleta8.src,
+        thumbnailURL: recoleta8.src,
+        width: 1064,
+        height: 707,
+    },
+    {
+        largeURL: recoleta9.src,
+        thumbnailURL: recoleta9.src,
+        width: 1064,
+        height: 694,
+    },
+    {
+        largeURL: recoleta10.src,
+        thumbnailURL: recoleta10.src,
+        width: 1064,
+        height: 707,
+    },
+
+    {
+        largeURL: recoleta11.src,
+        thumbnailURL: recoleta11.src,
+        width: 964,
+        height: 743,
+    },
+    {
+        largeURL: recoleta12.src,
+        thumbnailURL: recoleta12.src,
+        width: 600,
+        height: 743,
+    },
+    {
+        largeURL: recoleta13.src,
+        thumbnailURL: recoleta13.src,
+        width: 993,
+        height: 743,
+    },
+    {
+        largeURL: recoleta14.src,
+        thumbnailURL: recoleta14.src,
+        width: 674,
+        height: 743,
+    },
+    {
+        largeURL: recoleta15.src,
+        thumbnailURL: recoleta15.src,
+        width: 959,
+        height: 743,
+    },
+
+    {
+        largeURL: recoleta16.src,
+        thumbnailURL: recoleta16.src,
+        width: 955,
+        height: 743,
+    },
+    {
+        largeURL: recoleta17.src,
+        thumbnailURL: recoleta17.src,
+        width: 967,
+        height: 743,
+    },
+    {
+        largeURL: recoleta18.src,
+        thumbnailURL: recoleta18.src,
+        width: 950,
+        height: 743,
+    },
+    {
+        largeURL: recoleta19.src,
+        thumbnailURL: recoleta19.src,
+        width: 952,
+        height: 743,
+    },
+    {
+        largeURL: recoleta20.src,
+        thumbnailURL: recoleta20.src,
+        width: 949,
+        height: 743,
+    },
+];
+---
+
+<Layout description="" title="Centro Cultural Recoleta">
+    <Base>
+        <ProjectPage
+            images={images}
+            id="recoleta"
+            city="Buenos Aires, Argentina"
+            year="2016"
+            room="Salas el Aleph y Villa Villa"
+            project="Centro Cultural Recoleta"
+            description1="El Centro Cultural Recoleta es un complejo de exhibiciones parte del circuito turístico de la recoleta de Buenos Aires, declarado Monumento Histórico Nacional. Realizado por el renombrado arquitecto Clorindo Testa junto con los arquitectos Jacques Bedel y Luis Benedit fue inaugurado por primera vez como tal en 1980. Su historia data del año 1716 cuando el solar fue donado a los frailes franciscanos recoletos, quienes lo ocuparon como claustro. Luego de numerosos cambios de uso, el edificio fue remodelado en 1880 por el arquitecto Juan Antonio Buschiazzo quien realizó una serie de reformas, entre ellas la basílica icónica que sería restaurada en 2010 conteniendo actualmente la sala “El Aleph” con capacidad para 130 personas. La sala Villa Villa inaugurada en 2001, posee una capacidad para 350 personas y funciona como sala multipropósito.El proyecto de refuncionalización y puesta en valor del Centro Cultural Recoleta en el aspecto escenotécnico, abarca las salas “El Aleph” y “Villa Villa”, con sus dependencias artísticas. Se provee nueva tecnología para ambas salas, incluyendo el equipamiento escenotécnico para salas polivalentes, áreas de apoyo técnico y artístico, sistemas de iluminación escénica y escenarios multifuncionales."
+            description2="La sala El Aleph se dotó de la mayor flexibilidad posible de usos dentro de sus posibilidades morfológicas particulares, teniendo en cuenta que se trata de un edificio patrimonial. Así se posibilitarán las producciones de teatro de prosa, concierto de pequeñas orquestas, danza contemporánea, recitales y shows musicales, eventos especiales y conferencias. Su equipamiento escenotécnico consistió en un sistema de parrilla de suspensión no transitable con el objetivo de aprovechar al máximo la altura de despeje, varas de aluminio sin carrera vertical, sistemas de suspensión auxiliares, vestimenta teatral y telón principal, sistemas de intercomunicación técnica, audio y video. Además se proyectaron los elementos acústicos necesarios, la iluminación escénica, un piso de escenario modulado y una platea retráctil que permiten al salón adoptar múltiples configuraciones."
+            desciption3="El espacio Villa Villa se proyectó para que funcione como una sala experimental constituyendo una usina de actividades creativas relacionadas con las artes escénicas. Se reorganizaron las áreas de apoyo técnico y artísticos, para lograr mejores interrelaciones espaciales y aumentar la capacidad de recepción de artistas y personal vinculado a la producción. Es así como se remodelaron totalmente los camarines de artistas, se generaron las áreas típicas de apoyo como Green Room, Bodegas de material genérico técnico y talleres. El equipamiento escenotécnico incluye un sistema de parrilla y dos niveles de puentes técnicos que permiten operar en toda la superficie de la sala según la configuración requerida. A su vez se diseñó un sistema de varas motorizadas de suspensión que consta de 18 líneas, las que tienen la posibilidad de deslizarse en el eje longitudinal de la sala, cubriendo cualquier posición requerida. Se incluyeron también un sistema manual auxiliar complementario y sistemas auxiliares de montaje. El proyecto contempló la vestimenta teatral, iluminación escénica, intercomunicación técnica, audio y video. Se proyectaron los elementos acústicos necesarios para limitar la transmisión de vibraciones y ruidos desde el interior hacia el exterior o viceversa."
+            img={recoleta}
+            datosTecnicos={datosTecnicos}
+            asesores={asesores}
+        />
+    </Base>
+</Layout>

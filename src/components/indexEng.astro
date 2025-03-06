@@ -1,0 +1,46 @@
+---
+import Heading from '../components/about/Heading.astro';
+import Cta from '../components/home/Cta.astro';
+import Hero from '../components/home/Hero.astro';
+import Footer from '../components/layout/Footer.astro';
+import Header from '../components/layout/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import IndexNewsComponentEng from '../components/IndexNewsComponentEng.astro';
+import IndexPublicationsComponentEng from '../components/IndexPublicationsComponentEng.astro';
+import ProjectsEng from './home/ProjectsEng.astro';
+
+const texts = [
+    {
+        page: 'Sambataro Arquitectos, an architecture firm with over 40 years of experience in scenotechnical consulting and stage machinery for preventive and corrective maintenance.',
+        title: 'Sambataro Architects',
+        description: '',
+    },
+];
+---
+
+<Layout description={texts[0].page} title={texts[0].title}>
+    <Header id="top" />
+    <Hero title={texts[0].title} description={texts[0].description} />
+    <Heading title="Projects" subtitle="Selection of the most renowned." />
+    <ProjectsEng />
+    <Heading
+        title="News"
+        subtitle="News about theatrical architecture and scenotechnics regarding projects carried out by Sambataro Architects."
+    />
+    <IndexNewsComponentEng />
+    <Heading
+        title="Publications"
+        subtitle="Publications about theatrical architecture and scenotechnics regarding projects carried out by Sambataro Architects."
+    />
+    <IndexPublicationsComponentEng />
+    <!-- <Expertise /> -->
+    <!-- <Testimonials /> -->
+    <Cta
+        title="Building the Future"
+        description="At Sambataro Arquitectos, we are committed to quality and innovation in every one of our projects."
+        anchor="Contact Us"
+    />
+    <Footer
+        description="Sambataro Arquitectos, an architecture firm with over 40 years of experience in scenotechnical consulting and stage machinery for preventive and corrective maintenance."
+    />
+</Layout>
