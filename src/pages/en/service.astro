@@ -71,6 +71,7 @@ const contenido = [
         descripcion:
             'We provide specialized consulting in the design and planning of stage spaces, ensuring efficiency and functionality.',
         items: [
+            'Stage Machinery Preventive and Corrective Maintenance',
             'Stage design',
             'Acoustic optimization',
             'Lighting system planning',
@@ -109,14 +110,15 @@ const contenidos = contenido.find((item) => item.tema === 'Stage Technology Cons
         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
             <div class="mb-12 grid gap-16 lg:grid-cols-2 lg:gap-12">
                 <Image
-                    class="mx-auto h-full w-full max-w-xl rounded-3xl object-cover"
+                    class="mx-auto h-full w-full max-w-xl rounded-xl object-cover"
                     src={orquesta}
                     alt="Our experts working together"
                 />
                 <div class="flex flex-col gap-10">
                     <!-- Mission description -->
-                    <div class="space-y-8 pb-12 sm:space-y-12">
-                        <div class="space-y-6">
+                    <div class="space-y-8 sm:space-y-12">
+                        <div
+                            class="space-y-6 rounded-xl border border-primary-900/10 bg-primary-200/50 px-6 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 lg:p-12">
                             <p
                                 class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
                                 We provide comprehensive stage technology consulting services

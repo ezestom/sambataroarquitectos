@@ -1,6 +1,12 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+import HeaderLink from '../HeaderLink.astro';
 import LanguagePicker from '../LanguagePicker.astro';
 import Nav from './Nav.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -12,13 +18,14 @@ import Nav from './Nav.astro';
         class="mx-auto flex max-w-2xl items-center justify-between sm:px-6 sm:py-1 lg:max-w-7xl lg:px-8 lg:py-2">
         <!-- Brand logo -->
         <div class="group relative flex items-center transition-all">
-            <a
+            <HeaderLink
                 href="/"
+                locale={lang}
                 class="z-20 inline-flex h-14 w-16 items-center justify-center rounded-md bg-primary-200/50 text-xl font-bold text-primary-950 shadow ring-primary-950 backdrop-blur-md transition hover:border-2 hover:bg-primary-200/75 focus:outline-none focus-visible:ring-2 dark:bg-primary-800/50 dark:text-primary-200 dark:hover:bg-primary-800/75">
                 SA
-            </a>
+            </HeaderLink>
             <span
-                class="border-l-none tracking absolute left-full z-10 ml-2 flex -translate-x-6 transform flex-col justify-center rounded-md border bg-primary-200/50 px-5 py-1 text-base font leading-[1.05rem] text-primary-950 opacity-0 shadow ring-primary-950 drop-shadow backdrop-blur-md transition-all duration-300 group-hover:-translate-x-4 group-hover:opacity-100 dark:bg-primary-800/50 dark:text-primary-200">
+                class="border-l-none tracking font absolute left-full z-10 ml-2 flex -translate-x-6 transform flex-col justify-center rounded-md border bg-primary-200/50 px-5 py-1 text-base leading-[1.05rem] text-primary-950 opacity-0 shadow ring-primary-950 drop-shadow backdrop-blur-md transition-all duration-300 group-hover:-translate-x-4 group-hover:opacity-100 dark:bg-primary-800/50 dark:text-primary-200">
                 Sambataro <span> Arquitectos</span>
             </span>
         </div>
