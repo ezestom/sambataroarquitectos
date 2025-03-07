@@ -1,4 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import HeaderLink from './HeaderLink.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 interface Anchor {
     name?: string;
     href?: string;
@@ -6,8 +12,9 @@ interface Anchor {
 const { name, href } = Astro.props;
 ---
 
-<a
+<HeaderLink
+    locale={lang}
     {href}
     class="dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400">
     {name} →
-</a>
+</HeaderLink>
