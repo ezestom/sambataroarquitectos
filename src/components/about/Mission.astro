@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import Heading from '../../components/about/Heading.astro';
-import theater from '../../img/projects/argentino/argentino2.webp';
+import theater from '../../../public/assets/values.jpg';
 const stats = [
     {
         name: 'Years',
@@ -34,9 +33,7 @@ const { title, paragraph1, subtitle, paragraph2, paragraph3, paragraph4 } =
     Astro.props as MissionProps;
 ---
 
-<section class="py-16 sm:py-20">
-    <Heading title="Estudio" subtitle="Contactanos para más información" />
-
+<section class="pb-16 sm:pb-20">
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
         <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
             <div>

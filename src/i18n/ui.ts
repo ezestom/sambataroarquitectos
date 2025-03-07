@@ -8,10 +8,10 @@ export const languages: Record<string, { code: string; name: string }> = {
     name: 'En',
   },
 
-  de: {
-    code: 'de',
-    name: 'De',
-  },
+  // de: {
+  //   code: 'de',
+  //   name: 'De',
+  // },
 };
 
 // export const languages = {
