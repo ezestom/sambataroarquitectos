@@ -27,21 +27,24 @@ import dehesa20 from '../../../../img/projects/dehesa/dehesa20.webp';
 import dehesa21 from '../../../../img/projects/dehesa/dehesa21.webp';
 
 const datosTecnicos = [
-    { label: 'Tipología', value: 'Teatro' },
-    { label: 'Ubicación', value: 'Santiago, Chile' },
-    { label: 'Temática', value: 'Proyecto de obra nueva' },
-    { label: 'Servicios', value: 'Proyecto ejecutivo de escenotecnia' },
-    { label: 'Comitente', value: 'La Dehesa Holding' },
+    { label: 'Typology', value: 'Theater' },
+    { label: 'Location', value: 'Santiago, Chile' },
+    { label: 'Theme', value: 'New construction project' },
+    { label: 'Services', value: 'Executive stage technology project' },
+    { label: 'Client', value: 'La Dehesa Holding' },
     {
-        label: 'Proyecto de arquitectura general',
+        label: 'General architectural project',
         value: 'Bodas, Miami, Anger Arquitectos y Asociados; Soto Arquitectos',
     },
-    { label: 'Dirección ejecutiva', value: 'Enrique Bordolini' },
-    { label: 'Asesores', value: 'Ing. Juan Antonio Vargas, Ing. Jorge Sommerhoff, Jorge Cárdena' },
-    { label: 'Colaboradores', value: 'Arq. María Paz Carvajal, Arq. Cristina Cordero' },
-    { label: 'Localidades', value: '270' },
-    { label: 'Superficie aproximada intervenida', value: '1.000 m2' },
-    { label: 'Año', value: '2015-2016' },
+    { label: 'Executive Direction', value: 'Enrique Bordolini' },
+    {
+        label: 'Consultants',
+        value: 'Eng. Juan Antonio Vargas, Eng. Jorge Sommerhoff, Jorge Cárdena',
+    },
+    { label: 'Collaborators', value: 'Arch. María Paz Carvajal, Arch. Cristina Cordero' },
+    { label: 'Seating capacity', value: '270' },
+    { label: 'Approximate area of intervention', value: '1,000 m2' },
+    { label: 'Year', value: '2015-2016' },
 ];
 
 const asesores = ['-'];
@@ -176,17 +179,17 @@ const images = [
 ];
 ---
 
-<Layout description="" title="Teatro La Dehesa">
+<Layout description="" title="La Dehesa Theater">
     <Base>
         <ProjectPage
             images={images}
             id="dehesa"
             city="Santiago, Chile"
             year="2015-2016"
-            room="Sala de Teatro"
-            project="Teatro La Dehesa"
-            description1="El complejo La Dehesa, es una edificación multiuso con programa de vivienda, comercio y cultura, ubicado en La Dehesa, Santiago de Chile. Para la sala de espectáculos posicionada en su subsuelo con capacidad para 270 espectadores, se realizó el proyecto completo de arquitectura teatral y escenotecnia."
-            description2="Se incorporó equipamiento escenotécnico para decorados e iluminación escénica y acondicionamiento acústico para canto y orquesta sinfónica. También se proyectaron las áreas de apoyo técnico y artístico y un estudio de isóptica para óptimas visuales del público en la sala."
+            room="Theater"
+            project="La Dehesa Theater"
+            description1="The complex La Dehesa is a multipurpose building with a residential, commercial and cultural program, located in La Dehesa, Santiago de Chile. For the performance hall positioned in its basement with capacity for 270 spectators, the complete theater architecture and stage design project was carried out. "
+            description2="Theater equipment was added for sets and stage lighting and acoustic conditioning for singing and symphonic orchestra. The areas of technical and artistic support and an isoptic study for optimal sightlines of the audience were also projected."
             img={dehesa}
             datosTecnicos={datosTecnicos}
             asesores={asesores}
