@@ -86,7 +86,7 @@ export function Form({
       <form
         onSubmit={handleSubmit}
         method="POST"
-        action="https://formsubmit.co/alfio@sambataroarquitectos.com"
+        action="https://formsubmit.co/alfio777@gmail.com"
         // action="https://formsubmit.co/ezequielstom@gmail.com"
         className="mx-2 mt-2"
       >
