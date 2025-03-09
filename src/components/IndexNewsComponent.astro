@@ -1,21 +1,26 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import HeaderLink from './HeaderLink.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const notes = [
     {
-        title: 'Plaza del Agua, un emblema "abandonado"de Mar del Plata',
-        date: 'May 14, 2018 - El Marplatense',
-        images: ['/publications/plaza1.avif'],
+        title: 'El arquitecto que modernizó el Teatro Tronador sin perder el espíritu original',
+        date: '23 de Enero de 2025  - La Opinion',
+        images: ['/publications/tro2.webp'],
     },
     {
-        title: '“La cantidad de gente que vino demuestra el interés y el impacto”',
-        date: 'Mar 4, 2018 - El Marplatense',
-        images: ['/publications/nelson1.avif'],
+        title: '“Asombro, estupor y mística”: restauran la platea del Teatro Coliseo, que deja su sala “al desnudo” en una postal inédita',
+        date: '1 de marzo de 2025 - Clarín',
+        images: ['/publications/alf2.avif'],
     },
     {
-        title: 'Mar del Plata palpita el histórico concierto de la Filarmónica',
-        date: 'Mar 3, 2018 - El Marplatense',
-        images: ['/publications/fila1.avif'],
+        title: 'Murió Enrique Bordolini, director escenotécnico del Colón',
+        date: '31 de diciembre de 2024 - Clarín',
+        images: ['/publications/bor1.avif'],
     },
 ];
 ---
@@ -45,12 +50,13 @@ const notes = [
                                             {item.title}
                                         </p>
                                     </div>
-                                    <button
-                                        onclick="location.href='/news'"
+                                    <HeaderLink
+                                        locale={lang}
+                                        href="/news"
                                         class="dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400"
                                         data-index={index}>
                                         Leer más
-                                    </button>
+                                    </HeaderLink>
                                 </div>
                             </li>
                         ))

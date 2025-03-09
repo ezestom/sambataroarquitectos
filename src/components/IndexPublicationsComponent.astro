@@ -1,6 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import HeaderLink from './HeaderLink.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const notes = [
     {
         magazine: 'Revista ARQ',
@@ -46,12 +52,13 @@ const notes = [
                                             {item.title}
                                         </p>
                                     </div>
-                                    <a
+                                    <HeaderLink
+                                        locale={lang}
                                         href="/publications"
                                         class="dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400"
                                         data-index={index}>
                                         Leer más
-                                    </a>
+                                    </HeaderLink>
                                 </div>
                             </li>
                         ))

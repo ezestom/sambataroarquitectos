@@ -1,21 +1,26 @@
 ---
 import Base from '../layouts/Base.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import HeaderLink from './HeaderLink.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const notes = [
     {
-        title: "Plaza del Agua, an 'abandoned' emblem of Mar del Plata",
-        date: 'May 14, 2018 - El Marplatense',
-        images: ['/publications/plaza1.avif'],
+        title: 'The Architect Who Modernized the Teatro Tronador Without Losing Its Original Spirit',
+        date: 'January 23, 2025 - La Opinion',
+        images: ['/publications/tro2.webp'],
     },
     {
-        title: '‘The number of people who attended shows the interest and impact’',
-        date: 'Mar 4, 2018 - El Marplatense',
-        images: ['/publications/nelson1.avif'],
+        title: '"Wonder, Astonishment, and Mystique": The Coliseo Theater Stalls Are Being Restored, Leaving Its Hall "Bare" in an Unprecedented Snapshot',
+        date: 'March 1, 2025 - Clarín',
+        images: ['/publications/alf2.avif'],
     },
     {
-        title: 'Mar del Plata anticipates the historic Philharmonic concert',
-        date: 'Mar 3, 2018 - El Marplatense',
-        images: ['/publications/fila1.avif'],
+        title: 'Enrique Bordolini, Stage Technology Director at the Colón, Has Died',
+        date: 'December 31, 2024 - Clarín',
+        images: ['/publications/bor1.avif'],
     },
 ];
 ---
@@ -45,12 +50,13 @@ const notes = [
                                             {item.title}
                                         </p>
                                     </div>
-                                    <button
-                                        onclick="location.href='/news'"
+                                    <HeaderLink
+                                        locale={lang}
+                                        href="/news"
                                         class="dark:hover-bg-primary-700 flex w-full items-center justify-center rounded-xl bg-primary-100 px-6 py-4 text-sm font-normal text-primary-700 shadow transition-all hover:text-primary-800 hover:shadow-md focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-primary-500 active:scale-95 dark:border-primary-700 dark:bg-primary-800 dark:text-primary-200 dark:hover:bg-primary-700 dark:hover:text-primary-100 dark:focus-visible:outline-primary-400"
                                         data-index={index}>
                                         Read more
-                                    </button>
+                                    </HeaderLink>
                                 </div>
                             </li>
                         ))
