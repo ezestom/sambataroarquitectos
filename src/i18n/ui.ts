@@ -61,7 +61,7 @@ export const routes = {
     proyectos: 'projects/all',
     nosotros: 'about',
     publicaciones: 'publications',
-    service: 'services',
+    service: 'service',
     contacto: 'contact',
   },
   en: {
@@ -69,7 +69,7 @@ export const routes = {
     projects: 'projects/all',
     about: 'about',
     publications: 'publications',
-    services: 'services',
+    services: 'service',
     contact: 'contacto',
   },
   // de: {

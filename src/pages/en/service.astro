@@ -9,78 +9,45 @@ import Footer from '../../components/layout/Footer.astro';
 const arquitecturaTeatral = [
     {
         tema: 'tema',
-        description: 'Theatrical Architecture',
+        description: 'Stage Technology - Theater Architecture',
     },
     {
         tema: 'descripcion',
         description:
-            'Theatrical architecture encompasses the architectural design of all aspects concerning a performance venue.',
+            'Theater architecture covers the architectural design of all aspects concerning a performance hall.',
     },
     {
         tema: 'servicios',
         description: [
-            'Technical and diagnostic reports',
-            'Needs program',
-            'Preliminary layouts (with zoning), preliminary design, and bidding or executive project',
-            'Feasibility study',
-            'Interdisciplinary meetings',
-            'Technical analysis of bids',
-            'Architectural design of public areas (hall, foyer, lobby, complementary areas)',
-            'Architectural design of technical and artistic support areas (dressing rooms, makeup rooms, costume and complementary workshops, storage and warehouses, etc.)',
-            'Visual studies',
-            'Seating layout',
-            'Acoustic engineering',
-            'Specific construction and furniture details',
-            'Specific technical specifications',
+            'Stage equipment',
+            'Stage lighting',
+            'Acoustics and sound reinforcement',
+            'Stage machinery, preventive and corrective maintenance',
         ],
     },
 ];
 const equipamientoEscenotecnico = [
     {
         tema: 'tema',
-        description: 'Stage Technology Equipment',
+        description: 'Architecture',
     },
     {
         tema: 'descripcion',
         description:
-            'Stage technology equipment encompasses the systems that function behind the scenes efficiently, safely, quietly, and invisibly. We define and coordinate these systems with the building’s structure and its installations, advising on their selection according to economic, space, and time resources.',
+            'Stage equipment includes systems that operate behind the scenes efficiently, safely, quietly, and invisibly. We define and coordinate these systems with the building structure and its installations, advising on their selection according to economic, space, and time resources.',
     },
     {
         tema: 'servicios',
-        description: [
-            'Technical and diagnostic reports',
-            'Needs program',
-            'Preliminary layouts (with zoning), preliminary design, and bidding or executive project',
-            'Feasibility study',
-            'Interdisciplinary meetings',
-            'Technical analysis of bids',
-            'Architectural design of stage houses (grid and bridge system)',
-            'Design of scenery suspension systems (manual, motorized, and auxiliary systems)',
-            'Design of stage machinery systems (large horizontal and vertical movement platforms, variable proscenium)',
-            'Design of complementary systems (fire curtain, stage floor, ballet rebound floors, technical intercom, stage manager, control booths, theatrical drapery, and acoustic chamber)',
-            'Design of stage lighting systems',
-            'Design of audio and video systems',
-            'Specific technical specifications',
-        ],
+        description: ['Culture', 'Education', 'Interior Design', 'Residential'],
     },
 ];
 
 const contenido = [
     {
-        tema: 'Stage Technology Consulting',
+        tema: 'Sustainability - Structural Engineering',
         descripcion:
-            'We provide specialized consulting in the design and planning of stage spaces, ensuring efficiency and functionality.',
-        items: [
-            'Stage Machinery Preventive and Corrective Maintenance',
-            'Stage design',
-            'Acoustic optimization',
-            'Lighting system planning',
-            'Audiovisual technology integration',
-            'Bidding and executive projects',
-            'Construction management and supervision',
-            'Factory quality control',
-            'Technical direction and assembly of show productions',
-        ],
+            'We provide specialized consulting in the design and planning of performance spaces, ensuring efficiency and functionality.',
+        items: ['Simulation', 'LCA'],
     },
 ];
 
@@ -96,11 +63,11 @@ const equipamentos = equipamientoEscenotecnico.find(
     (item) => item.tema === 'servicios'
 )?.description;
 
-const tema3 = contenido.find((item) => item.tema === 'Stage Technology Consulting')?.tema;
+const tema3 = contenido.find((item) => item.tema === 'Sustainability - Structural Engineering')?.tema;
 const descripcion3 = contenido.find(
-    (item) => item.tema === 'Stage Technology Consulting'
+    (item) => item.tema === 'Sustainability - Structural Engineering'
 )?.descripcion;
-const contenidos = contenido.find((item) => item.tema === 'Stage Technology Consulting')?.items;
+const contenidos = contenido.find((item) => item.tema === 'Sustainability - Structural Engineering')?.items;
 ---
 
 <Layout title="Services" description="Know our comprehensive services">
@@ -148,12 +115,12 @@ const contenidos = contenido.find((item) => item.tema === 'Stage Technology Cons
             <div class="grid gap-12 py-12 lg:grid-cols-2">
                 <div
                     class="flex flex-col gap-4 rounded-xl border border-primary-900/10 bg-primary-200/50 px-6 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 lg:p-12">
-                    <h2 class="text-2xl font-bold lg:text-4xl">{tema1}</h2>
-                    <p
+                    <h2 class="text-2xl  lg:text-3xl pb-6">{tema1}</h2>
+                    <!-- <p
                         class="pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion1}
-                    </p>
-                    <div class="flex flex-col items-center">
+                    </p> -->
+                    <div class="flex flex-col">
                         <ul class="mb-2 text-left text-sm">
                             {
                                 servicios.map((servicio: string) => (
@@ -168,12 +135,12 @@ const contenidos = contenido.find((item) => item.tema === 'Stage Technology Cons
 
                 <div
                     class="flex flex-col gap-4 rounded-xl border border-primary-900/10 bg-primary-200/50 p-4 px-6 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 lg:p-12">
-                    <h2 class="text-2xl font-bold lg:text-4xl">{tema2}</h2>
-                    <p
+                    <h2 class="text-2xl  lg:text-3xl pb-6">{tema2}</h2>
+                    <!-- <p
                         class="pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion2}
-                    </p>
-                    <div class="flex flex-col items-center">
+                    </p> -->
+                    <div class="flex flex-col">
                         <ul class="mb-2 text-left text-sm">
                             {
                                 equipamentos.map((equipamento: string) => (
@@ -189,12 +156,12 @@ const contenidos = contenido.find((item) => item.tema === 'Stage Technology Cons
             <div class="grid gap-12 lg:grid-cols-2">
                 <div
                     class="justify-startrounded-xl flex flex-col items-start rounded-xl border border-primary-900/10 bg-primary-200/50 p-4 px-6 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 lg:p-12">
-                    <h2 class="text-2xl font-bold lg:text-4xl">{tema3}</h2>
-                    <p
+                    <h2 class="text-2xl  lg:text-3xl pb-6">{tema3}</h2>
+                    <!-- <p
                         class="text-balance !max-w-[50ch] pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion3}
-                    </p>
-                    <div class="flex flex-col items-center">
+                    </p> -->
+                    <div class="flex flex-col">
                         <ul class="mb-2 text-left text-sm">
                             {
                                 contenidos.map((contenido: string) => (

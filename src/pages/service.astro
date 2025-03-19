@@ -9,7 +9,7 @@ import Footer from '../components/layout/Footer.astro';
 const arquitecturaTeatral = [
     {
         tema: 'tema',
-        description: 'Arquitectura Teatral',
+        description: 'Escenotécnia - Arquitectura teatral',
     },
     {
         tema: 'descripcion',
@@ -19,26 +19,17 @@ const arquitecturaTeatral = [
     {
         tema: 'servicios',
         description: [
-            'Informes técnicos y de diagnóstico',
-            'Programa de necesidades',
-            'Planteos preliminares (con zonificaciones), anteproyecto y proyecto licitatorio o ejecutivo',
-            'Estudio de factibilidad',
-            'Reuniones interdisciplinarias',
-            'Análisis técnico de ofertas',
-            'Diseño arquitectural de áreas públicas (sala, foyer, hall, áreas complementarias)',
-            'Diseño arquitectural de áreas de apoyo técnico y artístico (camarines, salas de maquillaje, talleres de vestuario y complementarios, depósitos y bodegas, etc.)',
-            'Estudio de visuales',
-            'Sembrado de butacas',
-            'Ingeniería acústica',
-            'Detalles constructivos y de mobiliario específicos',
-            'Especificaciones técnicas particulares',
+            'Equipamiento escenotécnico ',
+            'Iluminación escénica',
+            'Acústica y refuerzo sonoro',
+            'Maquinaria escénica, mantenimiento preventivo y correctivo',
         ],
     },
 ];
 const equipamientoEscenotecnico = [
     {
         tema: 'tema',
-        description: 'Equipamiento Escenotécnico',
+        description: 'Arquitectura',
     },
     {
         tema: 'descripcion',
@@ -47,40 +38,16 @@ const equipamientoEscenotecnico = [
     },
     {
         tema: 'servicios',
-        description: [
-            'Informes técnicos y de diagnóstico',
-            'Programa de necesidades',
-            'Planteos preliminares (con zonificaciones), anteproyecto y proyecto licitatorio o ejecutivo',
-            'Estudio de factibilidad',
-            'Reuniones interdisciplinarias',
-            'Análisis técnico de ofertas',
-            'Diseño arquitectural de cajas escénicas (sistema de parrillas y puentes)',
-            'Diseño de sistemas de suspensión de decorados (sistemas manuales, motorizados y auxiliares)',
-            'Diseño de sistemas de maquinaria escenotécnica (grandes plataformas de movimientos horizontales y verticales, embocadura variable)',
-            'Diseño de sistemas complementarios (telón cortafuegos, piso de escenario, pisos de rebote de ballet, intercomunicación técnica, stage manager, cabinas de control, vestimenta teatral y cámara acústica)',
-            'Diseño de sistemas de iluminación escénica',
-            'Diseño de sistemas de audio y video',
-            'Especificaciones técnicas particulares',
-        ],
+        description: ['Cultura', 'Educación', 'Interiorismo', 'Residencial'],
     },
 ];
 
 const contenido = [
     {
-        tema: 'Asesoría Escenotécnica',
+        tema: 'Sustentabilidad - Ingeniería Estructural',
         descripcion:
             'Brindamos consultoría especializada en diseño y planificación de espacios escénicos, asegurando eficiencia y funcionalidad.',
-        items: [
-            'Maquinaria escénica mantenimiento preventivo y correctivo',
-            'Diseño de escenarios',
-            'Optimización acústica',
-            'Planificación de sistemas de iluminación',
-            'Integración de tecnología audiovisual',
-            'Proyectos licitatorios y ejecutivos',
-            'Dirección y Supervisión de Obra',
-            'Control de calidad en fábrica',
-            'Dirección técnica y de montaje de producciones de espectáculos',
-        ],
+        items: ['Simulación', 'LCA'],
     },
 ];
 
@@ -96,9 +63,15 @@ const equipamentos = equipamientoEscenotecnico.find(
     (item) => item.tema === 'servicios'
 )?.description;
 
-const tema3 = contenido.find((item) => item.tema === 'Asesoría Escenotécnica')?.tema;
-const descripcion3 = contenido.find((item) => item.tema === 'Asesoría Escenotécnica')?.descripcion;
-const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécnica')?.items;
+const tema3 = contenido.find(
+    (item) => item.tema === 'Sustentabilidad - Ingeniería Estructural'
+)?.tema;
+const descripcion3 = contenido.find(
+    (item) => item.tema === 'Sustentabilidad - Ingeniería Estructural'
+)?.descripcion;
+const contenidos = contenido.find(
+    (item) => item.tema === 'Sustentabilidad - Ingeniería Estructural'
+)?.items;
 ---
 
 <Layout title="Servicio" description="Conoce más sobre nuestro servicio">
@@ -146,12 +119,12 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
             <div class="grid gap-12 py-12 lg:grid-cols-2">
                 <div
                     class="flex flex-col gap-4 rounded-xl border border-primary-900/10 bg-primary-200/50 px-6 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 lg:p-12">
-                    <h2 class="text-2xl font-bold lg:text-4xl">{tema1}</h2>
-                    <p
+                    <h2 class="pb-6 text-2xl lg:text-3xl">{tema1}</h2>
+                    <!-- <p
                         class="pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion1}
-                    </p>
-                    <div class="flex flex-col items-center">
+                    </p> -->
+                    <div class="flex flex-col">
                         <ul class="mb-2 text-left text-sm">
                             {
                                 servicios.map((servicio: string) => (
@@ -166,12 +139,12 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
 
                 <div
                     class="flex flex-col gap-4 rounded-xl border border-primary-900/10 bg-primary-200/50 p-4 px-6 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 lg:p-12">
-                    <h2 class="text-2xl font-bold lg:text-4xl">{tema2}</h2>
-                    <p
+                    <h2 class="pb-6 text-2xl lg:text-3xl">{tema2}</h2>
+                    <!-- <p
                         class="pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion2}
-                    </p>
-                    <div class="flex flex-col items-center">
+                    </p> -->
+                    <div class="flex flex-col">
                         <ul class="mb-2 text-left text-sm">
                             {
                                 equipamentos.map((equipamento: string) => (
@@ -187,12 +160,12 @@ const contenidos = contenido.find((item) => item.tema === 'Asesoría Escenotécn
             <div class="grid gap-12 lg:grid-cols-2">
                 <div
                     class="justify-startrounded-xl flex flex-col items-start rounded-xl border border-primary-900/10 bg-primary-200/50 p-4 px-6 py-8 shadow-md dark:border-primary-300/10 dark:bg-primary-900 lg:p-12">
-                    <h2 class="text-2xl font-bold lg:text-4xl">{tema3}</h2>
-                    <p
+                    <h2 class="pb-6 text-2xl lg:text-3xl">{tema3}</h2>
+                    <!-- <p
                         class="text-balance !max-w-[50ch] pb-6 text-base leading-normal text-primary-950/70 dark:text-primary-200/70 sm:text-base">
                         {descripcion3}
-                    </p>
-                    <div class="flex flex-col items-center">
+                    </p> -->
+                    <div class="flex flex-col">
                         <ul class="mb-2 text-left text-sm">
                             {
                                 contenidos.map((contenido: string) => (
