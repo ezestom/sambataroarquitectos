@@ -2,13 +2,6 @@
 import '@fontsource/inter/latin-400.css';
 import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
-
-interface Props {
-    description: string;
-    title: string;
-}
-
-const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,14 +11,35 @@ const { description, title } = Astro.props;
         <!-- <meta http-equiv="refresh" content="0;url=/es/" /> -->
         <link rel="stylesheet" href="photoswipe/dist/photoswipe.css" />
         <meta charset="utf-8" />
+        <link rel="canonical" href="https://www.sambataroarquitectos.com/" />
+        <meta property="og:url" content="https://www.sambataroarquitectos.com/" />
+        <meta
+            name="description"
+            property="og:description"
+            content="Sambataro Arquitectos es un estudio de arquitectura con más de 40 años de experiencia en el mercado."
+        />
+        <meta property="og:title" content="Sambataro Arquitectos" />
+        <meta property="og:type" content="website" />
+
         <meta name="viewport" content="width=device-width" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="description" content={description} />
-        <title>{title}</title>
+        <meta property="og:image" content="/public/publications/alf2.avif" />
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@sambataroarq" />
+        <meta name="twitter:title" content="Sambataro Arquitectos" />
+        <meta
+            name="twitter:description"
+            content="Sambataro Arquitectos es un estudio de arquitectura con más de 40 años de experiencia en el mercado."
+        />
+        <meta name="twitter:image" content="/public/publications/alf2.avif" />
+        <meta name="twitter:image:alt" content="/public/publications/alf2.avif" />
+
+        <title>Sambataro Arquitectos</title>
         <ViewTransitions />
     </head>
     <body
@@ -33,46 +47,71 @@ const { description, title } = Astro.props;
         <main>
             <slot />
         </main>
-        <style is:global>
-            html {
-                scroll-behavior: smooth;
+    </body><style is:global>
+        html {
+            scroll-behavior: smooth;
+        }
+        [x-cloak] {
+            display: none !important;
+        }
+        html {
+            scrollbar-width: none;
+        }
+    </style>
+
+    <script>
+        import Alpine from 'alpinejs';
+        import collapse from '@alpinejs/collapse';
+
+        Alpine.plugin(collapse);
+
+        Alpine.store('theme', {
+            init() {
+                this.isDark = (() => {
+                    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                        return localStorage.getItem('theme') === 'dark';
+                    }
+                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        return true;
+                    }
+                    return false;
+                })();
+            },
+
+            isDark: false,
+
+            toggle() {
+                this.isDark = !this.isDark;
+                localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+            },
+        });
+
+        window.Alpine = Alpine;
+        Alpine.start();
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Sambataro Arquitectos",
+            "description": "Sambataro Arquitectos es un estudio de arquitectura con más de 40 años de experiencia en el mercado.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "WEB",
+            "url": "https://www.sambataroarquitectos.com/",
+            "image": "https://sambataroarquitectos/public/alf2.avif",
+            "author": {
+                "@type": "Organization",
+                "name": "Sambataro Arquitectos"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://www.sambataroarquitectos.com/",
+                "price": "0.00",
+                "priceCurrency": "USD",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock"
             }
-            [x-cloak] {
-                display: none !important;
-            }
-            html {
-                scrollbar-width: none;
-            }
-        </style>
-        <script>
-            import Alpine from 'alpinejs';
-            import collapse from '@alpinejs/collapse';
-
-            Alpine.plugin(collapse);
-
-            Alpine.store('theme', {
-                init() {
-                    this.isDark = (() => {
-                        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-                            return localStorage.getItem('theme') === 'dark';
-                        }
-                        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                            return true;
-                        }
-                        return false;
-                    })();
-                },
-
-                isDark: false,
-
-                toggle() {
-                    this.isDark = !this.isDark;
-                    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
-                },
-            });
-
-            window.Alpine = Alpine;
-            Alpine.start();
-        </script>
-    </body>
+        }
+    </script>
 </html>
