@@ -14,9 +14,10 @@ const { title, description } = Astro.props;
     <section class="relative -z-10 -translate-y-[.5rem] lg:pt-2">
         <div class="mx-auto">
             <div class="flex flex-col gap-2">
-                <!-- <h1 class="tracking-thin text-[2.5rem] font-light lg:text-[4vw]">
+                <h1 class="tracking-thin sr-only text-[2.5rem] font-light lg:text-[4vw]">
                     {title}
-                </h1> -->
+                </h1>
+                <h2 class="sr-only">{description}</h2>
                 <figure class="">
                     <video
                         poster={colon.src}
@@ -24,7 +25,7 @@ const { title, description } = Astro.props;
                         autoplay
                         muted
                         playsinline
-                        class="h-[85vh] w-full lg:h-full max-h-screen object-cover object-bottom">
+                        class="h-[85vh] max-h-screen w-full object-cover object-bottom lg:h-full">
                     </video>
                     <!-- <video
                         id="blur"
