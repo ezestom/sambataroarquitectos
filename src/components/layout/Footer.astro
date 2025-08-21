@@ -1,4 +1,6 @@
 ---
+import logo from '../../../public/e_logo_op.png';
+
 const bottomLinks = [
     {
         header: 'Media',
@@ -73,11 +75,12 @@ const { description } = Astro.props as FooterLink;
                     © 2025 - <span class="font-semibold">Sambataro Arquitectos</span>
                 </p>
                 <a
-                    href="https://ezestom.github.io/portfolio/"
+                    href="https://ezestom.is-a.dev/"
                     target="_blank"
-                    class="text-xs text-primary-950/70 dark:text-primary-200/70">
+                    class="flex items-center gap-1 text-sm text-primary-950/70 dark:text-primary-200/70">
+                    Powered by
                     <span>
-                        Developed by <span class="font-semibold">Eze Stom</span>
+                        <img src={logo.src} alt="eze logo" class="w-4" />
                     </span>
                 </a>
             </div>
